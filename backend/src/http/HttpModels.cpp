@@ -1,8 +1,6 @@
 #include "../../include/http/HttpModels.h"
 #include <sstream>
 
-// ============== HttpRequest Implementation ==============
-
 HttpRequest::HttpRequest() : method(HttpMethod::GET), path("/") {}
 
 HttpRequest::HttpRequest(HttpMethod m, const string& p) : method(m), path(p) {}
@@ -45,8 +43,6 @@ bool HttpRequest::hasPathParam(const string& key) const {
 map<string, string> HttpRequest::getAllQueryParams() const {
     return queryParams;
 }
-
-// ============== HttpResponse Implementation ==============
 
 HttpResponse::HttpResponse() : statusCode(HttpStatus::OK) {
     setContentType("application/json");
@@ -124,8 +120,6 @@ string HttpResponse::toString() const {
     return ss.str();
 }
 
-// ============== JsonHelper Implementation ==============
-
 string JsonHelper::createSuccessResponse(const string& data, const string& message) {
     stringstream ss;
     ss << "{";
@@ -161,8 +155,7 @@ string JsonHelper::createObject(const map<string, string>& fields) {
     for (const auto& field : fields) {
         if (!first) ss << ",";
         ss << "\"" << escapeJson(field.first) << "\":";
-        
-        // Check if value looks like a number or boolean
+
         if (!field.second.empty() && 
             (isdigit(field.second[0]) || field.second == "true" || field.second == "false" || 
              field.second[0] == '[' || field.second[0] == '{')) {
@@ -210,11 +203,10 @@ string JsonHelper::escapeJson(const string& str) {
 
 map<string, string> JsonHelper::parseSimpleJson(const string& json) {
     map<string, string> result;
-    
-    // Very basic JSON parser - for production use a proper JSON library
+
     size_t pos = 0;
     while (pos < json.length()) {
-        // Find key
+         
         size_t keyStart = json.find('"', pos);
         if (keyStart == string::npos) break;
         
@@ -222,28 +214,26 @@ map<string, string> JsonHelper::parseSimpleJson(const string& json) {
         if (keyEnd == string::npos) break;
         
         string key = json.substr(keyStart + 1, keyEnd - keyStart - 1);
-        
-        // Find colon
+
         size_t colon = json.find(':', keyEnd);
         if (colon == string::npos) break;
-        
-        // Find value
+
         size_t valueStart = json.find_first_not_of(" \t\n\r", colon + 1);
         if (valueStart == string::npos) break;
         
         string value;
         if (json[valueStart] == '"') {
-            // String value
+             
             size_t valueEnd = json.find('"', valueStart + 1);
             if (valueEnd == string::npos) break;
             value = json.substr(valueStart + 1, valueEnd - valueStart - 1);
             pos = valueEnd + 1;
         } else {
-            // Number, boolean, etc.
+             
             size_t valueEnd = json.find_first_of(",}", valueStart);
             if (valueEnd == string::npos) valueEnd = json.length();
             value = json.substr(valueStart, valueEnd - valueStart);
-            // Trim whitespace
+             
             size_t end = value.find_last_not_of(" \t\n\r");
             if (end != string::npos) value = value.substr(0, end + 1);
             pos = valueEnd;

@@ -5,7 +5,6 @@
 
 UserController::UserController(Library* lib) : library(lib) {}
 
-// Helper: Convert User object to JSON string
 string UserController::userToJson(const User& user) {
     stringstream ss;
     ss << "{";
@@ -13,8 +12,7 @@ string UserController::userToJson(const User& user) {
     ss << "\"name\":\"" << JsonHelper::escapeJson(user.getName()) << "\",";
     ss << "\"email\":\"" << JsonHelper::escapeJson(user.getEmail()) << "\",";
     ss << "\"role\":\"" << JsonHelper::escapeJson(user.getRole()) << "\",";
-    
-    // Borrowed books array
+
     ss << "\"borrowedBooks\":[";
     const auto& borrowedBooks = user.getBorrowedBookIDs();
     for (size_t i = 0; i < borrowedBooks.size(); i++) {
@@ -27,9 +25,8 @@ string UserController::userToJson(const User& user) {
     return ss.str();
 }
 
-// GET /users - Get all users
 HttpResponse UserController::getAllUsers(const HttpRequest& req) {
-    (void)req; // No query params needed for this endpoint
+    (void)req;  
     
     try {
         vector<User> users = library->getAllUsers();
@@ -52,7 +49,6 @@ HttpResponse UserController::getAllUsers(const HttpRequest& req) {
     }
 }
 
-// GET /users/:id - Get user by ID
 HttpResponse UserController::getUserById(const HttpRequest& req) {
     try {
         string idStr = req.getPathParam("id");
@@ -85,7 +81,6 @@ HttpResponse UserController::getUserById(const HttpRequest& req) {
     }
 }
 
-// GET /users/email/:email - Get user by email
 HttpResponse UserController::getUserByEmail(const HttpRequest& req) {
     try {
         string email = req.getPathParam("email");
@@ -113,10 +108,9 @@ HttpResponse UserController::getUserByEmail(const HttpRequest& req) {
     }
 }
 
-// POST /users - Create new user
 HttpResponse UserController::createUser(const HttpRequest& req) {
     try {
-        // Parse JSON body
+         
         map<string, string> body = JsonHelper::parseSimpleJson(req.getBody());
         
         string name = body["name"];
@@ -128,20 +122,17 @@ HttpResponse UserController::createUser(const HttpRequest& req) {
                 JsonHelper::createErrorResponse("Name and email are required")
             );
         }
-        
-        // Check if email already exists
+
         User* existingUser = library->findUserByEmail(email);
         if (existingUser) {
             return HttpResponse::badRequest(
                 JsonHelper::createErrorResponse("User with this email already exists")
             );
         }
-        
-        // Generate new user ID (simple auto-increment starting from 5000)
+
         static int nextUserID = 5000;
         int newUserID = nextUserID++;
-        
-        // Create and add user (constructor takes: id, name, email, role)
+
         User newUser(newUserID, name, email, role);
         library->addUser(newUser);
         
@@ -158,7 +149,6 @@ HttpResponse UserController::createUser(const HttpRequest& req) {
     }
 }
 
-// PUT /users/:id - Update user
 HttpResponse UserController::updateUser(const HttpRequest& req) {
     try {
         string idStr = req.getPathParam("id");
@@ -176,9 +166,7 @@ HttpResponse UserController::updateUser(const HttpRequest& req) {
                 JsonHelper::createErrorResponse("User not found with ID: " + to_string(userId))
             );
         }
-        
-        // TODO: Implement update logic (requires setters in User class)
-        // For now, return success with current user data
+
         return HttpResponse::ok(
             JsonHelper::createSuccessResponse(
                 userToJson(*user),
@@ -196,7 +184,6 @@ HttpResponse UserController::updateUser(const HttpRequest& req) {
     }
 }
 
-// DELETE /users/:id - Delete user
 HttpResponse UserController::deleteUser(const HttpRequest& req) {
     try {
         string idStr = req.getPathParam("id");
@@ -214,8 +201,7 @@ HttpResponse UserController::deleteUser(const HttpRequest& req) {
                 JsonHelper::createErrorResponse("User not found with ID: " + to_string(userId))
             );
         }
-        
-        // Check if user has borrowed books
+
         if (user->getBorrowedBooksCount() > 0) {
             return HttpResponse::badRequest(
                 JsonHelper::createErrorResponse(
@@ -223,8 +209,7 @@ HttpResponse UserController::deleteUser(const HttpRequest& req) {
                 )
             );
         }
-        
-        // TODO: Implement removeUser in Library class
+
         return HttpResponse::ok(
             JsonHelper::createSuccessResponse(
                 "{\"deletedUserID\":" + to_string(userId) + "}",
@@ -242,7 +227,6 @@ HttpResponse UserController::deleteUser(const HttpRequest& req) {
     }
 }
 
-// GET /users/:id/borrowed - Get user's borrowed books
 HttpResponse UserController::getBorrowedBooks(const HttpRequest& req) {
     try {
         string idStr = req.getPathParam("id");
@@ -262,8 +246,7 @@ HttpResponse UserController::getBorrowedBooks(const HttpRequest& req) {
         }
         
         const vector<int> borrowedBookIDs = user->getBorrowedBookIDs();
-        
-        // Get full book details for each borrowed book
+
         stringstream ss;
         ss << "[";
         size_t count = 0;

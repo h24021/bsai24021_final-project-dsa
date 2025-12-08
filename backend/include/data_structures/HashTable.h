@@ -5,7 +5,6 @@
 #include <optional>
 using namespace std;
 
-// Hash Table using chaining for collision resolution
 template <typename K, typename V>
 class HashTable {
 private:
@@ -47,20 +46,17 @@ public:
     
     void insert(const K& key, const V& value) {
         int index = getHash(key);
-        
-        // Check if key exists, update if it does
+
         for (auto& entry : table[index]) {
             if (entry.key == key) {
                 entry.value = value;
                 return;
             }
         }
-        
-        // Insert new entry
+
         table[index].push_back(Entry(key, value));
         size++;
-        
-        // Rehash if load factor > 0.75
+
         if ((double)size / capacity > 0.75) {
             rehash();
         }
@@ -107,8 +103,7 @@ public:
         table.resize(capacity);
         size = 0;
     }
-    
-    // Get all values
+
     vector<V> getAllValues() const {
         vector<V> values;
         for (const auto& bucket : table) {
@@ -118,8 +113,7 @@ public:
         }
         return values;
     }
-    
-    // Get all keys
+
     vector<K> getAllKeys() const {
         vector<K> keys;
         for (const auto& bucket : table) {

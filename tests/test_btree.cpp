@@ -7,12 +7,10 @@
 
 using namespace std;
 
-// Test counters
 int testsRun = 0;
 int testsPassed = 0;
 int testsFailed = 0;
 
-// Color codes for terminal output
 #define GREEN "\033[32m"
 #define RED "\033[31m"
 #define YELLOW "\033[33m"
@@ -39,8 +37,6 @@ void testFailed(const string& testName, const string& reason = "") {
     cout << endl;
 }
 
-// ============== B-Tree Tests ==============
-
 void testBTreeBasicInsertion() {
     printTestHeader("B-Tree Basic Insertion Test");
     
@@ -49,14 +45,12 @@ void testBTreeBasicInsertion() {
         if (a > b) return 1;
         return 0;
     });
-    
-    // Insert values
+
     vector<int> values = {10, 20, 5, 6, 12, 30, 7, 17};
     for (int val : values) {
         tree.insert(val);
     }
-    
-    // Verify all values are in tree
+
     bool allFound = true;
     for (int val : values) {
         if (tree.search(val) == nullptr) {
@@ -110,8 +104,7 @@ void testBTreeTraversal() {
     tree.traverse([&traversed](const int& val) {
         traversed.push_back(val);
     });
-    
-    // Check if traversal is in sorted order
+
     bool sorted = true;
     for (size_t i = 1; i < traversed.size(); i++) {
         if (traversed[i-1] > traversed[i]) {
@@ -135,14 +128,12 @@ void testBTreeLargeDataset() {
         if (a > b) return 1;
         return 0;
     });
-    
-    // Insert 1000 values
+
     int count = 1000;
     for (int i = 0; i < count; i++) {
-        tree.insert(i * 2); // Insert even numbers
+        tree.insert(i * 2);  
     }
-    
-    // Verify all values
+
     bool allFound = true;
     for (int i = 0; i < count; i++) {
         if (tree.search(i * 2) == nullptr) {
@@ -150,8 +141,7 @@ void testBTreeLargeDataset() {
             break;
         }
     }
-    
-    // Check that odd numbers are not found
+
     bool noFalsePositives = true;
     for (int i = 0; i < count; i++) {
         if (tree.search(i * 2 + 1) != nullptr) {
@@ -166,8 +156,6 @@ void testBTreeLargeDataset() {
         testFailed("B-Tree failed on large dataset");
     }
 }
-
-// ============== Library Management Tests ==============
 
 void testLibraryAddBooks() {
     printTestHeader("Library Add Books Test");
@@ -293,8 +281,7 @@ void testLibraryBorrowBook() {
     } else {
         testFailed("Book borrow operation failed");
     }
-    
-    // Try to borrow same book again
+
     bool shouldFail = lib.borrowBook(101, 1);
     if (!shouldFail) {
         testPassed("Correctly prevents borrowing same book twice");
@@ -319,8 +306,7 @@ void testLibraryReturnBook() {
     } else {
         testFailed("Book return operation failed");
     }
-    
-    // Try to return book that wasn't borrowed
+
     bool shouldFail = lib.returnBook(101, 999);
     if (!shouldFail) {
         testPassed("Correctly prevents returning non-borrowed book");
@@ -333,19 +319,16 @@ void testLibraryStatistics() {
     printTestHeader("Library Statistics Test");
     
     Library lib;
-    
-    // Add books
+
     lib.addBook(Book(1, "1984", "George Orwell", "ISBN001", "Dystopian", 2, 2));
     lib.addBook(Book(2, "The Great Gatsby", "F. Scott Fitzgerald", "ISBN002", "Fiction", 3, 3));
-    
-    // Add users
+
     lib.addUser(User(101, "Alice Smith", "alice@example.com", "Student"));
     lib.addUser(User(102, "Bob Jones", "bob@example.com", "Student"));
-    
-    // Borrow books
-    lib.borrowBook(101, 1); // Alice borrows 1984
-    lib.borrowBook(102, 1); // Bob borrows 1984
-    lib.borrowBook(101, 2); // Alice borrows Gatsby
+
+    lib.borrowBook(101, 1);  
+    lib.borrowBook(102, 1);  
+    lib.borrowBook(101, 2);  
     
     auto mostBorrowed = lib.getMostBorrowedBooks(1);
     
@@ -369,7 +352,7 @@ void testBookComparison() {
     
     Book b1(1, "AAA Book", "Author A", "ISBN001", "Fiction", 1, 1);
     Book b2(2, "ZZZ Book", "Author Z", "ISBN002", "Fiction", 1, 1);
-    Book b3(3, "aaa book", "Author A", "ISBN003", "Fiction", 1, 1); // Same title, different case
+    Book b3(3, "aaa book", "Author A", "ISBN003", "Fiction", 1, 1);  
     
     if (b1 < b2) {
         testPassed("Book comparison by title works (less than)");
@@ -406,11 +389,10 @@ void testStressTestWithManyBooks() {
     printTestHeader("Stress Test with Many Books");
     
     Library lib;
-    
-    // Add 100 books
+
     for (int i = 1; i <= 100; i++) {
         string title = "Book " + to_string(i);
-        string author = "Author " + to_string(i % 10); // 10 different authors
+        string author = "Author " + to_string(i % 10);  
         string isbn = "ISBN" + to_string(i);
         lib.addBook(Book(i, title, author, isbn, "Fiction", 2, 2));
     }
@@ -420,8 +402,7 @@ void testStressTestWithManyBooks() {
     } else {
         testFailed("Failed to add 100 books");
     }
-    
-    // Search by author (should find 10 books per author)
+
     auto results = lib.searchBookByAuthor("Author 5");
     
     if (results.size() == 10) {
@@ -432,23 +413,18 @@ void testStressTestWithManyBooks() {
     }
 }
 
-// ============== Main Test Runner ==============
-
 void runAllTests() {
     cout << YELLOW << "\n╔════════════════════════════════════════════╗" << RESET << endl;
     cout << YELLOW << "║  Library Management System - Test Suite   ║" << RESET << endl;
     cout << YELLOW << "╚════════════════════════════════════════════╝" << RESET << endl;
-    
-    // B-Tree Tests
+
     testBTreeBasicInsertion();
     testBTreeSearchNotFound();
     testBTreeTraversal();
     testBTreeLargeDataset();
-    
-    // Book Tests
+
     testBookComparison();
-    
-    // Library Tests
+
     testLibraryAddBooks();
     testLibrarySearchByTitle();
     testLibrarySearchByAuthor();
@@ -460,8 +436,7 @@ void runAllTests() {
     testLibraryReturnBook();
     testLibraryStatistics();
     testStressTestWithManyBooks();
-    
-    // Print Summary
+
     cout << "\n" << YELLOW << "╔════════════════════════════════════════════╗" << RESET << endl;
     cout << YELLOW << "║            TEST SUMMARY                    ║" << RESET << endl;
     cout << YELLOW << "╚════════════════════════════════════════════╝" << RESET << endl;

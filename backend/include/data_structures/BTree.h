@@ -6,72 +6,56 @@
 
 using namespace std;
 
-// Forward declaration
 template <typename T> class BTree;
 
-// B-Tree Node
 template <typename T>
 class BTreeNode {
 public:
-    vector<T> keys;              // Keys stored in node
-    vector<BTreeNode*> children; // Child pointers
-    int t;                       // Minimum degree (minimum keys = t-1)
-    bool isLeaf;                 // True if leaf node
+    vector<T> keys;               
+    vector<BTreeNode*> children;  
+    int t;                        
+    bool isLeaf;                  
     
     BTreeNode(int degree, bool leaf);
     ~BTreeNode();
-    
-    // Search for a key in subtree rooted at this node
+
     BTreeNode* search(const T& key, function<int(const T&, const T&)> compare);
-    
-    // Insert a key in non-full node
+
     void insertNonFull(const T& key, function<int(const T&, const T&)> compare);
-    
-    // Split child at index i
+
     void splitChild(int i, BTreeNode* child);
-    
-    // Traverse all keys in subtree
+
     void traverse(function<void(const T&)> visit);
-    
-    // Search by predicate (for flexible searching)
+
     void searchByPredicate(function<bool(const T&)> predicate, vector<T>& results);
     
     friend class BTree<T>;
 };
 
-// B-Tree
 template <typename T>
 class BTree {
 private:
     BTreeNode<T>* root;
-    int t; // Minimum degree
+    int t;  
     function<int(const T&, const T&)> compareFunc;
     
 public:
-    // Constructor with custom comparison function
+     
     BTree(int degree, function<int(const T&, const T&)> compare);
     ~BTree();
-    
-    // Insert a key
+
     void insert(const T& key);
-    
-    // Search for a key
+
     T* search(const T& key);
-    
-    // Traverse the tree
+
     void traverse(function<void(const T&)> visit);
-    
-    // Search by custom predicate
+
     vector<T> searchByPredicate(function<bool(const T&)> predicate);
-    
-    // Get all elements (in-order)
+
     vector<T> getAllElements();
-    
-    // Check if tree is empty
+
     bool isEmpty() const;
 };
-
-// ============== BTreeNode Implementation ==============
 
 template <typename T>
 BTreeNode<T>::BTreeNode(int degree, bool leaf) {
@@ -139,27 +123,22 @@ template <typename T>
 void BTreeNode<T>::splitChild(int i, BTreeNode* child) {
     BTreeNode* newNode = new BTreeNode(child->t, child->isLeaf);
     int mid = t - 1;
-    
-    // Copy second half of keys to new node
+
     for (int j = 0; j < t - 1; j++) {
         newNode->keys.push_back(child->keys[mid + 1 + j]);
     }
-    
-    // Copy second half of children if not leaf
+
     if (!child->isLeaf) {
         for (int j = 0; j < t; j++) {
             newNode->children.push_back(child->children[mid + 1 + j]);
         }
         child->children.resize(t);
     }
-    
-    // Move middle key up to parent
+
     keys.insert(keys.begin() + i, child->keys[mid]);
-    
-    // Resize old child
+
     child->keys.resize(mid);
-    
-    // Insert new child pointer
+
     children.insert(children.begin() + i + 1, newNode);
 }
 
@@ -194,8 +173,6 @@ void BTreeNode<T>::searchByPredicate(function<bool(const T&)> predicate, vector<
         children[i]->searchByPredicate(predicate, results);
     }
 }
-
-// ============== BTree Implementation ==============
 
 template <typename T>
 BTree<T>::BTree(int degree, function<int(const T&, const T&)> compare) {

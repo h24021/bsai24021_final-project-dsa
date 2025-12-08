@@ -4,12 +4,12 @@
 UserController::UserController(Library* lib) : library(lib) {}
 
 string UserController::getAllUsers() {
-    // TODO: Implement fetching all users and return as JSON array
+     
     return "{\"status\":\"success\",\"data\":[]}";
 }
 
 string UserController::getUserById(int id) {
-    (void)id; // TODO: Implement search by ID and return JSON
+    (void)id;  
     return "{\"status\":\"success\",\"data\":null}";
 }
 
@@ -21,24 +21,24 @@ string UserController::createUser(int id, string name, string role) {
 
 string UserController::updateUser(int id, string name, string role) {
     (void)id; (void)name; (void)role;
-    // TODO: Implement user update logic
+     
     return successResponse("User updated successfully");
 }
 
 string UserController::deleteUser(int id) {
-    (void)id; // TODO: Implement user deletion logic
+    (void)id;  
     return successResponse("User deleted successfully");
 }
 
 string UserController::borrowBook(int userId, int bookId) {
     (void)userId; (void)bookId;
-    // TODO: Implement borrow logic
+     
     return successResponse("Book borrowed successfully");
 }
 
 string UserController::returnBook(int userId, int bookId) {
     (void)userId; (void)bookId;
-    // TODO: Implement return logic
+     
     return successResponse("Book returned successfully");
 }
 

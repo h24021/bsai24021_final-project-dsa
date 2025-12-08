@@ -19,7 +19,6 @@ void User::printUser() const {
          << ", Borrowed Books: " << borrowedBooks << endl;
 }
 
-// Getters
 int User::getUserID() const { return userID; }
 string User::getName() const { return name; }
 string User::getEmail() const { return email; }
@@ -27,7 +26,6 @@ string User::getRole() const { return role; }
 int User::getBorrowedBooksCount() const { return borrowedBooks; }
 vector<int> User::getBorrowedBookIDs() const { return borrowedBookIDs; }
 
-// Borrow/Return operations
 bool User::borrowBook(int bookID) {
     if (!hasBorrowedBook(bookID)) {
         borrowedBookIDs.push_back(bookID);

@@ -4,15 +4,13 @@
 using namespace std;
 
 Library::Library() {
-    // Initialize B-Tree with degree 3 and title comparison
+     
     booksByTitle = new BTree<Book>(3, Book::compareByTitle);
 }
 
 Library::~Library() {
     delete booksByTitle;
 }
-
-// ============== Book Operations ==============
 
 void Library::addBook(const Book& b) {
     booksByTitle->insert(b);
@@ -66,15 +64,13 @@ Book* Library::findBookByID(int bookID) {
     });
     
     if (!books.empty()) {
-        // Return pointer to first match (stored in static to persist)
+         
         static Book foundBook;
         foundBook = books[0];
         return &foundBook;
     }
     return nullptr;
 }
-
-// ============== User Operations ==============
 
 void Library::addUser(const User& u) {
     usersByID.insert(u.getUserID(), u);
@@ -111,10 +107,8 @@ void Library::printAllUsers() {
     cout << "================================\n\n";
 }
 
-// ============== Borrow/Return Operations ==============
-
 bool Library::borrowBook(int userID, int bookID) {
-    // Find user
+     
     auto userOpt = usersByID.find(userID);
     if (!userOpt.has_value()) {
         cout << "Error: User ID " << userID << " not found.\n";
@@ -122,14 +116,12 @@ bool Library::borrowBook(int userID, int bookID) {
     }
     
     User user = userOpt.value();
-    
-    // Check if user already borrowed this book
+
     if (user.hasBorrowedBook(bookID)) {
         cout << "Error: User has already borrowed this book.\n";
         return false;
     }
-    
-    // Find book
+
     auto books = booksByTitle->searchByPredicate([bookID](const Book& b) {
         return b.getBookID() == bookID;
     });
@@ -140,22 +132,16 @@ bool Library::borrowBook(int userID, int bookID) {
     }
     
     Book book = books[0];
-    
-    // Check availability
+
     if (book.getAvailableCopies() <= 0) {
         cout << "Error: No copies available for \"" << book.getTitle() << "\".\n";
         return false;
     }
-    
-    // Update user
+
     user.borrowBook(bookID);
     usersByID.insert(userID, user);
     usersByEmail.insert(user.getEmail(), user);
-    
-    // Update book availability (Note: This is a limitation - we need to update in B-Tree)
-    // For now, we'll track this separately
-    
-    // Update borrow count statistics
+
     auto countOpt = borrowCounts.find(bookID);
     int count = countOpt.has_value() ? countOpt.value() : 0;
     borrowCounts.insert(bookID, count + 1);
@@ -165,7 +151,7 @@ bool Library::borrowBook(int userID, int bookID) {
 }
 
 bool Library::returnBook(int userID, int bookID) {
-    // Find user
+     
     auto userOpt = usersByID.find(userID);
     if (!userOpt.has_value()) {
         cout << "Error: User ID " << userID << " not found.\n";
@@ -173,14 +159,12 @@ bool Library::returnBook(int userID, int bookID) {
     }
     
     User user = userOpt.value();
-    
-    // Check if user has borrowed this book
+
     if (!user.hasBorrowedBook(bookID)) {
         cout << "Error: User has not borrowed this book.\n";
         return false;
     }
-    
-    // Find book
+
     auto books = booksByTitle->searchByPredicate([bookID](const Book& b) {
         return b.getBookID() == bookID;
     });
@@ -191,8 +175,7 @@ bool Library::returnBook(int userID, int bookID) {
     }
     
     Book book = books[0];
-    
-    // Update user
+
     user.returnBook(bookID);
     usersByID.insert(userID, user);
     usersByEmail.insert(user.getEmail(), user);
@@ -200,8 +183,6 @@ bool Library::returnBook(int userID, int bookID) {
     cout << "Success: \"" << book.getTitle() << "\" returned by " << user.getName() << endl;
     return true;
 }
-
-// ============== Statistics ==============
 
 vector<pair<int, int>> Library::getMostBorrowedBooks(int topN) {
     vector<pair<int, int>> bookCounts;
@@ -213,14 +194,12 @@ vector<pair<int, int>> Library::getMostBorrowedBooks(int topN) {
             bookCounts.push_back({id, count.value()});
         }
     }
-    
-    // Sort by count descending
+
     sort(bookCounts.begin(), bookCounts.end(), 
          [](const pair<int,int>& a, const pair<int,int>& b) {
              return a.second > b.second;
          });
-    
-    // Return top N
+
     if ((int)bookCounts.size() > topN) {
         bookCounts.resize(topN);
     }
@@ -235,14 +214,12 @@ vector<pair<int, int>> Library::getMostActiveUsers(int topN) {
     for (const auto& user : users) {
         userActivity.push_back({user.getUserID(), user.getBorrowedBooksCount()});
     }
-    
-    // Sort by activity descending
+
     sort(userActivity.begin(), userActivity.end(),
          [](const pair<int,int>& a, const pair<int,int>& b) {
              return a.second > b.second;
          });
-    
-    // Return top N
+
     if ((int)userActivity.size() > topN) {
         userActivity.resize(topN);
     }

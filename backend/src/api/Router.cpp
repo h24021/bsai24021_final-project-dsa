@@ -3,11 +3,9 @@
 #include <sstream>
 #include <algorithm>
 
-// ============== Route Implementation ==============
-
 Route::Route(HttpMethod m, const string& p, RouteHandler h) 
     : method(m), path(p), handler(h) {
-    // Convert path to regex pattern and extract parameter names
+     
     string pattern = p;
     size_t pos = 0;
     
@@ -17,13 +15,11 @@ Route::Route(HttpMethod m, const string& p, RouteHandler h)
         
         string paramName = pattern.substr(pos + 1, end - pos - 1);
         paramNames.push_back(paramName);
-        
-        // Replace :param with regex capture group
+
         pattern.replace(pos, end - pos, "([^/]+)");
         pos = end;
     }
-    
-    // Create regex from pattern
+
     pathPattern = regex("^" + pattern + "$");
 }
 
@@ -40,8 +36,6 @@ void Route::extractParams(const string& requestPath, HttpRequest& request) const
         }
     }
 }
-
-// ============== Router Implementation ==============
 
 Router::Router(const string& base) : basePath(base) {}
 
@@ -65,13 +59,11 @@ regex Router::createPathPattern(const string& path, vector<string>& paramNames) 
 
 string Router::normalizePath(const string& path) const {
     string normalized = path;
-    
-    // Remove trailing slash
+
     if (normalized.length() > 1 && normalized.back() == '/') {
         normalized.pop_back();
     }
-    
-    // Ensure leading slash
+
     if (normalized.empty() || normalized[0] != '/') {
         normalized = "/" + normalized;
     }
@@ -106,15 +98,13 @@ HttpResponse Router::handleRequest(const HttpRequest& request) {
 
 HttpResponse Router::routeRequest(HttpMethod method, const string& path, const HttpRequest& request) {
     string normalizedPath = normalizePath(path);
-    
-    // Try to find matching route
+
     for (auto& route : routes) {
         if (route.matches(method, normalizedPath)) {
-            // Create a copy of request to add path params
+             
             HttpRequest modifiedRequest = request;
             route.extractParams(normalizedPath, modifiedRequest);
-            
-            // Call the handler
+
             try {
                 return route.handler(modifiedRequest);
             } catch (const exception& e) {
@@ -122,8 +112,7 @@ HttpResponse Router::routeRequest(HttpMethod method, const string& path, const H
             }
         }
     }
-    
-    // No route found
+
     return HttpResponse::notFound("Route not found: " + normalizedPath);
 }
 

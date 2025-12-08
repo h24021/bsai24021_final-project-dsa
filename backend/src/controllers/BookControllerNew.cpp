@@ -4,7 +4,6 @@
 
 BookController::BookController(Library* lib) : library(lib) {}
 
-// Helper: Convert Book to JSON
 string BookController::bookToJson(const Book& book) {
     map<string, string> fields;
     fields["id"] = to_string(book.getBookID());
@@ -18,7 +17,6 @@ string BookController::bookToJson(const Book& book) {
     return JsonHelper::createObject(fields);
 }
 
-// Helper: Convert vector of Books to JSON array
 string BookController::booksToJson(const vector<Book>& books) {
     vector<string> bookJsons;
     for (const auto& book : books) {
@@ -27,7 +25,6 @@ string BookController::booksToJson(const vector<Book>& books) {
     return JsonHelper::createArray(bookJsons);
 }
 
-// GET /books - Get all books
 HttpResponse BookController::getAllBooks(const HttpRequest& request) {
     try {
         auto books = library->getAllBooks();
@@ -45,7 +42,6 @@ HttpResponse BookController::getAllBooks(const HttpRequest& request) {
     }
 }
 
-// GET /books/:id - Get book by ID
 HttpResponse BookController::getBookById(const HttpRequest& request) {
     try {
         string idStr = request.getPathParam("id");
@@ -70,22 +66,20 @@ HttpResponse BookController::getBookById(const HttpRequest& request) {
     }
 }
 
-// GET /books/search?title=...&author=...&category=... - Search books
 HttpResponse BookController::searchBooks(const HttpRequest& request) {
     try {
         vector<Book> results;
-        
-        // Search by title
+
         if (request.hasQueryParam("title")) {
             string title = request.getQueryParam("title");
             results = library->searchBookByTitle(title);
         }
-        // Search by author
+         
         else if (request.hasQueryParam("author")) {
             string author = request.getQueryParam("author");
             results = library->searchBookByAuthor(author);
         }
-        // Search by category
+         
         else if (request.hasQueryParam("category")) {
             string category = request.getQueryParam("category");
             results = library->searchBookByCategory(category);
@@ -107,18 +101,16 @@ HttpResponse BookController::searchBooks(const HttpRequest& request) {
     }
 }
 
-// POST /books - Create new book
 HttpResponse BookController::createBook(const HttpRequest& request) {
     try {
-        // Parse JSON body
+         
         auto fields = JsonHelper::parseSimpleJson(request.getBody());
         
         if (fields.find("title") == fields.end() || 
             fields.find("author") == fields.end()) {
             return HttpResponse::badRequest("Title and author are required");
         }
-        
-        // Generate new ID (in production, this would be auto-incremented)
+
         static int nextId = 1000;
         int id = nextId++;
         
@@ -139,7 +131,6 @@ HttpResponse BookController::createBook(const HttpRequest& request) {
     }
 }
 
-// PUT /books/:id - Update book
 HttpResponse BookController::updateBook(const HttpRequest& request) {
     try {
         string idStr = request.getPathParam("id");
@@ -153,13 +144,9 @@ HttpResponse BookController::updateBook(const HttpRequest& request) {
         if (existingBook == nullptr) {
             return HttpResponse::notFound("Book not found with ID: " + idStr);
         }
-        
-        // Parse update fields
+
         auto fields = JsonHelper::parseSimpleJson(request.getBody());
-        
-        // For now, we'll just return success
-        // In a full implementation, you'd update the book in the B-Tree
-        
+
         string json = JsonHelper::createSuccessResponse(
             bookToJson(*existingBook), 
             "Book updated successfully"
@@ -171,7 +158,6 @@ HttpResponse BookController::updateBook(const HttpRequest& request) {
     }
 }
 
-// DELETE /books/:id - Delete book
 HttpResponse BookController::deleteBook(const HttpRequest& request) {
     try {
         string idStr = request.getPathParam("id");
@@ -185,10 +171,7 @@ HttpResponse BookController::deleteBook(const HttpRequest& request) {
         if (book == nullptr) {
             return HttpResponse::notFound("Book not found with ID: " + idStr);
         }
-        
-        // For now, just return success
-        // In full implementation, you'd remove from B-Tree
-        
+
         map<string, string> response;
         response["status"] = "success";
         response["message"] = "Book deleted successfully";
@@ -201,7 +184,6 @@ HttpResponse BookController::deleteBook(const HttpRequest& request) {
     }
 }
 
-// GET /books/:id/history - Get borrow history
 HttpResponse BookController::getBorrowHistory(const HttpRequest& request) {
     try {
         string idStr = request.getPathParam("id");
@@ -215,10 +197,7 @@ HttpResponse BookController::getBorrowHistory(const HttpRequest& request) {
         if (book == nullptr) {
             return HttpResponse::notFound("Book not found with ID: " + idStr);
         }
-        
-        // For now, return empty history
-        // In full implementation, track borrow history
-        
+
         map<string, string> response;
         response["status"] = "success";
         response["data"] = "[]";

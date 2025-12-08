@@ -18,7 +18,6 @@ void Book::printBook() const {
          << ", Available: " << availableCopies << "/" << copies << endl;
 }
 
-// Getters
 string Book::getISBN() const { return isbn; }
 int Book::getBookID() const { return bookID; }
 string Book::getTitle() const { return title; }
@@ -27,7 +26,6 @@ string Book::getCategory() const { return category; }
 int Book::getCopies() const { return copies; }
 int Book::getAvailableCopies() const { return availableCopies; }
 
-// Setters
 void Book::setAvailableCopies(int count) {
     if (count >= 0 && count <= copies) {
         availableCopies = count;
@@ -50,7 +48,6 @@ bool Book::returnBook() {
     return false;
 }
 
-// Comparison operators (case-insensitive title comparison)
 bool Book::operator<(const Book& other) const {
     string t1 = title, t2 = other.title;
     transform(t1.begin(), t1.end(), t1.begin(), ::tolower);
@@ -77,7 +74,6 @@ bool Book::operator>=(const Book& other) const {
     return !(*this < other);
 }
 
-// Static comparison functions for B-Tree
 int Book::compareByTitle(const Book& a, const Book& b) {
     string t1 = a.title, t2 = b.title;
     transform(t1.begin(), t1.end(), t1.begin(), ::tolower);

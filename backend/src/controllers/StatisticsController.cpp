@@ -6,15 +6,13 @@
 
 StatisticsController::StatisticsController(Library* lib) : library(lib) {}
 
-// GET /dashboard - Get dashboard overview
 HttpResponse StatisticsController::getDashboard(const HttpRequest& req) {
-    (void)req; // No params needed
+    (void)req;  
     
     try {
         vector<Book> allBooks = library->getAllBooks();
         vector<User> allUsers = library->getAllUsers();
-        
-        // Count available vs borrowed books
+
         int totalBooks = (int)allBooks.size();
         int availableBooks = 0;
         int borrowedBooks = 0;
@@ -26,20 +24,17 @@ HttpResponse StatisticsController::getDashboard(const HttpRequest& req) {
                 borrowedBooks++;
             }
         }
-        
-        // Count total borrowed book instances (some users may have multiple)
+
         int totalBorrowedInstances = 0;
         for (const auto& user : allUsers) {
             totalBorrowedInstances += (int)user.getBorrowedBookIDs().size();
         }
-        
-        // Get category distribution
+
         map<string, int> categoryCount;
         for (const auto& book : allBooks) {
             categoryCount[book.getCategory()]++;
         }
-        
-        // Build category distribution JSON
+
         stringstream categorySS;
         categorySS << "[";
         size_t catIdx = 0;
@@ -52,8 +47,7 @@ HttpResponse StatisticsController::getDashboard(const HttpRequest& req) {
             catIdx++;
         }
         categorySS << "]";
-        
-        // Build dashboard JSON
+
         stringstream ss;
         ss << "{";
         ss << "\"overview\":{";
@@ -77,14 +71,13 @@ HttpResponse StatisticsController::getDashboard(const HttpRequest& req) {
     }
 }
 
-// GET /statistics/most-borrowed - Get most borrowed books
 HttpResponse StatisticsController::getMostBorrowedBooks(const HttpRequest& req) {
     try {
-        // Get limit from query params (default 10)
+         
         string limitStr = req.getQueryParam("limit");
         int limit = limitStr.empty() ? 10 : stoi(limitStr);
         if (limit <= 0) limit = 10;
-        if (limit > 100) limit = 100; // Max 100
+        if (limit > 100) limit = 100;  
         
         vector<pair<int, int>> mostBorrowed = library->getMostBorrowedBooks(limit);
         
@@ -98,9 +91,9 @@ HttpResponse StatisticsController::getMostBorrowedBooks(const HttpRequest& req) 
             if (book) {
                 ss << "{";
                 ss << "\"bookID\":" << bookID << ",";
-                ss << "\"title\":\"" << JsonHelper::escapeJson(bookOpt->getTitle()) << "\",";
-                ss << "\"author\":\"" << JsonHelper::escapeJson(bookOpt->getAuthor()) << "\",";
-                ss << "\"category\":\"" << JsonHelper::escapeJson(bookOpt->getCategory()) << "\",";
+                ss << "\"title\":\"" << JsonHelper::escapeJson(book->getTitle()) << "\",";
+                ss << "\"author\":\"" << JsonHelper::escapeJson(book->getAuthor()) << "\",";
+                ss << "\"category\":\"" << JsonHelper::escapeJson(book->getCategory()) << "\",";
                 ss << "\"timesCirculated\":" << count;
                 ss << "}";
                 
@@ -127,14 +120,13 @@ HttpResponse StatisticsController::getMostBorrowedBooks(const HttpRequest& req) 
     }
 }
 
-// GET /statistics/most-active - Get most active users
 HttpResponse StatisticsController::getMostActiveUsers(const HttpRequest& req) {
     try {
-        // Get limit from query params (default 10)
+         
         string limitStr = req.getQueryParam("limit");
         int limit = limitStr.empty() ? 10 : stoi(limitStr);
         if (limit <= 0) limit = 10;
-        if (limit > 100) limit = 100; // Max 100
+        if (limit > 100) limit = 100;  
         
         vector<pair<int, int>> mostActive = library->getMostActiveUsers(limit);
         
@@ -148,11 +140,11 @@ HttpResponse StatisticsController::getMostActiveUsers(const HttpRequest& req) {
             if (user) {
                 ss << "{";
                 ss << "\"userID\":" << userID << ",";
-                ss << "\"name\":\"" << JsonHelper::escapeJson(userOpt->getName()) << "\",";
-                ss << "\"email\":\"" << JsonHelper::escapeJson(userOpt->getEmail()) << "\",";
-                ss << "\"role\":\"" << JsonHelper::escapeJson(userOpt->getRole()) << "\",";
+                ss << "\"name\":\"" << JsonHelper::escapeJson(user->getName()) << "\",";
+                ss << "\"email\":\"" << JsonHelper::escapeJson(user->getEmail()) << "\",";
+                ss << "\"role\":\"" << JsonHelper::escapeJson(user->getRole()) << "\",";
                 ss << "\"booksBorrowed\":" << count << ",";
-                ss << "\"currentlyBorrowed\":" << userOpt->getBorrowedBookIDs().size();
+                ss << "\"currentlyBorrowed\":" << user->getBorrowedBookIDs().size();
                 ss << "}";
                 
                 if (i < mostActive.size() - 1) ss << ",";
@@ -178,14 +170,12 @@ HttpResponse StatisticsController::getMostActiveUsers(const HttpRequest& req) {
     }
 }
 
-// GET /statistics/category-distribution - Get book distribution by category
 HttpResponse StatisticsController::getCategoryDistribution(const HttpRequest& req) {
-    (void)req; // No params needed
+    (void)req;  
     
     try {
         vector<Book> allBooks = library->getAllBooks();
-        
-        // Count books by category
+
         map<string, int> categoryCount;
         map<string, int> availableCount;
         map<string, int> borrowedCount;
@@ -200,8 +190,7 @@ HttpResponse StatisticsController::getCategoryDistribution(const HttpRequest& re
                 borrowedCount[category]++;
             }
         }
-        
-        // Build JSON array
+
         stringstream ss;
         ss << "[";
         size_t idx = 0;
