@@ -1,0 +1,117 @@
+# Build directories
+build/
+bin/
+lib/
+*.o
+*.a
+*.so
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+main
+library_system
+
+# Debug symbols
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# IDE specific files
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# CLion
+.idea/
+cmake-build-*/
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+*.bak
+*.log
+
+# Dependencies (if using package managers)
+node_modules/
+vendor/
+third_party/
+
+# Frontend build artifacts (for future)
+frontend/dist/
+frontend/build/
+frontend/node_modules/
+frontend/.next/
+frontend/.cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Database files (if applicable)
+*.db
+*.sqlite
+*.sqlite3
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
+
+# Test coverage
+coverage/
+*.gcov
+*.gcda
+*.gcno
+
+# Package managers
+Makefile.old
+*.tar.gz
+*.zip
+
+# Core dumps
+core
+core.*
