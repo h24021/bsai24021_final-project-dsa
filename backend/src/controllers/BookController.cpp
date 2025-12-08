@@ -9,7 +9,7 @@ string BookController::getAllBooks() {
 }
 
 string BookController::getBookById(int id) {
-    // TODO: Implement search by ID and return JSON
+    (void)id; // TODO: Implement search by ID and return JSON
     return "{\"status\":\"success\",\"data\":null}";
 }
 
@@ -28,12 +28,13 @@ string BookController::createBook(int id, string title, string author,
 
 string BookController::updateBook(int id, string title, string author,
                                   string isbn, string category, int copies, int available) {
+    (void)id; (void)title; (void)author; (void)isbn; (void)category; (void)copies; (void)available;
     // TODO: Implement book update logic
     return successResponse("Book updated successfully");
 }
 
 string BookController::deleteBook(int id) {
-    // TODO: Implement book deletion logic
+    (void)id; // TODO: Implement book deletion logic
     return successResponse("Book deleted successfully");
 }
 
