@@ -51,6 +51,8 @@ public:
     void printStatistics();
     
     // Utility
+    vector<Book> getAllBooks() const;
+    vector<User> getAllUsers() const;
     int getTotalBooks() const;
     int getTotalUsers() const;
 };

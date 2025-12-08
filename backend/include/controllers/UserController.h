@@ -3,33 +3,30 @@
 #include <vector>
 #include "../models/User.h"
 #include "../services/Library.h"
+#include "../http/HttpModels.h"
 
 using namespace std;
 
 /**
- * UserController - Handles HTTP-like requests for user operations
- * This will be the bridge between API endpoints and business logic
+ * UserController - Handles REST API requests for user operations
+ * This is the bridge between HTTP endpoints and business logic
  */
 class UserController {
 private:
     Library* library;
+    
+    // Helper method to convert User to JSON string
+    string userToJson(const User& user);
 
 public:
     UserController(Library* lib);
 
-    // REST-like methods that will be exposed via API
-    string getAllUsers();           // GET /api/users
-    string getUserById(int id);     // GET /api/users/:id
-    string createUser(int id, string name, string role); // POST /api/users
-    string updateUser(int id, string name, string role); // PUT /api/users/:id
-    string deleteUser(int id);      // DELETE /api/users/:id
-    
-    // Borrowing operations
-    string borrowBook(int userId, int bookId);    // POST /api/users/:id/borrow
-    string returnBook(int userId, int bookId);    // POST /api/users/:id/return
-    
-    // JSON response helpers
-    string toJSON(const User& user);
-    string errorResponse(string message, int code);
-    string successResponse(string message);
+    // REST API endpoint handlers
+    HttpResponse getAllUsers(const HttpRequest& req);           // GET /users
+    HttpResponse getUserById(const HttpRequest& req);           // GET /users/:id
+    HttpResponse getUserByEmail(const HttpRequest& req);        // GET /users/email/:email
+    HttpResponse createUser(const HttpRequest& req);            // POST /users
+    HttpResponse updateUser(const HttpRequest& req);            // PUT /users/:id
+    HttpResponse deleteUser(const HttpRequest& req);            // DELETE /users/:id
+    HttpResponse getBorrowedBooks(const HttpRequest& req);      // GET /users/:id/borrowed
 };

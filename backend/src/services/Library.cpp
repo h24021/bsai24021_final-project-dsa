@@ -289,3 +289,11 @@ int Library::getTotalBooks() const {
 int Library::getTotalUsers() const {
     return usersByID.getSize();
 }
+
+vector<Book> Library::getAllBooks() const {
+    return booksByTitle->getAllElements();
+}
+
+vector<User> Library::getAllUsers() const {
+    return usersByID.getAllValues();
+}
