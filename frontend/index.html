@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📚 Library Management System</h1>
+                <p class="subtitle">B-Tree & Hash Table Powered REST API</p>
+            </div>
+            <div class="header-stats">
+                <div class="stat-card">
+                    <span class="stat-value" id="totalBooks">0</span>
+                    <span class="stat-label">Total Books</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="totalUsers">0</span>
+                    <span class="stat-label">Total Users</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="borrowedBooks">0</span>
+                    <span class="stat-label">Borrowed</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="books">📖 Books</button>
+            <button class="tab-btn" data-tab="users">👥 Users</button>
+            <button class="tab-btn" data-tab="borrow">🔄 Borrow/Return</button>
+            <button class="tab-btn" data-tab="search">🔍 Search</button>
+            <button class="tab-btn" data-tab="statistics">📊 Statistics</button>
+        </nav>
+
+        <!-- Books Tab -->
+        <div class="tab-content active" id="books-tab">
+            <div class="section-header">
+                <h2>📖 Books Management</h2>
+                <button class="btn btn-primary" onclick="showAddBookForm()">+ Add New Book</button>
+            </div>
+
+            <!-- Add Book Form (Initially Hidden) -->
+            <div class="form-container" id="addBookForm" style="display:none;">
+                <h3>Add New Book</h3>
+                <form onsubmit="addBook(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Title *</label>
+                            <input type="text" id="bookTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Author *</label>
+                            <input type="text" id="bookAuthor" required>
+                        </div>
+                        <div class="form-group">
+                            <label>ISBN</label>
+                            <input type="text" id="bookISBN">
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <input type="text" id="bookCategory" placeholder="e.g., Fiction, Science">
+                        </div>
+                        <div class="form-group">
+                            <label>Total Copies</label>
+                            <input type="number" id="bookCopies" value="1" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label>Available Copies</label>
+                            <input type="number" id="bookAvailable" value="1" min="0">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Save Book</button>
+                        <button type="button" class="btn btn-secondary" onclick="hideAddBookForm()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Books Table -->
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Category</th>
+                            <th>Available / Total</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="booksTableBody">
+                        <tr>
+                            <td colspan="6" class="loading">Loading books...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Users Tab -->
+        <div class="tab-content" id="users-tab">
+            <div class="section-header">
+                <h2>👥 Users Management</h2>
+                <button class="btn btn-primary" onclick="showAddUserForm()">+ Add New User</button>
+            </div>
+
+            <!-- Add User Form -->
+            <div class="form-container" id="addUserForm" style="display:none;">
+                <h3>Add New User</h3>
+                <form onsubmit="addUser(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Name *</label>
+                            <input type="text" id="userName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" id="userEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Role</label>
+                            <select id="userRole">
+                                <option value="member">Member</option>
+                                <option value="librarian">Librarian</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Save User</button>
+                        <button type="button" class="btn btn-secondary" onclick="hideAddUserForm()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Users Table -->
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Borrowed Books</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        <tr>
+                            <td colspan="6" class="loading">Loading users...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Borrow/Return Tab -->
+        <div class="tab-content" id="borrow-tab">
+            <div class="section-header">
+                <h2>🔄 Borrow & Return Books</h2>
+            </div>
+
+            <div class="borrow-return-grid">
+                <!-- Borrow Form -->
+                <div class="form-container">
+                    <h3>📤 Borrow Book</h3>
+                    <form onsubmit="borrowBook(event)">
+                        <div class="form-group">
+                            <label>User ID *</label>
+                            <input type="number" id="borrowUserID" required placeholder="e.g., 1001">
+                        </div>
+                        <div class="form-group">
+                            <label>Book ID *</label>
+                            <input type="number" id="borrowBookID" required placeholder="e.g., 101">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Borrow Book</button>
+                    </form>
+                </div>
+
+                <!-- Return Form -->
+                <div class="form-container">
+                    <h3>📥 Return Book</h3>
+                    <form onsubmit="returnBook(event)">
+                        <div class="form-group">
+                            <label>User ID *</label>
+                            <input type="number" id="returnUserID" required placeholder="e.g., 1001">
+                        </div>
+                        <div class="form-group">
+                            <label>Book ID *</label>
+                            <input type="number" id="returnBookID" required placeholder="e.g., 101">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">Return Book</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Transaction History -->
+            <div class="table-container" style="margin-top: 2rem;">
+                <h3>Recent Transactions</h3>
+                <div id="transactionHistory" class="transaction-list">
+                    <p class="no-data">No transactions yet</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Tab -->
+        <div class="tab-content" id="search-tab">
+            <div class="section-header">
+                <h2>🔍 Advanced Search</h2>
+            </div>
+
+            <div class="search-container">
+                <h3>Search Books</h3>
+                <form onsubmit="searchBooks(event)" class="search-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Search by Title</label>
+                            <input type="text" id="searchTitle" placeholder="Enter book title...">
+                        </div>
+                        <div class="form-group">
+                            <label>Search by Author</label>
+                            <input type="text" id="searchAuthor" placeholder="Enter author name...">
+                        </div>
+                        <div class="form-group">
+                            <label>Search by Category</label>
+                            <input type="text" id="searchCategory" placeholder="Enter category...">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="button" class="btn btn-secondary" onclick="clearSearch()">Clear</button>
+                </form>
+            </div>
+
+            <!-- Search Results -->
+            <div class="table-container" style="margin-top: 2rem;">
+                <h3>Search Results</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Category</th>
+                            <th>Available</th>
+                        </tr>
+                    </thead>
+                    <tbody id="searchResultsBody">
+                        <tr>
+                            <td colspan="5" class="no-data">Enter search criteria above</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Statistics Tab -->
+        <div class="tab-content" id="statistics-tab">
+            <div class="section-header">
+                <h2>📊 Library Statistics & Analytics</h2>
+                <button class="btn btn-primary" onclick="loadStatistics()">🔄 Refresh</button>
+            </div>
+
+            <!-- Dashboard Stats -->
+            <div class="stats-grid" id="dashboardStats">
+                <div class="stat-box">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-info">
+                        <h4>Total Books</h4>
+                        <p class="stat-number" id="statTotalBooks">-</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h4>Available</h4>
+                        <p class="stat-number" id="statAvailable">-</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">📤</div>
+                    <div class="stat-info">
+                        <h4>Borrowed</h4>
+                        <p class="stat-number" id="statBorrowed">-</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <h4>Total Users</h4>
+                        <p class="stat-number" id="statUsers">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Most Borrowed Books -->
+            <div class="analytics-section">
+                <h3>🔥 Most Borrowed Books</h3>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Book Title</th>
+                                <th>Author</th>
+                                <th>Times Circulated</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mostBorrowedBody">
+                            <tr><td colspan="4" class="loading">Loading...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Most Active Users -->
+            <div class="analytics-section">
+                <h3>⭐ Most Active Users</h3>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Books Borrowed</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mostActiveBody">
+                            <tr><td colspan="4" class="loading">Loading...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Category Distribution -->
+            <div class="analytics-section">
+                <h3>📑 Category Distribution</h3>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Total Books</th>
+                                <th>Available</th>
+                                <th>Borrowed</th>
+                                <th>Borrow Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody id="categoryDistBody">
+                            <tr><td colspan="5" class="loading">Loading...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast"></div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with B-Tree & Hash Table Data Structures | REST API Backend | DSA Final Project 2024</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
