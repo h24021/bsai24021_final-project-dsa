@@ -12,10 +12,10 @@ User::User(int id, string n, string e, string r) {
 }
 
 void User::printUser() const {
-    cout << "User ID: " << userID 
-         << ", Name: " << name 
+    cout << "User ID: " << userID
+         << ", Name: " << name
          << ", Email: " << email
-         << ", Role: " << role 
+         << ", Role: " << role
          << ", Borrowed Books: " << borrowedBooks << endl;
 }
 

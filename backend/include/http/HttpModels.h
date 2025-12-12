@@ -90,7 +90,7 @@ public:
 
 class JsonHelper {
 public:
-     
+
     static string createSuccessResponse(const string& data, const string& message = "");
     static string createErrorResponse(const string& message, const string& code = "ERROR");
     static string createObject(const map<string, string>& fields);

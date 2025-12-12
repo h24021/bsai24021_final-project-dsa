@@ -7,8 +7,8 @@
 StatisticsController::StatisticsController(Library* lib) : library(lib) {}
 
 HttpResponse StatisticsController::getDashboard(const HttpRequest& req) {
-    (void)req;  
-    
+    (void)req;
+
     try {
         vector<Book> allBooks = library->getAllBooks();
         vector<User> allUsers = library->getAllUsers();
@@ -16,7 +16,7 @@ HttpResponse StatisticsController::getDashboard(const HttpRequest& req) {
         int totalBooks = (int)allBooks.size();
         int availableBooks = 0;
         int borrowedBooks = 0;
-        
+
         for (const auto& book : allBooks) {
             if (book.getAvailableCopies() > 0) {
                 availableBooks++;
@@ -59,11 +59,11 @@ HttpResponse StatisticsController::getDashboard(const HttpRequest& req) {
         ss << "},";
         ss << "\"categoryDistribution\":" << categorySS.str();
         ss << "}";
-        
+
         return HttpResponse::ok(
             JsonHelper::createSuccessResponse(ss.str(), "Dashboard data retrieved successfully")
         );
-        
+
     } catch (const exception& e) {
         return HttpResponse::serverError(
             JsonHelper::createErrorResponse("Failed to retrieve dashboard: " + string(e.what()))
@@ -73,20 +73,20 @@ HttpResponse StatisticsController::getDashboard(const HttpRequest& req) {
 
 HttpResponse StatisticsController::getMostBorrowedBooks(const HttpRequest& req) {
     try {
-         
+
         string limitStr = req.getQueryParam("limit");
         int limit = limitStr.empty() ? 10 : stoi(limitStr);
         if (limit <= 0) limit = 10;
-        if (limit > 100) limit = 100;  
-        
+        if (limit > 100) limit = 100;
+
         vector<pair<int, int>> mostBorrowed = library->getMostBorrowedBooks(limit);
-        
+
         stringstream ss;
         ss << "[";
         for (size_t i = 0; i < mostBorrowed.size(); i++) {
             int bookID = mostBorrowed[i].first;
             int count = mostBorrowed[i].second;
-            
+
             Book* book = library->findBookByID(bookID);
             if (book) {
                 ss << "{";
@@ -96,19 +96,19 @@ HttpResponse StatisticsController::getMostBorrowedBooks(const HttpRequest& req) 
                 ss << "\"category\":\"" << JsonHelper::escapeJson(book->getCategory()) << "\",";
                 ss << "\"timesCirculated\":" << count;
                 ss << "}";
-                
+
                 if (i < mostBorrowed.size() - 1) ss << ",";
             }
         }
         ss << "]";
-        
+
         return HttpResponse::ok(
             JsonHelper::createSuccessResponse(
                 ss.str(),
                 "Retrieved top " + to_string(mostBorrowed.size()) + " most borrowed books"
             )
         );
-        
+
     } catch (const invalid_argument& e) {
         return HttpResponse::badRequest(
             JsonHelper::createErrorResponse("Invalid limit parameter")
@@ -122,20 +122,20 @@ HttpResponse StatisticsController::getMostBorrowedBooks(const HttpRequest& req) 
 
 HttpResponse StatisticsController::getMostActiveUsers(const HttpRequest& req) {
     try {
-         
+
         string limitStr = req.getQueryParam("limit");
         int limit = limitStr.empty() ? 10 : stoi(limitStr);
         if (limit <= 0) limit = 10;
-        if (limit > 100) limit = 100;  
-        
+        if (limit > 100) limit = 100;
+
         vector<pair<int, int>> mostActive = library->getMostActiveUsers(limit);
-        
+
         stringstream ss;
         ss << "[";
         for (size_t i = 0; i < mostActive.size(); i++) {
             int userID = mostActive[i].first;
             int count = mostActive[i].second;
-            
+
             User* user = library->findUserByID(userID);
             if (user) {
                 ss << "{";
@@ -146,19 +146,19 @@ HttpResponse StatisticsController::getMostActiveUsers(const HttpRequest& req) {
                 ss << "\"booksBorrowed\":" << count << ",";
                 ss << "\"currentlyBorrowed\":" << user->getBorrowedBookIDs().size();
                 ss << "}";
-                
+
                 if (i < mostActive.size() - 1) ss << ",";
             }
         }
         ss << "]";
-        
+
         return HttpResponse::ok(
             JsonHelper::createSuccessResponse(
                 ss.str(),
                 "Retrieved top " + to_string(mostActive.size()) + " most active users"
             )
         );
-        
+
     } catch (const invalid_argument& e) {
         return HttpResponse::badRequest(
             JsonHelper::createErrorResponse("Invalid limit parameter")
@@ -171,19 +171,19 @@ HttpResponse StatisticsController::getMostActiveUsers(const HttpRequest& req) {
 }
 
 HttpResponse StatisticsController::getCategoryDistribution(const HttpRequest& req) {
-    (void)req;  
-    
+    (void)req;
+
     try {
         vector<Book> allBooks = library->getAllBooks();
 
         map<string, int> categoryCount;
         map<string, int> availableCount;
         map<string, int> borrowedCount;
-        
+
         for (const auto& book : allBooks) {
             string category = book.getCategory();
             categoryCount[category]++;
-            
+
             if (book.getAvailableCopies() > 0) {
                 availableCount[category]++;
             } else {
@@ -199,7 +199,7 @@ HttpResponse StatisticsController::getCategoryDistribution(const HttpRequest& re
             int total = entry.second;
             int available = availableCount[category];
             int borrowed = borrowedCount[category];
-            
+
             ss << "{";
             ss << "\"category\":\"" << JsonHelper::escapeJson(category) << "\",";
             ss << "\"totalBooks\":" << total << ",";
@@ -207,19 +207,19 @@ HttpResponse StatisticsController::getCategoryDistribution(const HttpRequest& re
             ss << "\"borrowedBooks\":" << borrowed << ",";
             ss << "\"borrowRate\":" << (total > 0 ? (borrowed * 100.0 / total) : 0);
             ss << "}";
-            
+
             if (idx < categoryCount.size() - 1) ss << ",";
             idx++;
         }
         ss << "]";
-        
+
         return HttpResponse::ok(
             JsonHelper::createSuccessResponse(
                 ss.str(),
                 "Retrieved category distribution for " + to_string(categoryCount.size()) + " categories"
             )
         );
-        
+
     } catch (const exception& e) {
         return HttpResponse::serverError(
             JsonHelper::createErrorResponse("Failed to retrieve category distribution: " + string(e.what()))

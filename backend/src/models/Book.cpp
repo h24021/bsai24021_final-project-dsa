@@ -14,7 +14,7 @@ Book::Book(int id, string t, string a, string i, string c, int cp, int av) {
 
 void Book::printBook() const {
     cout << "Book ID: " << bookID << ", Title: " << title
-         << ", Author: " << author << ", ISBN: " << isbn 
+         << ", Author: " << author << ", ISBN: " << isbn
          << ", Available: " << availableCopies << "/" << copies << endl;
 }
 

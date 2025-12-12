@@ -13,7 +13,7 @@ string BookController::bookToJson(const Book& book) {
     fields["category"] = book.getCategory();
     fields["copies"] = to_string(book.getCopies());
     fields["availableCopies"] = to_string(book.getAvailableCopies());
-    
+
     return JsonHelper::createObject(fields);
 }
 
@@ -28,15 +28,15 @@ string BookController::booksToJson(const vector<Book>& books) {
 HttpResponse BookController::getAllBooks(const HttpRequest& request) {
     try {
         auto books = library->getAllBooks();
-        
+
         map<string, string> response;
         response["status"] = "success";
         response["data"] = booksToJson(books);
         response["count"] = to_string(books.size());
-        
+
         string json = JsonHelper::createObject(response);
         return HttpResponse::ok(json);
-        
+
     } catch (const exception& e) {
         return HttpResponse::serverError(e.what());
     }
@@ -48,17 +48,17 @@ HttpResponse BookController::getBookById(const HttpRequest& request) {
         if (idStr.empty()) {
             return HttpResponse::badRequest("Book ID is required");
         }
-        
+
         int id = stoi(idStr);
         Book* book = library->findBookByID(id);
-        
+
         if (book == nullptr) {
             return HttpResponse::notFound("Book not found with ID: " + idStr);
         }
-        
+
         string json = JsonHelper::createSuccessResponse(bookToJson(*book));
         return HttpResponse::ok(json);
-        
+
     } catch (const invalid_argument& e) {
         return HttpResponse::badRequest("Invalid book ID format");
     } catch (const exception& e) {
@@ -74,12 +74,12 @@ HttpResponse BookController::searchBooks(const HttpRequest& request) {
             string title = request.getQueryParam("title");
             results = library->searchBookByTitle(title);
         }
-         
+
         else if (request.hasQueryParam("author")) {
             string author = request.getQueryParam("author");
             results = library->searchBookByAuthor(author);
         }
-         
+
         else if (request.hasQueryParam("category")) {
             string category = request.getQueryParam("category");
             results = library->searchBookByCategory(category);
@@ -87,15 +87,15 @@ HttpResponse BookController::searchBooks(const HttpRequest& request) {
         else {
             return HttpResponse::badRequest("Please provide title, author, or category parameter");
         }
-        
+
         map<string, string> response;
         response["status"] = "success";
         response["data"] = booksToJson(results);
         response["count"] = to_string(results.size());
-        
+
         string json = JsonHelper::createObject(response);
         return HttpResponse::ok(json);
-        
+
     } catch (const exception& e) {
         return HttpResponse::serverError(e.what());
     }
@@ -103,29 +103,29 @@ HttpResponse BookController::searchBooks(const HttpRequest& request) {
 
 HttpResponse BookController::createBook(const HttpRequest& request) {
     try {
-         
+
         auto fields = JsonHelper::parseSimpleJson(request.getBody());
-        
-        if (fields.find("title") == fields.end() || 
+
+        if (fields.find("title") == fields.end() ||
             fields.find("author") == fields.end()) {
             return HttpResponse::badRequest("Title and author are required");
         }
 
         static int nextId = 1000;
         int id = nextId++;
-        
+
         string title = fields["title"];
         string author = fields["author"];
         string isbn = (fields.find("isbn") != fields.end()) ? fields["isbn"] : "";
         string category = (fields.find("category") != fields.end()) ? fields["category"] : "General";
         int copies = (fields.find("copies") != fields.end()) ? stoi(fields["copies"]) : 1;
-        
+
         Book book(id, title, author, isbn, category, copies, copies);
         library->addBook(book);
-        
+
         string json = JsonHelper::createSuccessResponse(bookToJson(book), "Book added successfully");
         return HttpResponse::created(json);
-        
+
     } catch (const exception& e) {
         return HttpResponse::serverError(e.what());
     }
@@ -137,10 +137,10 @@ HttpResponse BookController::updateBook(const HttpRequest& request) {
         if (idStr.empty()) {
             return HttpResponse::badRequest("Book ID is required");
         }
-        
+
         int id = stoi(idStr);
         Book* existingBook = library->findBookByID(id);
-        
+
         if (existingBook == nullptr) {
             return HttpResponse::notFound("Book not found with ID: " + idStr);
         }
@@ -148,11 +148,11 @@ HttpResponse BookController::updateBook(const HttpRequest& request) {
         auto fields = JsonHelper::parseSimpleJson(request.getBody());
 
         string json = JsonHelper::createSuccessResponse(
-            bookToJson(*existingBook), 
+            bookToJson(*existingBook),
             "Book updated successfully"
         );
         return HttpResponse::ok(json);
-        
+
     } catch (const exception& e) {
         return HttpResponse::serverError(e.what());
     }
@@ -164,10 +164,10 @@ HttpResponse BookController::deleteBook(const HttpRequest& request) {
         if (idStr.empty()) {
             return HttpResponse::badRequest("Book ID is required");
         }
-        
+
         int id = stoi(idStr);
         Book* book = library->findBookByID(id);
-        
+
         if (book == nullptr) {
             return HttpResponse::notFound("Book not found with ID: " + idStr);
         }
@@ -175,10 +175,10 @@ HttpResponse BookController::deleteBook(const HttpRequest& request) {
         map<string, string> response;
         response["status"] = "success";
         response["message"] = "Book deleted successfully";
-        
+
         string json = JsonHelper::createObject(response);
         return HttpResponse::ok(json);
-        
+
     } catch (const exception& e) {
         return HttpResponse::serverError(e.what());
     }
@@ -190,10 +190,10 @@ HttpResponse BookController::getBorrowHistory(const HttpRequest& request) {
         if (idStr.empty()) {
             return HttpResponse::badRequest("Book ID is required");
         }
-        
+
         int id = stoi(idStr);
         Book* book = library->findBookByID(id);
-        
+
         if (book == nullptr) {
             return HttpResponse::notFound("Book not found with ID: " + idStr);
         }
@@ -202,10 +202,10 @@ HttpResponse BookController::getBorrowHistory(const HttpRequest& request) {
         response["status"] = "success";
         response["data"] = "[]";
         response["count"] = "0";
-        
+
         string json = JsonHelper::createObject(response);
         return HttpResponse::ok(json);
-        
+
     } catch (const exception& e) {
         return HttpResponse::serverError(e.what());
     }

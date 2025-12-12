@@ -111,11 +111,11 @@ HttpResponse HttpResponse::serverError(const string& message) {
 string HttpResponse::toString() const {
     stringstream ss;
     ss << "HTTP/1.1 " << getStatusCodeValue() << "\r\n";
-    
+
     for (const auto& header : headers) {
         ss << header.first << ": " << header.second << "\r\n";
     }
-    
+
     ss << "\r\n" << body;
     return ss.str();
 }
@@ -124,15 +124,15 @@ string JsonHelper::createSuccessResponse(const string& data, const string& messa
     stringstream ss;
     ss << "{";
     ss << "\"status\":\"success\"";
-    
+
     if (!message.empty()) {
         ss << ",\"message\":\"" << escapeJson(message) << "\"";
     }
-    
+
     if (!data.empty()) {
         ss << ",\"data\":" << data;
     }
-    
+
     ss << "}";
     return ss.str();
 }
@@ -150,23 +150,23 @@ string JsonHelper::createErrorResponse(const string& message, const string& code
 string JsonHelper::createObject(const map<string, string>& fields) {
     stringstream ss;
     ss << "{";
-    
+
     bool first = true;
     for (const auto& field : fields) {
         if (!first) ss << ",";
         ss << "\"" << escapeJson(field.first) << "\":";
 
-        if (!field.second.empty() && 
-            (isdigit(field.second[0]) || field.second == "true" || field.second == "false" || 
+        if (!field.second.empty() &&
+            (isdigit(field.second[0]) || field.second == "true" || field.second == "false" ||
              field.second[0] == '[' || field.second[0] == '{')) {
             ss << field.second;
         } else {
             ss << "\"" << escapeJson(field.second) << "\"";
         }
-        
+
         first = false;
     }
-    
+
     ss << "}";
     return ss.str();
 }
@@ -174,12 +174,12 @@ string JsonHelper::createObject(const map<string, string>& fields) {
 string JsonHelper::createArray(const vector<string>& items) {
     stringstream ss;
     ss << "[";
-    
+
     for (size_t i = 0; i < items.size(); i++) {
         if (i > 0) ss << ",";
         ss << items[i];
     }
-    
+
     ss << "]";
     return ss.str();
 }
@@ -206,13 +206,13 @@ map<string, string> JsonHelper::parseSimpleJson(const string& json) {
 
     size_t pos = 0;
     while (pos < json.length()) {
-         
+
         size_t keyStart = json.find('"', pos);
         if (keyStart == string::npos) break;
-        
+
         size_t keyEnd = json.find('"', keyStart + 1);
         if (keyEnd == string::npos) break;
-        
+
         string key = json.substr(keyStart + 1, keyEnd - keyStart - 1);
 
         size_t colon = json.find(':', keyEnd);
@@ -220,27 +220,27 @@ map<string, string> JsonHelper::parseSimpleJson(const string& json) {
 
         size_t valueStart = json.find_first_not_of(" \t\n\r", colon + 1);
         if (valueStart == string::npos) break;
-        
+
         string value;
         if (json[valueStart] == '"') {
-             
+
             size_t valueEnd = json.find('"', valueStart + 1);
             if (valueEnd == string::npos) break;
             value = json.substr(valueStart + 1, valueEnd - valueStart - 1);
             pos = valueEnd + 1;
         } else {
-             
+
             size_t valueEnd = json.find_first_of(",}", valueStart);
             if (valueEnd == string::npos) valueEnd = json.length();
             value = json.substr(valueStart, valueEnd - valueStart);
-             
+
             size_t end = value.find_last_not_of(" \t\n\r");
             if (end != string::npos) value = value.substr(0, end + 1);
             pos = valueEnd;
         }
-        
+
         result[key] = value;
     }
-    
+
     return result;
 }

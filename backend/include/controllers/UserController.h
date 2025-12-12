@@ -16,11 +16,11 @@ private:
 public:
     UserController(Library* lib);
 
-    HttpResponse getAllUsers(const HttpRequest& req);            
-    HttpResponse getUserById(const HttpRequest& req);            
-    HttpResponse getUserByEmail(const HttpRequest& req);         
-    HttpResponse createUser(const HttpRequest& req);             
-    HttpResponse updateUser(const HttpRequest& req);             
-    HttpResponse deleteUser(const HttpRequest& req);             
-    HttpResponse getBorrowedBooks(const HttpRequest& req);       
+    HttpResponse getAllUsers(const HttpRequest& req);
+    HttpResponse getUserById(const HttpRequest& req);
+    HttpResponse getUserByEmail(const HttpRequest& req);
+    HttpResponse createUser(const HttpRequest& req);
+    HttpResponse updateUser(const HttpRequest& req);
+    HttpResponse deleteUser(const HttpRequest& req);
+    HttpResponse getBorrowedBooks(const HttpRequest& req);
 };

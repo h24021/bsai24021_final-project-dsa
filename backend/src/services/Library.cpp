@@ -4,7 +4,7 @@
 using namespace std;
 
 Library::Library() {
-     
+
     booksByTitle = new BTree<Book>(3, Book::compareByTitle);
 }
 
@@ -18,17 +18,17 @@ void Library::addBook(const Book& b) {
 }
 
 void Library::printAllBooks() {
-    cout << "\n========== ALL BOOKS ==========\n";
+    cout << "\n ALL BOOKS \n";
     booksByTitle->traverse([](const Book& b) {
         b.printBook();
     });
-    cout << "================================\n\n";
+    cout << "\n\n";
 }
 
 vector<Book> Library::searchBookByTitle(const string& title) {
     string searchLower = title;
     transform(searchLower.begin(), searchLower.end(), searchLower.begin(), ::tolower);
-    
+
     return booksByTitle->searchByPredicate([searchLower](const Book& b) {
         string bookTitle = b.getTitle();
         transform(bookTitle.begin(), bookTitle.end(), bookTitle.begin(), ::tolower);
@@ -39,7 +39,7 @@ vector<Book> Library::searchBookByTitle(const string& title) {
 vector<Book> Library::searchBookByAuthor(const string& author) {
     string searchLower = author;
     transform(searchLower.begin(), searchLower.end(), searchLower.begin(), ::tolower);
-    
+
     return booksByTitle->searchByPredicate([searchLower](const Book& b) {
         string bookAuthor = b.getAuthor();
         transform(bookAuthor.begin(), bookAuthor.end(), bookAuthor.begin(), ::tolower);
@@ -50,7 +50,7 @@ vector<Book> Library::searchBookByAuthor(const string& author) {
 vector<Book> Library::searchBookByCategory(const string& category) {
     string searchLower = category;
     transform(searchLower.begin(), searchLower.end(), searchLower.begin(), ::tolower);
-    
+
     return booksByTitle->searchByPredicate([searchLower](const Book& b) {
         string bookCategory = b.getCategory();
         transform(bookCategory.begin(), bookCategory.end(), bookCategory.begin(), ::tolower);
@@ -62,9 +62,9 @@ Book* Library::findBookByID(int bookID) {
     auto books = booksByTitle->searchByPredicate([bookID](const Book& b) {
         return b.getBookID() == bookID;
     });
-    
+
     if (!books.empty()) {
-         
+
         static Book foundBook;
         foundBook = books[0];
         return &foundBook;
@@ -99,22 +99,22 @@ User* Library::findUserByEmail(const string& email) {
 }
 
 void Library::printAllUsers() {
-    cout << "\n========== ALL USERS ==========\n";
+    cout << "\nALL USERS\n";
     auto users = usersByID.getAllValues();
     for (const auto& u : users) {
         u.printUser();
     }
-    cout << "================================\n\n";
+    cout << "\n\n";
 }
 
 bool Library::borrowBook(int userID, int bookID) {
-     
+
     auto userOpt = usersByID.find(userID);
     if (!userOpt.has_value()) {
         cout << "Error: User ID " << userID << " not found.\n";
         return false;
     }
-    
+
     User user = userOpt.value();
 
     if (user.hasBorrowedBook(bookID)) {
@@ -125,12 +125,12 @@ bool Library::borrowBook(int userID, int bookID) {
     auto books = booksByTitle->searchByPredicate([bookID](const Book& b) {
         return b.getBookID() == bookID;
     });
-    
+
     if (books.empty()) {
         cout << "Error: Book ID " << bookID << " not found.\n";
         return false;
     }
-    
+
     Book book = books[0];
 
     if (book.getAvailableCopies() <= 0) {
@@ -145,19 +145,19 @@ bool Library::borrowBook(int userID, int bookID) {
     auto countOpt = borrowCounts.find(bookID);
     int count = countOpt.has_value() ? countOpt.value() : 0;
     borrowCounts.insert(bookID, count + 1);
-    
+
     cout << "Success: \"" << book.getTitle() << "\" borrowed by " << user.getName() << endl;
     return true;
 }
 
 bool Library::returnBook(int userID, int bookID) {
-     
+
     auto userOpt = usersByID.find(userID);
     if (!userOpt.has_value()) {
         cout << "Error: User ID " << userID << " not found.\n";
         return false;
     }
-    
+
     User user = userOpt.value();
 
     if (!user.hasBorrowedBook(bookID)) {
@@ -168,18 +168,18 @@ bool Library::returnBook(int userID, int bookID) {
     auto books = booksByTitle->searchByPredicate([bookID](const Book& b) {
         return b.getBookID() == bookID;
     });
-    
+
     if (books.empty()) {
         cout << "Error: Book ID " << bookID << " not found.\n";
         return false;
     }
-    
+
     Book book = books[0];
 
     user.returnBook(bookID);
     usersByID.insert(userID, user);
     usersByEmail.insert(user.getEmail(), user);
-    
+
     cout << "Success: \"" << book.getTitle() << "\" returned by " << user.getName() << endl;
     return true;
 }
@@ -187,7 +187,7 @@ bool Library::returnBook(int userID, int bookID) {
 vector<pair<int, int>> Library::getMostBorrowedBooks(int topN) {
     vector<pair<int, int>> bookCounts;
     auto bookIDs = borrowCounts.getAllKeys();
-    
+
     for (int id : bookIDs) {
         auto count = borrowCounts.find(id);
         if (count.has_value()) {
@@ -195,7 +195,7 @@ vector<pair<int, int>> Library::getMostBorrowedBooks(int topN) {
         }
     }
 
-    sort(bookCounts.begin(), bookCounts.end(), 
+    sort(bookCounts.begin(), bookCounts.end(),
          [](const pair<int,int>& a, const pair<int,int>& b) {
              return a.second > b.second;
          });
@@ -203,14 +203,14 @@ vector<pair<int, int>> Library::getMostBorrowedBooks(int topN) {
     if ((int)bookCounts.size() > topN) {
         bookCounts.resize(topN);
     }
-    
+
     return bookCounts;
 }
 
 vector<pair<int, int>> Library::getMostActiveUsers(int topN) {
     vector<pair<int, int>> userActivity;
     auto users = usersByID.getAllValues();
-    
+
     for (const auto& user : users) {
         userActivity.push_back({user.getUserID(), user.getBorrowedBooksCount()});
     }
@@ -223,16 +223,16 @@ vector<pair<int, int>> Library::getMostActiveUsers(int topN) {
     if ((int)userActivity.size() > topN) {
         userActivity.resize(topN);
     }
-    
+
     return userActivity;
 }
 
 void Library::printStatistics() {
-    cout << "\n========== LIBRARY STATISTICS ==========\n";
+    cout << "\nLIBRARY STATISTICS\n";
     cout << "Total Books: " << getTotalBooks() << endl;
     cout << "Total Users: " << getTotalUsers() << endl;
-    
-    cout << "\n--- Most Borrowed Books ---\n";
+
+    cout << "\n Most Borrowed Books\n\n";
     auto topBooks = getMostBorrowedBooks(5);
     for (size_t i = 0; i < topBooks.size(); i++) {
         int bookID = topBooks[i].first;
@@ -244,8 +244,8 @@ void Library::printStatistics() {
             cout << "  " << books[0].getTitle() << " - " << count << " times\n";
         }
     }
-    
-    cout << "\n--- Most Active Users ---\n";
+
+    cout << "\nMost Active Users\n";
     auto topUsers = getMostActiveUsers(5);
     for (size_t i = 0; i < topUsers.size(); i++) {
         int userID = topUsers[i].first;
@@ -255,8 +255,8 @@ void Library::printStatistics() {
             cout << "  " << user.value().getName() << " - " << count << " books borrowed\n";
         }
     }
-    
-    cout << "=========================================\n\n";
+
+    cout << "\n\n";
 }
 
 int Library::getTotalBooks() const {

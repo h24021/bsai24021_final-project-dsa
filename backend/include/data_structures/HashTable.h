@@ -13,23 +13,23 @@ private:
         V value;
         Entry(K k, V v) : key(k), value(v) {}
     };
-    
+
     vector<list<Entry>> table;
     int capacity;
     int size;
     hash<K> hashFunction;
-    
+
     int getHash(const K& key) const {
         return hashFunction(key) % capacity;
     }
-    
+
     void rehash() {
         vector<list<Entry>> oldTable = table;
         capacity *= 2;
         table.clear();
         table.resize(capacity);
         size = 0;
-        
+
         for (auto& bucket : oldTable) {
             for (auto& entry : bucket) {
                 insert(entry.key, entry.value);
@@ -43,7 +43,7 @@ public:
         size = 0;
         table.resize(capacity);
     }
-    
+
     void insert(const K& key, const V& value) {
         int index = getHash(key);
 
@@ -61,7 +61,7 @@ public:
             rehash();
         }
     }
-    
+
     optional<V> find(const K& key) const {
         int index = getHash(key);
         for (const auto& entry : table[index]) {
@@ -71,11 +71,11 @@ public:
         }
         return nullopt;
     }
-    
+
     bool remove(const K& key) {
         int index = getHash(key);
         auto& bucket = table[index];
-        
+
         for (auto it = bucket.begin(); it != bucket.end(); ++it) {
             if (it->key == key) {
                 bucket.erase(it);
@@ -85,19 +85,19 @@ public:
         }
         return false;
     }
-    
+
     bool contains(const K& key) const {
         return find(key).has_value();
     }
-    
+
     int getSize() const {
         return size;
     }
-    
+
     bool isEmpty() const {
         return size == 0;
     }
-    
+
     void clear() {
         table.clear();
         table.resize(capacity);

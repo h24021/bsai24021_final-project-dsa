@@ -11,14 +11,14 @@ using namespace std;
 
 class Library {
 private:
-     
+
     BTree<Book>* booksByTitle;
 
-    HashTable<int, User> usersByID;       
-    HashTable<string, User> usersByEmail;  
+    HashTable<int, User> usersByID;
+    HashTable<string, User> usersByEmail;
 
-    HashTable<int, int> borrowCounts;      
-    
+    HashTable<int, int> borrowCounts;
+
 public:
     Library();
     ~Library();

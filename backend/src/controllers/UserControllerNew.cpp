@@ -20,17 +20,17 @@ string UserController::userToJson(const User& user) {
         if (i < borrowedBooks.size() - 1) ss << ",";
     }
     ss << "]";
-    
+
     ss << "}";
     return ss.str();
 }
 
 HttpResponse UserController::getAllUsers(const HttpRequest& req) {
-    (void)req;  
-    
+    (void)req;
+
     try {
         vector<User> users = library->getAllUsers();
-        
+
         stringstream ss;
         ss << "[";
         for (size_t i = 0; i < users.size(); i++) {
@@ -38,7 +38,7 @@ HttpResponse UserController::getAllUsers(const HttpRequest& req) {
             if (i < users.size() - 1) ss << ",";
         }
         ss << "]";
-        
+
         return HttpResponse::ok(
             JsonHelper::createSuccessResponse(ss.str(), "Retrieved " + to_string(users.size()) + " users")
         );
@@ -57,16 +57,16 @@ HttpResponse UserController::getUserById(const HttpRequest& req) {
                 JsonHelper::createErrorResponse("User ID is required")
             );
         }
-        
+
         int userId = stoi(idStr);
         User* user = library->findUserByID(userId);
-        
+
         if (!user) {
             return HttpResponse::notFound(
                 JsonHelper::createErrorResponse("User not found with ID: " + to_string(userId))
             );
         }
-        
+
         return HttpResponse::ok(
             JsonHelper::createSuccessResponse(userToJson(*user))
         );
@@ -89,15 +89,15 @@ HttpResponse UserController::getUserByEmail(const HttpRequest& req) {
                 JsonHelper::createErrorResponse("Email is required")
             );
         }
-        
+
         User* user = library->findUserByEmail(email);
-        
+
         if (!user) {
             return HttpResponse::notFound(
                 JsonHelper::createErrorResponse("User not found with email: " + email)
             );
         }
-        
+
         return HttpResponse::ok(
             JsonHelper::createSuccessResponse(userToJson(*user))
         );
@@ -110,13 +110,13 @@ HttpResponse UserController::getUserByEmail(const HttpRequest& req) {
 
 HttpResponse UserController::createUser(const HttpRequest& req) {
     try {
-         
+
         map<string, string> body = JsonHelper::parseSimpleJson(req.getBody());
-        
+
         string name = body["name"];
         string email = body["email"];
         string role = body.count("role") ? body["role"] : "member";
-        
+
         if (name.empty() || email.empty()) {
             return HttpResponse::badRequest(
                 JsonHelper::createErrorResponse("Name and email are required")
@@ -135,7 +135,7 @@ HttpResponse UserController::createUser(const HttpRequest& req) {
 
         User newUser(newUserID, name, email, role);
         library->addUser(newUser);
-        
+
         return HttpResponse::created(
             JsonHelper::createSuccessResponse(
                 userToJson(newUser),
@@ -157,10 +157,10 @@ HttpResponse UserController::updateUser(const HttpRequest& req) {
                 JsonHelper::createErrorResponse("User ID is required")
             );
         }
-        
+
         int userId = stoi(idStr);
         User* user = library->findUserByID(userId);
-        
+
         if (!user) {
             return HttpResponse::notFound(
                 JsonHelper::createErrorResponse("User not found with ID: " + to_string(userId))
@@ -192,10 +192,10 @@ HttpResponse UserController::deleteUser(const HttpRequest& req) {
                 JsonHelper::createErrorResponse("User ID is required")
             );
         }
-        
+
         int userId = stoi(idStr);
         User* user = library->findUserByID(userId);
-        
+
         if (!user) {
             return HttpResponse::notFound(
                 JsonHelper::createErrorResponse("User not found with ID: " + to_string(userId))
@@ -235,16 +235,16 @@ HttpResponse UserController::getBorrowedBooks(const HttpRequest& req) {
                 JsonHelper::createErrorResponse("User ID is required")
             );
         }
-        
+
         int userId = stoi(idStr);
         User* user = library->findUserByID(userId);
-        
+
         if (!user) {
             return HttpResponse::notFound(
                 JsonHelper::createErrorResponse("User not found with ID: " + to_string(userId))
             );
         }
-        
+
         const vector<int> borrowedBookIDs = user->getBorrowedBookIDs();
 
         stringstream ss;
@@ -254,19 +254,19 @@ HttpResponse UserController::getBorrowedBooks(const HttpRequest& req) {
             Book* book = library->findBookByID(bookId);
             if (book) {
                 if (count > 0) ss << ",";
-                
+
                 ss << "{";
                 ss << "\"bookID\":" << book->getBookID() << ",";
                 ss << "\"title\":\"" << JsonHelper::escapeJson(book->getTitle()) << "\",";
                 ss << "\"author\":\"" << JsonHelper::escapeJson(book->getAuthor()) << "\",";
                 ss << "\"category\":\"" << JsonHelper::escapeJson(book->getCategory()) << "\"";
                 ss << "}";
-                
+
                 count++;
             }
         }
         ss << "]";
-        
+
         return HttpResponse::ok(
             JsonHelper::createSuccessResponse(
                 ss.str(),

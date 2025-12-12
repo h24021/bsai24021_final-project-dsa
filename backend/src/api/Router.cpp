@@ -3,16 +3,16 @@
 #include <sstream>
 #include <algorithm>
 
-Route::Route(HttpMethod m, const string& p, RouteHandler h) 
+Route::Route(HttpMethod m, const string& p, RouteHandler h)
     : method(m), path(p), handler(h) {
-     
+
     string pattern = p;
     size_t pos = 0;
-    
+
     while ((pos = pattern.find(':', pos)) != string::npos) {
         size_t end = pattern.find('/', pos);
         if (end == string::npos) end = pattern.length();
-        
+
         string paramName = pattern.substr(pos + 1, end - pos - 1);
         paramNames.push_back(paramName);
 
@@ -42,18 +42,18 @@ Router::Router(const string& base) : basePath(base) {}
 regex Router::createPathPattern(const string& path, vector<string>& paramNames) {
     string pattern = path;
     size_t pos = 0;
-    
+
     while ((pos = pattern.find(':', pos)) != string::npos) {
         size_t end = pattern.find('/', pos);
         if (end == string::npos) end = pattern.length();
-        
+
         string paramName = pattern.substr(pos + 1, end - pos - 1);
         paramNames.push_back(paramName);
-        
+
         pattern.replace(pos, end - pos, "([^/]+)");
         pos = end;
     }
-    
+
     return regex("^" + pattern + "$");
 }
 
@@ -67,7 +67,7 @@ string Router::normalizePath(const string& path) const {
     if (normalized.empty() || normalized[0] != '/') {
         normalized = "/" + normalized;
     }
-    
+
     return normalized;
 }
 
@@ -101,7 +101,7 @@ HttpResponse Router::routeRequest(HttpMethod method, const string& path, const H
 
     for (auto& route : routes) {
         if (route.matches(method, normalizedPath)) {
-             
+
             HttpRequest modifiedRequest = request;
             route.extractParams(normalizedPath, modifiedRequest);
 
@@ -119,9 +119,9 @@ HttpResponse Router::routeRequest(HttpMethod method, const string& path, const H
 void Router::printRoutes() const {
     cout << "\n========== Registered API Routes ==========\n";
     cout << "Base Path: " << basePath << "\n\n";
-    
+
     map<string, vector<string>> methodGroups;
-    
+
     for (const auto& route : routes) {
         string methodStr;
         switch (route.method) {
@@ -131,10 +131,10 @@ void Router::printRoutes() const {
             case HttpMethod::DELETE: methodStr = "DELETE"; break;
             default: methodStr = "UNKNOWN"; break;
         }
-        
+
         methodGroups[methodStr].push_back(route.path);
     }
-    
+
     for (const auto& group : methodGroups) {
         cout << group.first << ":\n";
         for (const auto& path : group.second) {
@@ -142,7 +142,7 @@ void Router::printRoutes() const {
         }
         cout << "\n";
     }
-    
+
     cout << "Total Routes: " << routes.size() << "\n";
     cout << "==========================================\n\n";
 }

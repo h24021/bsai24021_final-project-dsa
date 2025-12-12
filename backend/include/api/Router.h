@@ -16,7 +16,7 @@ struct Route {
     regex pathPattern;
     vector<string> paramNames;
     RouteHandler handler;
-    
+
     Route(HttpMethod m, const string& p, RouteHandler h);
     bool matches(HttpMethod m, const string& requestPath) const;
     void extractParams(const string& requestPath, HttpRequest& request) const;
@@ -36,7 +36,7 @@ public:
     void get(const string& path, RouteHandler handler);
     void post(const string& path, RouteHandler handler);
     void put(const string& path, RouteHandler handler);
-    void del(const string& path, RouteHandler handler);   
+    void del(const string& path, RouteHandler handler);
     void registerRoute(HttpMethod method, const string& path, RouteHandler handler);
 
     HttpResponse handleRequest(const HttpRequest& request);

@@ -11,11 +11,11 @@ template <typename T> class BTree;
 template <typename T>
 class BTreeNode {
 public:
-    vector<T> keys;               
-    vector<BTreeNode*> children;  
-    int t;                        
-    bool isLeaf;                  
-    
+    vector<T> keys;
+    vector<BTreeNode*> children;
+    int t;
+    bool isLeaf;
+
     BTreeNode(int degree, bool leaf);
     ~BTreeNode();
 
@@ -28,7 +28,7 @@ public:
     void traverse(function<void(const T&)> visit);
 
     void searchByPredicate(function<bool(const T&)> predicate, vector<T>& results);
-    
+
     friend class BTree<T>;
 };
 
@@ -36,11 +36,11 @@ template <typename T>
 class BTree {
 private:
     BTreeNode<T>* root;
-    int t;  
+    int t;
     function<int(const T&, const T&)> compareFunc;
-    
+
 public:
-     
+
     BTree(int degree, function<int(const T&, const T&)> compare);
     ~BTree();
 
@@ -80,22 +80,22 @@ BTreeNode<T>* BTreeNode<T>::search(const T& key, function<int(const T&, const T&
     while (i < keys.size() && compare(key, keys[i]) > 0) {
         i++;
     }
-    
+
     if (i < keys.size() && compare(keys[i], key) == 0) {
         return this;
     }
-    
+
     if (isLeaf) {
         return nullptr;
     }
-    
+
     return children[i]->search(key, compare);
 }
 
 template <typename T>
 void BTreeNode<T>::insertNonFull(const T& key, function<int(const T&, const T&)> compare) {
     int i = keys.size() - 1;
-    
+
     if (isLeaf) {
         keys.push_back(key);
         while (i >= 0 && compare(keys[i], key) > 0) {
@@ -108,7 +108,7 @@ void BTreeNode<T>::insertNonFull(const T& key, function<int(const T&, const T&)>
             i--;
         }
         i++;
-        
+
         if (children[i]->keys.size() == 2 * t - 1) {
             splitChild(i, children[i]);
             if (compare(keys[i], key) < 0) {
@@ -151,7 +151,7 @@ void BTreeNode<T>::traverse(function<void(const T&)> visit) {
         }
         visit(keys[i]);
     }
-    
+
     if (!isLeaf) {
         children[i]->traverse(visit);
     }
@@ -168,7 +168,7 @@ void BTreeNode<T>::searchByPredicate(function<bool(const T&)> predicate, vector<
             results.push_back(keys[i]);
         }
     }
-    
+
     if (!isLeaf) {
         children[i]->searchByPredicate(predicate, results);
     }
@@ -198,13 +198,13 @@ void BTree<T>::insert(const T& key) {
             BTreeNode<T>* newRoot = new BTreeNode<T>(t, false);
             newRoot->children.push_back(root);
             newRoot->splitChild(0, root);
-            
+
             int i = 0;
             if (compareFunc(newRoot->keys[0], key) < 0) {
                 i++;
             }
             newRoot->children[i]->insertNonFull(key, compareFunc);
-            
+
             root = newRoot;
         } else {
             root->insertNonFull(key, compareFunc);
@@ -217,12 +217,12 @@ T* BTree<T>::search(const T& key) {
     if (root == nullptr) {
         return nullptr;
     }
-    
+
     BTreeNode<T>* node = root->search(key, compareFunc);
     if (node == nullptr) {
         return nullptr;
     }
-    
+
     for (auto& k : node->keys) {
         if (compareFunc(k, key) == 0) {
             return &k;

@@ -12,8 +12,8 @@ private:
 public:
     StatisticsController(Library* lib);
 
-    HttpResponse getDashboard(const HttpRequest& req);            
-    HttpResponse getMostBorrowedBooks(const HttpRequest& req);    
-    HttpResponse getMostActiveUsers(const HttpRequest& req);      
-    HttpResponse getCategoryDistribution(const HttpRequest& req);  
+    HttpResponse getDashboard(const HttpRequest& req);
+    HttpResponse getMostBorrowedBooks(const HttpRequest& req);
+    HttpResponse getMostActiveUsers(const HttpRequest& req);
+    HttpResponse getCategoryDistribution(const HttpRequest& req);
 };

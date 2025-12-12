@@ -14,7 +14,7 @@ private:
 public:
     BorrowController(Library* lib);
 
-    HttpResponse borrowBook(const HttpRequest& req);       
-    HttpResponse returnBook(const HttpRequest& req);       
-    HttpResponse getBorrowHistory(const HttpRequest& req);  
+    HttpResponse borrowBook(const HttpRequest& req);
+    HttpResponse returnBook(const HttpRequest& req);
+    HttpResponse getBorrowHistory(const HttpRequest& req);
 };
