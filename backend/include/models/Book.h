@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <algorithm>
+#include <vector>
 using namespace std;
 
 class Book {
@@ -12,10 +13,13 @@ private:
     string category;
     int copies;
     int availableCopies;
+    string coverImage;
+    string type;
+    vector<string> downloadLinks;
 
 public:
     Book();
-    Book(int id, string t, string a, string i, string c, int cp, int av);
+    Book(int id, string t, string a, string i, string c, int cp, int av, string cover = "", string tp = "", vector<string> dl = {});
 
     void printBook() const;
 
@@ -26,6 +30,9 @@ public:
     string getCategory() const;
     int getCopies() const;
     int getAvailableCopies() const;
+    string getCoverImage() const;
+    string getType() const;
+    vector<string> getDownloadLinks() const;
 
     void setAvailableCopies(int count);
     bool borrowBook();

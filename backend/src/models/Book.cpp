@@ -1,8 +1,8 @@
 #include "../../include/models/Book.h"
 
-Book::Book() : bookID(0), title(""), author(""), isbn(""), category(""), copies(0), availableCopies(0) {}
+Book::Book() : bookID(0), title(""), author(""), isbn(""), category(""), copies(0), availableCopies(0), coverImage(""), type("") {}
 
-Book::Book(int id, string t, string a, string i, string c, int cp, int av) {
+Book::Book(int id, string t, string a, string i, string c, int cp, int av, string cover, string tp, vector<string> dl) {
     bookID = id;
     title = t;
     author = a;
@@ -10,6 +10,9 @@ Book::Book(int id, string t, string a, string i, string c, int cp, int av) {
     category = c;
     copies = cp;
     availableCopies = av;
+    coverImage = cover;
+    type = tp;
+    downloadLinks = dl;
 }
 
 void Book::printBook() const {
@@ -25,6 +28,9 @@ string Book::getAuthor() const { return author; }
 string Book::getCategory() const { return category; }
 int Book::getCopies() const { return copies; }
 int Book::getAvailableCopies() const { return availableCopies; }
+string Book::getCoverImage() const { return coverImage; }
+string Book::getType() const { return type; }
+vector<string> Book::getDownloadLinks() const { return downloadLinks; }
 
 void Book::setAvailableCopies(int count) {
     if (count >= 0 && count <= copies) {

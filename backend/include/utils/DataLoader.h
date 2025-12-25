@@ -88,9 +88,11 @@ private:
             std::string category = extractValue(json, "category", objStart);
             int copies = extractInt(json, "copies", objStart);
             int availableCopies = extractInt(json, "availableCopies", objStart);
+            std::string coverImage = extractValue(json, "coverImage", objStart);
+            std::string type = extractValue(json, "type", objStart);
 
             if (id > 0 && !title.empty()) {
-                library.addBook(Book(id, title, author, isbn, category, copies, availableCopies));
+                library.addBook(Book(id, title, author, isbn, category, copies, availableCopies, coverImage, type));
                 count++;
             }
 

@@ -13,6 +13,8 @@ string BookController::bookToJson(const Book& book) {
     fields["category"] = book.getCategory();
     fields["copies"] = to_string(book.getCopies());
     fields["availableCopies"] = to_string(book.getAvailableCopies());
+    fields["coverImage"] = book.getCoverImage();
+    fields["type"] = book.getType();
 
     return JsonHelper::createObject(fields);
 }
