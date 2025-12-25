@@ -41,8 +41,8 @@ static void registerRoutes(Router& router, Library& library,
                            StatisticsController& statsController) {
     // Book routes
     router.get("/books", [&](const HttpRequest& req) { return bookController.getAllBooks(req); });
+    router.get("/books/search", [&](const HttpRequest& req) { return bookController.searchBooks(req); });  // MUST be before :id
     router.get("/books/:id", [&](const HttpRequest& req) { return bookController.getBookById(req); });
-    router.get("/books/search", [&](const HttpRequest& req) { return bookController.searchBooks(req); });
     router.post("/books", [&](const HttpRequest& req) { return bookController.createBook(req); });
     router.put("/books/:id", [&](const HttpRequest& req) { return bookController.updateBook(req); });
     router.del("/books/:id", [&](const HttpRequest& req) { return bookController.deleteBook(req); });
