@@ -1,0 +1,320 @@
+/* ===================================
+   PREMIUM LIBRARY MANAGEMENT SYSTEM
+   Color Scheme: Black, White, Deep Maroon
+   =================================== */
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --deep-maroon: #6B0F1A;
+    --maroon-hover: #8B1420;
+    --dark-gray: #1a1a1a;
+    --mid-gray: #2a2a2a;
+    --light-gray: #cccccc;
+    --text-gray: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===================================
+   HEADER
+   =================================== */
+
+.main-header {
+    background-color: var(--black);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--mid-gray);
+}
+
+.site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.title-accent {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--deep-maroon), transparent);
+    margin: 0 auto;
+}
+
+/* ===================================
+   MAIN CONTENT
+   =================================== */
+
+.main-content {
+    flex: 1;
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.books-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--white);
+}
+
+/* ===================================
+   CATEGORY CARDS
+   =================================== */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background-color: var(--dark-gray);
+    border: 1px solid var(--mid-gray);
+    border-radius: 8px;
+    padding: 3rem 2rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--deep-maroon);
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-card:hover {
+    background-color: var(--mid-gray);
+    border-color: var(--deep-maroon);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(107, 15, 26, 0.2);
+}
+
+.category-card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-content {
+    text-align: center;
+}
+
+
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--white);
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: var(--light-gray);
+    font-weight: 300;
+}
+
+/* ===================================
+   BOOK GRID LAYOUT (for category pages)
+   =================================== */
+
+.page-header {
+    background-color: var(--black);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--mid-gray);
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--deep-maroon);
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.book-item {
+    text-decoration: none;
+    color: var(--white);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-item:hover {
+    transform: translateY(-8px);
+}
+
+.book-cover {
+    width: 100%;
+    aspect-ratio: 2/3;
+    background-color: var(--mid-gray);
+    border: 1px solid var(--mid-gray);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-item:hover .book-cover {
+    border-color: var(--deep-maroon);
+    box-shadow: 0 8px 24px rgba(107, 15, 26, 0.3);
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.book-cover-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--dark-gray) 0%, var(--mid-gray) 100%);
+}
+
+.book-title {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-gray);
+    text-align: center;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.book-author {
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: var(--light-gray);
+    text-align: center;
+    font-weight: 300;
+}
+
+/* ===================================
+   LOADING & ERROR STATES
+   =================================== */
+
+.loading-state,
+.error-state,
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--light-gray);
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--mid-gray);
+    border-top-color: var(--deep-maroon);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 2rem;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .main-content {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+}

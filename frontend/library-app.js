@@ -52,11 +52,13 @@ function setupEventListeners() {
 
 async function loadBooks() {
     try {
-        const response = await fetch(`${API_BASE}/books`);
+        const response = await fetch(`${window.ENV.API_BASE}/books`);
         const data = await response.json();
         
         if (data.status === 'success') {
             allBooks = data.data;
+            console.log('Loaded books:', allBooks.length);
+            console.log('First book:', allBooks[0]);
             document.getElementById('totalCount').textContent = `${allBooks.length} items`;
             filterAndDisplay();
         } else {
@@ -64,7 +66,7 @@ async function loadBooks() {
         }
     } catch (error) {
         console.error('Error:', error);
-        showError('Error connecting to server');
+        showError('Error connecting to server: ' + error.message);
     }
 }
 
