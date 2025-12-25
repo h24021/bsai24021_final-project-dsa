@@ -151,13 +151,14 @@ function displayUsers(users) {
     }
     
     users.forEach(user => {
+        const userId = user.userID || user.id;  // Handle both formats
         const userCard = document.createElement('div');
         userCard.className = 'item-card';
         userCard.innerHTML = `
             <div class="item-info">
                 <h4>${user.name}</h4>
-                <p><strong>User ID: ${user.id}</strong> | Email: ${user.email || 'N/A'} | Role: ${user.role || 'Member'}</p>
-                <p class="id-highlight">Use ID ${user.id} for borrowing/returning books</p>
+                <p><strong>User ID: ${userId}</strong> | Email: ${user.email || 'N/A'} | Role: ${user.role || 'Member'}</p>
+                <p class="id-highlight">Use ID ${userId} for borrowing/returning books</p>
             </div>
         `;
         container.appendChild(userCard);
@@ -184,7 +185,8 @@ async function addUser() {
         const data = await response.json();
         
         if (data.status === 'success') {
-            alert(`✅ User added successfully!\n\nName: ${name}\nUser ID: ${data.data.id || 'Check list below'}\n\nYou can now use this User ID to borrow books.`);
+            const userId = data.data.userID || data.data.id;  // Handle both formats
+            alert(`✅ User added successfully!\n\nName: ${name}\nUser ID: ${userId}\n\nYou can now use this User ID to borrow books.`);
             document.getElementById('userName').value = '';
             document.getElementById('userEmail').value = '';
             loadUsers();
@@ -288,7 +290,8 @@ async function searchBooks() {
     }
     
     try {
-        const response = await fetch(`${API_URL}/books/search?query=${encodeURIComponent(query)}`);
+        // Search by title by default - backend expects title, author, or category parameter
+        const response = await fetch(`${API_URL}/books/search?title=${encodeURIComponent(query)}`);
         const data = await response.json();
         
         if (data.status === 'success') {
