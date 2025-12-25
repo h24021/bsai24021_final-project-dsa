@@ -54,16 +54,16 @@ def generate_books(num_books=1000):
     books = []
     book_id = 1001
     
-    # Calculate distribution
-    novels = int(num_books * 0.4)  # 40% novels
-    other_books = int(num_books * 0.3)  # 30% other books
-    magazines = int(num_books * 0.2)  # 20% magazines
-    comics = num_books - novels - other_books - magazines  # Rest are comics
+    # Calculate distribution: 500 novels, 300 comics, 200 magazines
+    novels = 500
+    magazines = 200
+    comics = 300
+    other_books = 0  # No other books
     
     # Generate novels
     for i in range(novels):
         category = random.choice(categories["Novel"])
-        title = f"{random.choice(novel_titles)} Vol. {random.randint(1, 10)}"
+        title = f"{random.choice(novel_titles)} - {random.choice(['Part', 'Volume', 'Book'])} {random.randint(1, 20)}"
         author = random.choice(authors)
         isbn = f"ISBN-{book_id:06d}"
         copies = random.randint(1, 10)
@@ -120,7 +120,7 @@ def generate_books(num_books=1000):
     # Generate comics
     for i in range(comics):
         category = random.choice(categories["Comic"])
-        title = f"{random.choice(comic_titles)} Issue #{random.randint(1, 100)}"
+        title = f"{random.choice(comic_titles)} - Issue #{random.randint(1, 150)}"
         author = random.choice(authors)
         isbn = f"COMIC-{book_id:06d}"
         copies = random.randint(2, 15)
