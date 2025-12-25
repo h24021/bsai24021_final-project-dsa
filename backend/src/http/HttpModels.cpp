@@ -1,5 +1,6 @@
 #include "../../include/http/HttpModels.h"
 #include <sstream>
+#include <cstdlib>
 
 HttpRequest::HttpRequest() : method(HttpMethod::GET), path("/") {}
 
@@ -156,9 +157,19 @@ string JsonHelper::createObject(const map<string, string>& fields) {
         if (!first) ss << ",";
         ss << "\"" << escapeJson(field.first) << "\":";
 
-        if (!field.second.empty() &&
-            (isdigit(field.second[0]) || field.second == "true" || field.second == "false" ||
-             field.second[0] == '[' || field.second[0] == '{')) {
+        // Check if the entire string is a valid number (not just starts with a digit)
+        bool isNumber = false;
+        bool isBoolean = (field.second == "true" || field.second == "false");
+        bool isObject = (!field.second.empty() && (field.second[0] == '[' || field.second[0] == '{'));
+        
+        if (!field.second.empty() && !isBoolean && !isObject) {
+            // Try to parse as number
+            char* end;
+            strtod(field.second.c_str(), &end);
+            isNumber = (*end == '\0');  // Valid number if we consumed the entire string
+        }
+
+        if (isNumber || isBoolean || isObject) {
             ss << field.second;
         } else {
             ss << "\"" << escapeJson(field.second) << "\"";
