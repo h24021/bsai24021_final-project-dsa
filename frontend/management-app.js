@@ -1,6 +1,8 @@
 // Library Management System - Main Application
 const API_URL = window.ENV.API_BASE;
 
+let allBooks = []; // Store all books for filtering
+
 // Tab switching
 document.querySelectorAll('.main-tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -15,14 +17,114 @@ document.querySelectorAll('.main-tab').forEach(tab => {
         document.getElementById(`${section}-section`).classList.add('active');
         
         // Load data for the section
+        if (section === 'books') loadAllBooks();
         if (section === 'users') loadUsers();
         if (section === 'borrow') loadBorrowHistory();
-        if (section === 'search') {
-            // Show all books in search by default
-            loadAllBooksForSearch();
-        }
+        if (section === 'search') loadAllBooksForSearch();
     });
 });
+
+// Books Management - Show all books with IDs
+async function loadAllBooks() {
+    try {
+        const response = await fetch(`${API_URL}/books`);
+        const data = await response.json();
+        
+        if (data.status === 'success') {
+            allBooks = data.data;
+            displayAllBooks(allBooks);
+        }
+    } catch (error) {
+        console.error('Error loading books:', error);
+        alert('Error loading books: ' + error.message);
+    }
+}
+
+function filterBooks(type) {
+    // Update active filter button
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    if (type === 'all') {
+        displayAllBooks(allBooks);
+    } else {
+        const filtered = allBooks.filter(book => book.type === type);
+        displayAllBooks(filtered);
+    }
+}
+
+function displayAllBooks(books) {
+    const container = document.getElementById('allBooksGrid');
+    container.innerHTML = '';
+    
+    if (books.length === 0) {
+        container.innerHTML = '<p class="empty-state">No books found</p>';
+        return;
+    }
+    
+    books.forEach(book => {
+        const bookCard = document.createElement('div');
+        bookCard.className = 'book-item';
+        
+        const cover = document.createElement('div');
+        cover.className = 'book-cover';
+        
+        if (book.coverImage) {
+            const img = document.createElement('img');
+            img.src = book.coverImage;
+            img.alt = book.title;
+            img.onerror = function() {
+                this.style.display = 'none';
+                const placeholder = document.createElement('div');
+                placeholder.className = 'book-cover-placeholder';
+                cover.appendChild(placeholder);
+            };
+            cover.appendChild(img);
+        } else {
+            const placeholder = document.createElement('div');
+            placeholder.className = 'book-cover-placeholder';
+            cover.appendChild(placeholder);
+        }
+        
+        const bookInfo = document.createElement('div');
+        bookInfo.className = 'book-details';
+        
+        const title = document.createElement('div');
+        title.className = 'book-title';
+        title.textContent = book.title;
+        
+        const author = document.createElement('div');
+        author.className = 'book-author';
+        author.textContent = book.author;
+        
+        const bookId = document.createElement('div');
+        bookId.className = 'book-id-badge';
+        bookId.innerHTML = `<strong>Book ID: ${book.id}</strong>`;
+        
+        const info = document.createElement('div');
+        info.className = 'book-info';
+        info.innerHTML = `Available: ${book.availableCopies}/${book.copies} | ${book.type || 'Book'}`;
+        
+        bookInfo.appendChild(title);
+        bookInfo.appendChild(author);
+        bookInfo.appendChild(bookId);
+        bookInfo.appendChild(info);
+        
+        bookCard.appendChild(cover);
+        bookCard.appendChild(bookInfo);
+        
+        // Add download link if available
+        if (book.downloadLinks && book.downloadLinks.length > 0) {
+            const downloadBtn = document.createElement('button');
+            downloadBtn.className = 'btn-download';
+            downloadBtn.textContent = 'Download/Read';
+            downloadBtn.onclick = () => window.open(book.downloadLinks[0], '_blank');
+            bookCard.appendChild(downloadBtn);
+        }
+        
+        container.appendChild(bookCard);
+    });
+}
 
 // User Management
 async function loadUsers() {
@@ -44,7 +146,7 @@ function displayUsers(users) {
     container.innerHTML = '<h3>All Users</h3>';
     
     if (users.length === 0) {
-        container.innerHTML += '<p class="empty-state">No users yet. Add some users above.</p>';
+        container.innerHTML += '<p class="empty-state">No users yet. Add your first user above!</p>';
         return;
     }
     
@@ -82,7 +184,7 @@ async function addUser() {
         const data = await response.json();
         
         if (data.status === 'success') {
-            alert(`User added successfully! User ID: ${data.data.id || 'Check list below'}`);
+            alert(`✅ User added successfully!\n\nName: ${name}\nUser ID: ${data.data.id || 'Check list below'}\n\nYou can now use this User ID to borrow books.`);
             document.getElementById('userName').value = '';
             document.getElementById('userEmail').value = '';
             loadUsers();
@@ -281,9 +383,6 @@ function displaySearchResults(books) {
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Library Management System loaded');
-    // Load users by default if on users tab
-    const usersSection = document.getElementById('users-section');
-    if (usersSection && usersSection.classList.contains('active')) {
-        loadUsers();
-    }
+    // Load books on page load (Books tab is active by default)
+    loadAllBooks();
 });
