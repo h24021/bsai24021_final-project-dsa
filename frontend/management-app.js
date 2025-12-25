@@ -17,6 +17,10 @@ document.querySelectorAll('.main-tab').forEach(tab => {
         // Load data for the section
         if (section === 'users') loadUsers();
         if (section === 'borrow') loadBorrowHistory();
+        if (section === 'search') {
+            // Show all books in search by default
+            loadAllBooksForSearch();
+        }
     });
 });
 
@@ -31,6 +35,7 @@ async function loadUsers() {
         }
     } catch (error) {
         console.error('Error loading users:', error);
+        alert('Error loading users: ' + error.message);
     }
 }
 
@@ -38,13 +43,19 @@ function displayUsers(users) {
     const container = document.getElementById('usersList');
     container.innerHTML = '<h3>All Users</h3>';
     
+    if (users.length === 0) {
+        container.innerHTML += '<p class="empty-state">No users yet. Add some users above.</p>';
+        return;
+    }
+    
     users.forEach(user => {
         const userCard = document.createElement('div');
         userCard.className = 'item-card';
         userCard.innerHTML = `
             <div class="item-info">
                 <h4>${user.name}</h4>
-                <p>ID: ${user.id} | Email: ${user.email || 'N/A'} | Role: ${user.role || 'Member'}</p>
+                <p><strong>User ID: ${user.id}</strong> | Email: ${user.email || 'N/A'} | Role: ${user.role || 'Member'}</p>
+                <p class="id-highlight">Use ID ${user.id} for borrowing/returning books</p>
             </div>
         `;
         container.appendChild(userCard);
@@ -71,7 +82,7 @@ async function addUser() {
         const data = await response.json();
         
         if (data.status === 'success') {
-            alert('User added successfully!');
+            alert(`User added successfully! User ID: ${data.data.id || 'Check list below'}`);
             document.getElementById('userName').value = '';
             document.getElementById('userEmail').value = '';
             loadUsers();
@@ -103,15 +114,15 @@ async function borrowBook() {
         const data = await response.json();
         
         if (data.status === 'success') {
-            alert('Book borrowed successfully!');
+            alert('✅ Book borrowed successfully!\n\nUser ID: ' + userId + '\nBook ID: ' + bookId);
             document.getElementById('borrowUserId').value = '';
             document.getElementById('borrowBookId').value = '';
             loadBorrowHistory();
         } else {
-            alert('Error: ' + data.message);
+            alert('❌ Error: ' + (data.message || 'Failed to borrow book'));
         }
     } catch (error) {
-        alert('Error borrowing book: ' + error.message);
+        alert('❌ Error borrowing book: ' + error.message);
     }
 }
 
@@ -134,24 +145,53 @@ async function returnBook() {
         const data = await response.json();
         
         if (data.status === 'success') {
-            alert('Book returned successfully!');
+            alert('✅ Book returned successfully!\n\nUser ID: ' + userId + '\nBook ID: ' + bookId);
             document.getElementById('returnUserId').value = '';
             document.getElementById('returnBookId').value = '';
             loadBorrowHistory();
         } else {
-            alert('Error: ' + data.message);
+            alert('❌ Error: ' + (data.message || 'Failed to return book'));
         }
     } catch (error) {
-        alert('Error returning book: ' + error.message);
+        alert('❌ Error returning book: ' + error.message);
     }
 }
 
 async function loadBorrowHistory() {
     const container = document.getElementById('borrowHistory');
-    container.innerHTML = '<h3>Recent Borrow History</h3><p>Use the forms above to borrow or return books</p>';
+    container.innerHTML = `
+        <h3>How to Borrow/Return</h3>
+        <div class="info-box">
+            <p><strong>To Borrow:</strong></p>
+            <ol>
+                <li>Go to the <strong>Search</strong> tab to find a book and note its <strong>Book ID</strong></li>
+                <li>Go to the <strong>Users</strong> tab to find your <strong>User ID</strong></li>
+                <li>Enter both IDs above and click "Borrow"</li>
+            </ol>
+            <p><strong>To Return:</strong></p>
+            <ol>
+                <li>Enter the same User ID and Book ID</li>
+                <li>Click "Return"</li>
+            </ol>
+        </div>
+    `;
 }
 
 // Search
+async function loadAllBooksForSearch() {
+    try {
+        const response = await fetch(`${API_URL}/books`);
+        const data = await response.json();
+        
+        if (data.status === 'success') {
+            displaySearchResults(data.data.slice(0, 20)); // Show first 20 books
+            document.getElementById('searchQuery').placeholder = 'Search by title, author, or ISBN... (showing first 20 books)';
+        }
+    } catch (error) {
+        console.error('Error loading books:', error);
+    }
+}
+
 async function searchBooks() {
     const query = document.getElementById('searchQuery').value;
     
@@ -166,9 +206,12 @@ async function searchBooks() {
         
         if (data.status === 'success') {
             displaySearchResults(data.data);
+        } else {
+            alert('Search failed: ' + data.message);
         }
     } catch (error) {
         console.error('Error searching:', error);
+        alert('Error searching: ' + error.message);
     }
 }
 
@@ -215,7 +258,7 @@ function displaySearchResults(books) {
         
         const info = document.createElement('div');
         info.className = 'book-info';
-        info.textContent = `ID: ${book.id} | Available: ${book.availableCopies}/${book.copies}`;
+        info.innerHTML = `<strong>Book ID: ${book.id}</strong><br>Available: ${book.availableCopies}/${book.copies}`;
         
         bookCard.appendChild(cover);
         bookCard.appendChild(title);
@@ -224,10 +267,11 @@ function displaySearchResults(books) {
         
         // Add download link if available
         if (book.downloadLinks && book.downloadLinks.length > 0) {
-            bookCard.style.cursor = 'pointer';
-            bookCard.addEventListener('click', () => {
-                window.open(book.downloadLinks[0], '_blank');
-            });
+            const downloadBtn = document.createElement('button');
+            downloadBtn.className = 'btn-download';
+            downloadBtn.textContent = 'Download/Read';
+            downloadBtn.onclick = () => window.open(book.downloadLinks[0], '_blank');
+            bookCard.appendChild(downloadBtn);
         }
         
         container.appendChild(bookCard);
@@ -237,4 +281,9 @@ function displaySearchResults(books) {
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Library Management System loaded');
+    // Load users by default if on users tab
+    const usersSection = document.getElementById('users-section');
+    if (usersSection && usersSection.classList.contains('active')) {
+        loadUsers();
+    }
 });

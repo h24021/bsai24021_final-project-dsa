@@ -395,6 +395,12 @@ body {
     border-radius: 4px;
     padding: 1rem;
     margin-bottom: 1rem;
+    transition: all 0.2s;
+}
+
+.item-card:hover {
+    border-color: var(--deep-maroon);
+    box-shadow: 0 2px 8px rgba(107, 15, 26, 0.3);
 }
 
 .item-info h4 {
@@ -406,6 +412,68 @@ body {
     color: var(--light-gray);
     font-size: 0.9rem;
 }
+
+.id-highlight {
+    background: var(--deep-maroon);
+    color: var(--white);
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-top: 8px;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 0.85rem;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--light-gray);
+    padding: 40px;
+    font-size: 16px;
+}
+
+.info-box {
+    background: var(--mid-gray);
+    border-left: 4px solid var(--deep-maroon);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.info-box strong {
+    color: var(--deep-maroon);
+}
+
+.info-box ol {
+    margin: 10px 0 10px 20px;
+    padding: 0;
+    color: var(--white);
+}
+
+.info-box li {
+    margin: 8px 0;
+}
+
+.info-box p {
+    color: var(--white);
+}
+
+.btn-download {
+    background: var(--deep-maroon);
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.btn-download:hover {
+    background: var(--maroon-hover);
+}
+
 
 .search-container {
     max-width: 800px;
