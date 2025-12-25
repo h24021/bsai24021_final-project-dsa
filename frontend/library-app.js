@@ -73,13 +73,19 @@ function filterAndDisplay() {
 
     // Filter by type (Novel, Comic, Manga)
     filtered = filtered.filter(book => {
-        return book.type === currentType || book.category.startsWith(currentType);
+        // Check if book has type field OR check category field
+        if (book.type) {
+            return book.type === currentType;
+        } else if (book.category) {
+            return book.category.startsWith(currentType);
+        }
+        return false;
     });
 
     // Filter by category
     if (currentCategory !== 'all') {
         filtered = filtered.filter(book => {
-            return book.category.includes(currentCategory);
+            return book.category && book.category.includes(currentCategory);
         });
     }
 
