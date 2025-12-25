@@ -7,6 +7,7 @@
 #include "../include/controllers/BorrowController.h"
 #include "../include/controllers/StatisticsController.h"
 #include "../include/http/HttpServer.h"
+#include "../include/utils/DataLoader.h"
 
 using namespace std;
 
@@ -72,7 +73,12 @@ static void registerRoutes(Router& router, Library& library,
 int main() {
     printBanner();
     Library library;
-    seedSampleData(library);
+    
+    // Try to load from JSON file first, fall back to sample data if file not found
+    if (!DataLoader::loadFromFile(library, "library_data.json")) {
+        cout << "Could not load library_data.json, using sample data instead...\n";
+        seedSampleData(library);
+    }
 
     Router router("/api/v1");
     
