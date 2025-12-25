@@ -258,7 +258,7 @@
     {
       "id": 1016,
       "title": "Jane Eyre: An Autobiography",
-      "author": "Bront\u00eb, Charlotte",
+      "author": "Brontë, Charlotte",
       "isbn": "PG-001260",
       "category": "Novel - Romance",
       "copies": 5,
@@ -359,7 +359,7 @@
     },
     {
       "id": 1022,
-      "title": "The Adventures of Ferdinand Count Fathom \u2014 Complete",
+      "title": "The Adventures of Ferdinand Count Fathom — Complete",
       "author": "Smollett, T. (Tobias)",
       "isbn": "PG-006761",
       "category": "Novel - Horror",
@@ -444,7 +444,7 @@
     },
     {
       "id": 1027,
-      "title": "My Life \u2014 Volume 1",
+      "title": "My Life — Volume 1",
       "author": "Wagner, Richard",
       "isbn": "PG-005197",
       "category": "Novel - Fiction",
@@ -547,7 +547,7 @@
     {
       "id": 1033,
       "title": "Wuthering Heights",
-      "author": "Bront\u00eb, Emily",
+      "author": "Brontë, Emily",
       "isbn": "PG-000768",
       "category": "Novel - Romance",
       "copies": 2,
@@ -768,7 +768,7 @@
     {
       "id": 1046,
       "title": "The Prince",
-      "author": "Machiavelli, Niccol\u00f2",
+      "author": "Machiavelli, Niccolò",
       "isbn": "PG-001232",
       "category": "Novel - Psychological",
       "copies": 5,
@@ -954,7 +954,7 @@
     },
     {
       "id": 1057,
-      "title": "The Works of Edgar Allan Poe \u2014 Volume 2",
+      "title": "The Works of Edgar Allan Poe — Volume 2",
       "author": "Poe, Edgar Allan",
       "isbn": "PG-002148",
       "category": "Novel - Horror",
@@ -1141,7 +1141,7 @@
     },
     {
       "id": 1068,
-      "title": "\u6c60\u5317\u5076\u8ac7",
+      "title": "池北偶談",
       "author": "Wang, Shizhen",
       "isbn": "PG-025162",
       "category": "Novel - Fiction",
@@ -1328,7 +1328,7 @@
     },
     {
       "id": 1079,
-      "title": "Les Mis\u00e9rables",
+      "title": "Les Misérables",
       "author": "Hugo, Victor",
       "isbn": "PG-000135",
       "category": "Novel - Fiction",
@@ -1533,7 +1533,7 @@
     {
       "id": 1091,
       "title": "The Philosophy of Auguste Comte",
-      "author": "L\u00e9vy-Bruhl, Lucien",
+      "author": "Lévy-Bruhl, Lucien",
       "isbn": "PG-056517",
       "category": "Novel - Fiction",
       "copies": 5,
@@ -1567,7 +1567,7 @@
     {
       "id": 1093,
       "title": "The Reign of Greed",
-      "author": "Rizal, Jos\u00e9",
+      "author": "Rizal, José",
       "isbn": "PG-010676",
       "category": "Novel - Fiction",
       "copies": 8,
@@ -1838,7 +1838,7 @@
     },
     {
       "id": 1109,
-      "title": "\u96a8\u5712\u8a69\u8a71",
+      "title": "隨園詩話",
       "author": "Yuan, Mei",
       "isbn": "PG-052206",
       "category": "Novel - Fiction",
@@ -2076,7 +2076,7 @@
     },
     {
       "id": 1123,
-      "title": "Democracy in America \u2014 Volume 1",
+      "title": "Democracy in America — Volume 1",
       "author": "Tocqueville, Alexis de",
       "isbn": "PG-000815",
       "category": "Novel - Fiction",
@@ -2196,7 +2196,7 @@
     {
       "id": 1130,
       "title": "Noli Me Tangere",
-      "author": "Rizal, Jos\u00e9",
+      "author": "Rizal, José",
       "isbn": "PG-020228",
       "category": "Novel - Fiction",
       "copies": 4,
@@ -2331,7 +2331,7 @@
     },
     {
       "id": 1138,
-      "title": "Pascal's Pens\u00e9es",
+      "title": "Pascal's Pensées",
       "author": "Pascal, Blaise",
       "isbn": "PG-018269",
       "category": "Novel - Fiction",
@@ -2365,7 +2365,7 @@
     },
     {
       "id": 1140,
-      "title": "The Travels of Marco Polo \u2014 Volume 1",
+      "title": "The Travels of Marco Polo — Volume 1",
       "author": "Polo, Marco",
       "isbn": "PG-010636",
       "category": "Novel - Fiction",
@@ -2451,7 +2451,7 @@
     {
       "id": 1145,
       "title": "The Philippines a Century Hence",
-      "author": "Rizal, Jos\u00e9",
+      "author": "Rizal, José",
       "isbn": "PG-035899",
       "category": "Novel - Fiction",
       "copies": 3,
@@ -2535,7 +2535,7 @@
     },
     {
       "id": 1150,
-      "title": "Du c\u00f4t\u00e9 de chez Swann",
+      "title": "Du côté de chez Swann",
       "author": "Proust, Marcel",
       "isbn": "PG-002650",
       "category": "Novel - Fiction",
@@ -2569,7 +2569,7 @@
     },
     {
       "id": 1152,
-      "title": "\u82b1\u6708\u75d5",
+      "title": "花月痕",
       "author": "Wei, Zi'an",
       "isbn": "PG-025219",
       "category": "Novel - Fiction",
@@ -2620,7 +2620,7 @@
     },
     {
       "id": 1155,
-      "title": "\u51b7\u773c\u89c2",
+      "title": "冷眼观",
       "author": "Wang, Junqing",
       "isbn": "PG-024029",
       "category": "Novel - Fiction",
@@ -3011,7 +3011,7 @@
     },
     {
       "id": 1178,
-      "title": "\u7075\u5386\u96c6\u5149",
+      "title": "灵历集光",
       "author": "Song, Shangjie",
       "isbn": "PG-025716",
       "category": "Novel - Fiction",
@@ -3096,7 +3096,7 @@
     },
     {
       "id": 1183,
-      "title": "Essays of Michel de Montaigne \u2014 Complete",
+      "title": "Essays of Michel de Montaigne — Complete",
       "author": "Montaigne, Michel de",
       "isbn": "PG-003600",
       "category": "Novel - Fiction",
@@ -3317,7 +3317,7 @@
     },
     {
       "id": 1196,
-      "title": "The History of Herodotus \u2014 Volume 1",
+      "title": "The History of Herodotus — Volume 1",
       "author": "Herodotus",
       "isbn": "PG-002707",
       "category": "Novel - Fiction",
@@ -3369,7 +3369,7 @@
     {
       "id": 1199,
       "title": "The Elementary Forms of the Religious Life",
-      "author": "Durkheim, \u00c9mile",
+      "author": "Durkheim, Émile",
       "isbn": "PG-041360",
       "category": "Novel - Psychological",
       "copies": 4,
@@ -3521,7 +3521,7 @@
     },
     {
       "id": 1208,
-      "title": "\u5b7d\u6d77\u82b1",
+      "title": "孽海花",
       "author": "Zeng, Pu",
       "isbn": "PG-025128",
       "category": "Novel - Fiction",
@@ -3725,7 +3725,7 @@
     },
     {
       "id": 1220,
-      "title": "The Works of Edgar Allan Poe \u2014 Volume 1",
+      "title": "The Works of Edgar Allan Poe — Volume 1",
       "author": "Poe, Edgar Allan",
       "isbn": "PG-002147",
       "category": "Novel - Horror",
@@ -4048,7 +4048,7 @@
     },
     {
       "id": 1239,
-      "title": "Josefine Mutzenbacher: oder Die Geschichte einer Wienerischen Dirne von ihr selbst erz\u00e4hlt",
+      "title": "Josefine Mutzenbacher: oder Die Geschichte einer Wienerischen Dirne von ihr selbst erzählt",
       "author": "Salten, Felix",
       "isbn": "PG-031284",
       "category": "Novel - Fiction",
@@ -4150,7 +4150,7 @@
     },
     {
       "id": 1245,
-      "title": "\u96f2\u5f62\u7d0b\u7ae0",
+      "title": "雲形紋章",
       "author": "Falkner, John Meade",
       "isbn": "PG-035018",
       "category": "Novel - Fiction",
@@ -4201,7 +4201,7 @@
     },
     {
       "id": 1248,
-      "title": "\u5b50\u4e0d\u8a9e",
+      "title": "子不語",
       "author": "Yuan, Mei",
       "isbn": "PG-025245",
       "category": "Novel - Horror",
@@ -4235,7 +4235,7 @@
     },
     {
       "id": 1250,
-      "title": "\u6587\u660e\u5c0f\u53f2",
+      "title": "文明小史",
       "author": "Li, Boyuan",
       "isbn": "PG-025379",
       "category": "Novel - Fiction",
@@ -4304,7 +4304,7 @@
     {
       "id": 1254,
       "title": "Discourse on the Method of Rightly Conducting One's Reason and of Seeking Truth in the Sciences",
-      "author": "Descartes, Ren\u00e9",
+      "author": "Descartes, René",
       "isbn": "PG-000059",
       "category": "Novel - Fiction",
       "copies": 7,
@@ -4320,7 +4320,7 @@
     },
     {
       "id": 1255,
-      "title": "\u4e2d\u570b\u5c0f\u8aaa\u53f2\u7565",
+      "title": "中國小說史略",
       "author": "Lu, Xun",
       "isbn": "PG-025559",
       "category": "Novel - Fiction",
@@ -4388,7 +4388,7 @@
     },
     {
       "id": 1259,
-      "title": "The Dor\u00e9 Bible Gallery, Complete: Containing One Hundred Superb Illustrations, and a Page of Explanatory Letter-press Facing Each",
+      "title": "The Doré Bible Gallery, Complete: Containing One Hundred Superb Illustrations, and a Page of Explanatory Letter-press Facing Each",
       "author": "Unknown Author",
       "isbn": "PG-008710",
       "category": "Novel - Fiction",
@@ -4423,7 +4423,7 @@
     {
       "id": 1261,
       "title": "Life in Mexico",
-      "author": "Calder\u00f3n de la Barca, Madame (Frances Erskine Inglis)",
+      "author": "Calderón de la Barca, Madame (Frances Erskine Inglis)",
       "isbn": "PG-028761",
       "category": "Novel - Fiction",
       "copies": 7,
@@ -4609,7 +4609,7 @@
     },
     {
       "id": 1272,
-      "title": "The R\u00e1m\u00e1yan of V\u00e1lm\u00edki, translated into English verse",
+      "title": "The Rámáyan of Válmíki, translated into English verse",
       "author": "Valmiki",
       "isbn": "PG-024869",
       "category": "Novel - Fiction",
@@ -4762,7 +4762,7 @@
     },
     {
       "id": 1281,
-      "title": "The Letters of Wolfgang Amadeus Mozart \u2014 Volume 01",
+      "title": "The Letters of Wolfgang Amadeus Mozart — Volume 01",
       "author": "Mozart, Wolfgang Amadeus",
       "isbn": "PG-005307",
       "category": "Novel - Fiction",
@@ -4813,7 +4813,7 @@
     },
     {
       "id": 1284,
-      "title": "Chaucer's Works, Volume 4 \u2014 The Canterbury Tales",
+      "title": "Chaucer's Works, Volume 4 — The Canterbury Tales",
       "author": "Chaucer, Geoffrey",
       "isbn": "PG-022120",
       "category": "Novel - Fiction",
@@ -4864,7 +4864,7 @@
     },
     {
       "id": 1287,
-      "title": "Les mis\u00e9rables Tome I: Fantine",
+      "title": "Les misérables Tome I: Fantine",
       "author": "Hugo, Victor",
       "isbn": "PG-017489",
       "category": "Novel - Fiction",
@@ -4932,7 +4932,7 @@
     },
     {
       "id": 1291,
-      "title": "\u738b\u967d\u660e\u5168\u96c6",
+      "title": "王陽明全集",
       "author": "Wang, Yangming",
       "isbn": "PG-025142",
       "category": "Novel - Psychological",
@@ -5323,7 +5323,7 @@
     },
     {
       "id": 1314,
-      "title": "The Extraordinary Adventures of Ars\u00e8ne Lupin, Gentleman-Burglar",
+      "title": "The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar",
       "author": "Leblanc, Maurice",
       "isbn": "PG-006133",
       "category": "Novel - Thriller",
@@ -5459,7 +5459,7 @@
     },
     {
       "id": 1322,
-      "title": "M\u00e4rchen der Gebr\u00fcder Grimm 2",
+      "title": "Märchen der Gebrüder Grimm 2",
       "author": "Grimm, Jacob",
       "isbn": "PG-020051",
       "category": "Novel - Fiction",
@@ -5476,7 +5476,7 @@
     },
     {
       "id": 1323,
-      "title": "Fables of La Fontaine \u2014 a New Edition, with Notes",
+      "title": "Fables of La Fontaine — a New Edition, with Notes",
       "author": "La Fontaine, Jean de",
       "isbn": "PG-007241",
       "category": "Novel - Fiction",
@@ -5528,7 +5528,7 @@
     {
       "id": 1326,
       "title": "Jane Eyre",
-      "author": "Bront\u00eb, Charlotte",
+      "author": "Brontë, Charlotte",
       "isbn": "PG-023077",
       "category": "Novel - Romance",
       "copies": 5,
@@ -6020,7 +6020,7 @@
     },
     {
       "id": 1355,
-      "title": "The Portrait of a Lady \u2014 Volume 1",
+      "title": "The Portrait of a Lady — Volume 1",
       "author": "James, Henry",
       "isbn": "PG-002833",
       "category": "Novel - Romance",
@@ -6139,7 +6139,7 @@
     },
     {
       "id": 1362,
-      "title": "\u4e8c\u5341\u5e74\u76ee\u7779\u4e4b\u602a\u73fe\u72c0",
+      "title": "二十年目睹之怪現狀",
       "author": "Wu, Jianren",
       "isbn": "PG-024099",
       "category": "Novel - Fiction",
@@ -6156,8 +6156,8 @@
     },
     {
       "id": 1363,
-      "title": "Novo dicion\u00e1rio da l\u00edngua portuguesa",
-      "author": "Figueiredo, C\u00e2ndido de",
+      "title": "Novo dicionário da língua portuguesa",
+      "author": "Figueiredo, Cândido de",
       "isbn": "PG-031552",
       "category": "Novel - Fiction",
       "copies": 5,
@@ -6360,7 +6360,7 @@
     },
     {
       "id": 1375,
-      "title": "Democracy in America \u2014 Volume 2",
+      "title": "Democracy in America — Volume 2",
       "author": "Tocqueville, Alexis de",
       "isbn": "PG-000816",
       "category": "Novel - Fiction",
@@ -6394,7 +6394,7 @@
     },
     {
       "id": 1377,
-      "title": "More Letters of Charles Darwin \u2014 Volume 1: A Record of His Work in a Series of Hitherto Unpublished Letters",
+      "title": "More Letters of Charles Darwin — Volume 1: A Record of His Work in a Series of Hitherto Unpublished Letters",
       "author": "Darwin, Charles",
       "isbn": "PG-002739",
       "category": "Novel - Fiction",
@@ -6666,7 +6666,7 @@
     },
     {
       "id": 1393,
-      "title": "The Song Celestial; Or, Bhagavad-G\u00eet\u00e2 (from the Mah\u00e2bh\u00e2rata): Being a discourse between Arjuna, Prince of India, and the Supreme Being under the form of Krishna",
+      "title": "The Song Celestial; Or, Bhagavad-Gîtâ (from the Mahâbhârata): Being a discourse between Arjuna, Prince of India, and the Supreme Being under the form of Krishna",
       "author": "Unknown Author",
       "isbn": "PG-002388",
       "category": "Novel - Fiction",
@@ -6769,7 +6769,7 @@
     {
       "id": 1399,
       "title": "The Memoirs of the Conquistador Bernal Diaz del Castillo, Vol 1 (of 2): Written by Himself Containing a True and Full Account of the Discovery and Conquest of Mexico and New Spain.",
-      "author": "D\u00edaz del Castillo, Bernal",
+      "author": "Díaz del Castillo, Bernal",
       "isbn": "PG-032474",
       "category": "Novel - Fiction",
       "copies": 7,
@@ -6802,8 +6802,8 @@
     },
     {
       "id": 1401,
-      "title": "Ang \"Filibusterismo\" (Karugt\u00f3ng ng Noli Me Tangere)",
-      "author": "Rizal, Jos\u00e9",
+      "title": "Ang \"Filibusterismo\" (Karugtóng ng Noli Me Tangere)",
+      "author": "Rizal, José",
       "isbn": "PG-047629",
       "category": "Novel - Fiction",
       "copies": 2,
@@ -7364,7 +7364,7 @@
     {
       "id": 1434,
       "title": "The Social Cancer: A Complete English Version of Noli Me Tangere",
-      "author": "Rizal, Jos\u00e9",
+      "author": "Rizal, José",
       "isbn": "PG-006737",
       "category": "Novel - Fiction",
       "copies": 4,
@@ -7652,7 +7652,7 @@
     },
     {
       "id": 1451,
-      "title": "\u5c01\u795e\u6f14\u7fa9",
+      "title": "封神演義",
       "author": "Lu, Xixing",
       "isbn": "PG-023910",
       "category": "Novel - Fiction",
@@ -7686,7 +7686,7 @@
     },
     {
       "id": 1453,
-      "title": "\u6f22\u66f8",
+      "title": "漢書",
       "author": "Ban, Gu",
       "isbn": "PG-023841",
       "category": "Novel - Fiction",
@@ -7754,7 +7754,7 @@
     },
     {
       "id": 1457,
-      "title": "A history of the Peninsular War, Vol. 3, Sep. 1809-Dec. 1810 : $b Oca\u00f1a, Cadiz, Bussaco, Torres Vedras",
+      "title": "A history of the Peninsular War, Vol. 3, Sep. 1809-Dec. 1810 : $b Ocaña, Cadiz, Bussaco, Torres Vedras",
       "author": "Oman, Charles",
       "isbn": "PG-055231",
       "category": "Novel - Fiction",
@@ -7771,7 +7771,7 @@
     },
     {
       "id": 1458,
-      "title": "The Notebooks of Leonardo Da Vinci \u2014 Complete",
+      "title": "The Notebooks of Leonardo Da Vinci — Complete",
       "author": "Leonardo, da Vinci",
       "isbn": "PG-005000",
       "category": "Novel - Fiction",
@@ -8009,7 +8009,7 @@
     },
     {
       "id": 1472,
-      "title": "\u4e2d\u570b\u5341\u5927\u7981\u66f8\u4e4b\u570b\u8272\u5929\u9999",
+      "title": "中國十大禁書之國色天香",
       "author": "Wu, Jingsuo, active 16th century",
       "isbn": "PG-024156",
       "category": "Novel - Fiction",
@@ -8077,7 +8077,7 @@
     },
     {
       "id": 1476,
-      "title": "\u6b61\u559c\u51a4\u5bb6",
+      "title": "歡喜冤家",
       "author": "Xihuyuyinzhuren",
       "isbn": "PG-025286",
       "category": "Novel - Fiction",
@@ -8366,7 +8366,7 @@
     },
     {
       "id": 1493,
-      "title": "\u6d77\u570b\u6625\u79cb",
+      "title": "海國春秋",
       "author": "Wang, Ji",
       "isbn": "PG-029032",
       "category": "Novel - Fiction",
@@ -8468,7 +8468,7 @@
     },
     {
       "id": 1499,
-      "title": "The Diary of Samuel Pepys \u2014 Complete",
+      "title": "The Diary of Samuel Pepys — Complete",
       "author": "Pepys, Samuel",
       "isbn": "PG-004200",
       "category": "Novel - Fiction",
@@ -8508,7 +8508,7 @@
       "category": "Manga - Fiction",
       "copies": 14,
       "availableCopies": 9,
-      "coverImage": "https://via.placeholder.com/400x600?text=Demon+Slayer+Vol.+15",
+      "coverImage": "https://m.media-amazon.com/images/I/81Th7uSWy7L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8522,7 +8522,7 @@
       "category": "Manga - Fiction",
       "copies": 8,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=My+Hero+Academia+Vol.+1",
+      "coverImage": "https://m.media-amazon.com/images/I/91Aw8k3KLNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8536,7 +8536,7 @@
       "category": "Manga - Fiction",
       "copies": 9,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Demon+Slayer+Vol.+10",
+      "coverImage": "https://m.media-amazon.com/images/I/81Th7uSWy7L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8550,7 +8550,7 @@
       "category": "Manga - Fiction",
       "copies": 8,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fullmetal+Alchemist+Vol.+43",
+      "coverImage": "https://m.media-amazon.com/images/I/81oLy93xWSL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8564,7 +8564,7 @@
       "category": "Manga - Fiction",
       "copies": 8,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Naruto+Vol.+1",
+      "coverImage": "https://m.media-amazon.com/images/I/91VPuLJZKNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8578,7 +8578,7 @@
       "category": "Manga - Fiction",
       "copies": 18,
       "availableCopies": 9,
-      "coverImage": "https://via.placeholder.com/400x600?text=Naruto+Vol.+27",
+      "coverImage": "https://m.media-amazon.com/images/I/91VPuLJZKNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8592,7 +8592,7 @@
       "category": "Manga - Fiction",
       "copies": 11,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=My+Hero+Academia+Vol.+15",
+      "coverImage": "https://m.media-amazon.com/images/I/91Aw8k3KLNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8606,7 +8606,7 @@
       "category": "Manga - Fiction",
       "copies": 11,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Attack+on+Titan+Vol.+8",
+      "coverImage": "https://m.media-amazon.com/images/I/81CFNO1W1yL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8620,7 +8620,7 @@
       "category": "Manga - Fiction",
       "copies": 15,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=My+Hero+Academia+Vol.+26",
+      "coverImage": "https://m.media-amazon.com/images/I/91Aw8k3KLNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8634,7 +8634,7 @@
       "category": "Manga - Fiction",
       "copies": 18,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fullmetal+Alchemist+Vol.+47",
+      "coverImage": "https://m.media-amazon.com/images/I/81oLy93xWSL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8648,7 +8648,7 @@
       "category": "Manga - Fiction",
       "copies": 19,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fullmetal+Alchemist+Vol.+10",
+      "coverImage": "https://m.media-amazon.com/images/I/81oLy93xWSL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8662,7 +8662,7 @@
       "category": "Manga - Fiction",
       "copies": 12,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Naruto+Vol.+27",
+      "coverImage": "https://m.media-amazon.com/images/I/91VPuLJZKNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8676,7 +8676,7 @@
       "category": "Manga - Fiction",
       "copies": 20,
       "availableCopies": 9,
-      "coverImage": "https://via.placeholder.com/400x600?text=Demon+Slayer+Vol.+49",
+      "coverImage": "https://m.media-amazon.com/images/I/81Th7uSWy7L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8690,7 +8690,7 @@
       "category": "Manga - Fiction",
       "copies": 11,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fullmetal+Alchemist+Vol.+11",
+      "coverImage": "https://m.media-amazon.com/images/I/81oLy93xWSL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8704,7 +8704,7 @@
       "category": "Manga - Fiction",
       "copies": 20,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Naruto+Vol.+25",
+      "coverImage": "https://m.media-amazon.com/images/I/91VPuLJZKNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8718,7 +8718,7 @@
       "category": "Manga - Fiction",
       "copies": 16,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Demon+Slayer+Vol.+26",
+      "coverImage": "https://m.media-amazon.com/images/I/81Th7uSWy7L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8732,7 +8732,7 @@
       "category": "Manga - Fiction",
       "copies": 17,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=My+Hero+Academia+Vol.+14",
+      "coverImage": "https://m.media-amazon.com/images/I/91Aw8k3KLNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8746,7 +8746,7 @@
       "category": "Manga - Fiction",
       "copies": 9,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Naruto+Vol.+5",
+      "coverImage": "https://m.media-amazon.com/images/I/91VPuLJZKNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8760,7 +8760,7 @@
       "category": "Manga - Fiction",
       "copies": 11,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Demon+Slayer+Vol.+34",
+      "coverImage": "https://m.media-amazon.com/images/I/81Th7uSWy7L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8774,7 +8774,7 @@
       "category": "Manga - Fiction",
       "copies": 9,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fullmetal+Alchemist+Vol.+7",
+      "coverImage": "https://m.media-amazon.com/images/I/81oLy93xWSL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8788,7 +8788,7 @@
       "category": "Manga - Fiction",
       "copies": 6,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Naruto+Vol.+36",
+      "coverImage": "https://m.media-amazon.com/images/I/91VPuLJZKNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8802,7 +8802,7 @@
       "category": "Manga - Fiction",
       "copies": 6,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Demon+Slayer+Vol.+38",
+      "coverImage": "https://m.media-amazon.com/images/I/81Th7uSWy7L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8816,7 +8816,7 @@
       "category": "Manga - Fiction",
       "copies": 7,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Attack+on+Titan+Vol.+19",
+      "coverImage": "https://m.media-amazon.com/images/I/81CFNO1W1yL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8830,7 +8830,7 @@
       "category": "Manga - Fiction",
       "copies": 19,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Attack+on+Titan+Vol.+43",
+      "coverImage": "https://m.media-amazon.com/images/I/81CFNO1W1yL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8844,7 +8844,7 @@
       "category": "Manga - Fiction",
       "copies": 18,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Attack+on+Titan+Vol.+18",
+      "coverImage": "https://m.media-amazon.com/images/I/81CFNO1W1yL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8858,7 +8858,7 @@
       "category": "Manga - Fiction",
       "copies": 14,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fullmetal+Alchemist+Vol.+31",
+      "coverImage": "https://m.media-amazon.com/images/I/81oLy93xWSL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8872,7 +8872,7 @@
       "category": "Manga - Fiction",
       "copies": 18,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Naruto+Vol.+43",
+      "coverImage": "https://m.media-amazon.com/images/I/91VPuLJZKNL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8886,7 +8886,7 @@
       "category": "Manga - Fiction",
       "copies": 15,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Attack+on+Titan+Vol.+50",
+      "coverImage": "https://m.media-amazon.com/images/I/81CFNO1W1yL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8900,7 +8900,7 @@
       "category": "Manga - Horror",
       "copies": 9,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Another+Vol.+24",
+      "coverImage": "https://picsum.photos/seed/manga-1529/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8914,7 +8914,7 @@
       "category": "Manga - Horror",
       "copies": 20,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Deadman+Wonderland+Vol.+46",
+      "coverImage": "https://picsum.photos/seed/manga-1530/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8928,7 +8928,7 @@
       "category": "Manga - Horror",
       "copies": 9,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Parasyte+Vol.+34",
+      "coverImage": "https://picsum.photos/seed/manga-1531/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8942,7 +8942,7 @@
       "category": "Manga - Horror",
       "copies": 20,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Deadman+Wonderland+Vol.+45",
+      "coverImage": "https://picsum.photos/seed/manga-1532/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8956,7 +8956,7 @@
       "category": "Manga - Horror",
       "copies": 5,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Higurashi+Vol.+48",
+      "coverImage": "https://picsum.photos/seed/manga-1533/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8970,7 +8970,7 @@
       "category": "Manga - Horror",
       "copies": 8,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Deadman+Wonderland+Vol.+2",
+      "coverImage": "https://picsum.photos/seed/manga-1534/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8984,7 +8984,7 @@
       "category": "Manga - Horror",
       "copies": 18,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Deadman+Wonderland+Vol.+32",
+      "coverImage": "https://picsum.photos/seed/manga-1535/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -8998,7 +8998,7 @@
       "category": "Manga - Horror",
       "copies": 13,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Another+Vol.+43",
+      "coverImage": "https://picsum.photos/seed/manga-1536/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9012,7 +9012,7 @@
       "category": "Manga - Horror",
       "copies": 7,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Tokyo+Ghoul+Vol.+23",
+      "coverImage": "https://m.media-amazon.com/images/I/71l6q8FBcEL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9026,7 +9026,7 @@
       "category": "Manga - Horror",
       "copies": 18,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Deadman+Wonderland+Vol.+8",
+      "coverImage": "https://picsum.photos/seed/manga-1538/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9040,7 +9040,7 @@
       "category": "Manga - Horror",
       "copies": 7,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Parasyte+Vol.+49",
+      "coverImage": "https://picsum.photos/seed/manga-1539/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9054,7 +9054,7 @@
       "category": "Manga - Horror",
       "copies": 15,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Deadman+Wonderland+Vol.+10",
+      "coverImage": "https://picsum.photos/seed/manga-1540/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9068,7 +9068,7 @@
       "category": "Manga - Horror",
       "copies": 18,
       "availableCopies": 3,
-      "coverImage": "https://via.placeholder.com/400x600?text=Higurashi+Vol.+6",
+      "coverImage": "https://picsum.photos/seed/manga-1541/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9082,7 +9082,7 @@
       "category": "Manga - Horror",
       "copies": 15,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Parasyte+Vol.+33",
+      "coverImage": "https://picsum.photos/seed/manga-1542/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9096,7 +9096,7 @@
       "category": "Manga - Horror",
       "copies": 13,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Tokyo+Ghoul+Vol.+19",
+      "coverImage": "https://m.media-amazon.com/images/I/71l6q8FBcEL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9110,7 +9110,7 @@
       "category": "Manga - Horror",
       "copies": 17,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Higurashi+Vol.+23",
+      "coverImage": "https://picsum.photos/seed/manga-1544/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9124,7 +9124,7 @@
       "category": "Manga - Horror",
       "copies": 12,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Parasyte+Vol.+10",
+      "coverImage": "https://picsum.photos/seed/manga-1545/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9138,7 +9138,7 @@
       "category": "Manga - Horror",
       "copies": 17,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Another+Vol.+15",
+      "coverImage": "https://picsum.photos/seed/manga-1546/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9152,7 +9152,7 @@
       "category": "Manga - Horror",
       "copies": 7,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Parasyte+Vol.+10",
+      "coverImage": "https://picsum.photos/seed/manga-1547/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9166,7 +9166,7 @@
       "category": "Manga - Horror",
       "copies": 13,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Deadman+Wonderland+Vol.+17",
+      "coverImage": "https://picsum.photos/seed/manga-1548/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9180,7 +9180,7 @@
       "category": "Manga - Horror",
       "copies": 14,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Tokyo+Ghoul+Vol.+14",
+      "coverImage": "https://m.media-amazon.com/images/I/71l6q8FBcEL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9194,7 +9194,7 @@
       "category": "Manga - Horror",
       "copies": 17,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Deadman+Wonderland+Vol.+14",
+      "coverImage": "https://picsum.photos/seed/manga-1550/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9208,7 +9208,7 @@
       "category": "Manga - Horror",
       "copies": 19,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Higurashi+Vol.+5",
+      "coverImage": "https://picsum.photos/seed/manga-1551/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9222,7 +9222,7 @@
       "category": "Manga - Horror",
       "copies": 20,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Another+Vol.+35",
+      "coverImage": "https://picsum.photos/seed/manga-1552/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9236,7 +9236,7 @@
       "category": "Manga - Horror",
       "copies": 10,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Parasyte+Vol.+30",
+      "coverImage": "https://picsum.photos/seed/manga-1553/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9250,7 +9250,7 @@
       "category": "Manga - Horror",
       "copies": 14,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Parasyte+Vol.+17",
+      "coverImage": "https://picsum.photos/seed/manga-1554/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9264,7 +9264,7 @@
       "category": "Manga - Horror",
       "copies": 11,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Another+Vol.+30",
+      "coverImage": "https://picsum.photos/seed/manga-1555/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9278,7 +9278,7 @@
       "category": "Manga - Horror",
       "copies": 5,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Higurashi+Vol.+23",
+      "coverImage": "https://picsum.photos/seed/manga-1556/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9292,7 +9292,7 @@
       "category": "Manga - Thriller",
       "copies": 6,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Monster+Vol.+15",
+      "coverImage": "https://m.media-amazon.com/images/I/81TlWNvOW8L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9306,7 +9306,7 @@
       "category": "Manga - Thriller",
       "copies": 11,
       "availableCopies": 9,
-      "coverImage": "https://via.placeholder.com/400x600?text=Psycho-Pass+Vol.+3",
+      "coverImage": "https://picsum.photos/seed/manga-1558/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9320,7 +9320,7 @@
       "category": "Manga - Thriller",
       "copies": 15,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Death+Note+Vol.+45",
+      "coverImage": "https://m.media-amazon.com/images/I/81Rm1oGLZkL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9334,7 +9334,7 @@
       "category": "Manga - Thriller",
       "copies": 17,
       "availableCopies": 3,
-      "coverImage": "https://via.placeholder.com/400x600?text=Erased+Vol.+36",
+      "coverImage": "https://picsum.photos/seed/manga-1560/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9348,7 +9348,7 @@
       "category": "Manga - Thriller",
       "copies": 5,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Erased+Vol.+25",
+      "coverImage": "https://picsum.photos/seed/manga-1561/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9362,7 +9362,7 @@
       "category": "Manga - Thriller",
       "copies": 20,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Monster+Vol.+44",
+      "coverImage": "https://m.media-amazon.com/images/I/81TlWNvOW8L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9376,7 +9376,7 @@
       "category": "Manga - Thriller",
       "copies": 16,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Monster+Vol.+34",
+      "coverImage": "https://m.media-amazon.com/images/I/81TlWNvOW8L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9390,7 +9390,7 @@
       "category": "Manga - Thriller",
       "copies": 16,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Erased+Vol.+47",
+      "coverImage": "https://picsum.photos/seed/manga-1564/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9404,7 +9404,7 @@
       "category": "Manga - Thriller",
       "copies": 15,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Promised+Neverland+Vol.+44",
+      "coverImage": "https://picsum.photos/seed/manga-1565/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9418,7 +9418,7 @@
       "category": "Manga - Thriller",
       "copies": 19,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Erased+Vol.+50",
+      "coverImage": "https://picsum.photos/seed/manga-1566/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9432,7 +9432,7 @@
       "category": "Manga - Thriller",
       "copies": 16,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Monster+Vol.+17",
+      "coverImage": "https://m.media-amazon.com/images/I/81TlWNvOW8L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9446,7 +9446,7 @@
       "category": "Manga - Thriller",
       "copies": 7,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Promised+Neverland+Vol.+49",
+      "coverImage": "https://picsum.photos/seed/manga-1568/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9460,7 +9460,7 @@
       "category": "Manga - Thriller",
       "copies": 16,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Promised+Neverland+Vol.+45",
+      "coverImage": "https://picsum.photos/seed/manga-1569/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9474,7 +9474,7 @@
       "category": "Manga - Thriller",
       "copies": 10,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Death+Note+Vol.+39",
+      "coverImage": "https://m.media-amazon.com/images/I/81Rm1oGLZkL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9488,7 +9488,7 @@
       "category": "Manga - Thriller",
       "copies": 14,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Psycho-Pass+Vol.+39",
+      "coverImage": "https://picsum.photos/seed/manga-1571/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9502,7 +9502,7 @@
       "category": "Manga - Thriller",
       "copies": 10,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Erased+Vol.+44",
+      "coverImage": "https://picsum.photos/seed/manga-1572/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9516,7 +9516,7 @@
       "category": "Manga - Thriller",
       "copies": 6,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Death+Note+Vol.+9",
+      "coverImage": "https://m.media-amazon.com/images/I/81Rm1oGLZkL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9530,7 +9530,7 @@
       "category": "Manga - Thriller",
       "copies": 19,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Promised+Neverland+Vol.+17",
+      "coverImage": "https://picsum.photos/seed/manga-1574/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9544,7 +9544,7 @@
       "category": "Manga - Thriller",
       "copies": 6,
       "availableCopies": 3,
-      "coverImage": "https://via.placeholder.com/400x600?text=Monster+Vol.+27",
+      "coverImage": "https://m.media-amazon.com/images/I/81TlWNvOW8L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9558,7 +9558,7 @@
       "category": "Manga - Thriller",
       "copies": 19,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Psycho-Pass+Vol.+24",
+      "coverImage": "https://picsum.photos/seed/manga-1576/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9572,7 +9572,7 @@
       "category": "Manga - Thriller",
       "copies": 9,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Erased+Vol.+14",
+      "coverImage": "https://picsum.photos/seed/manga-1577/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9586,7 +9586,7 @@
       "category": "Manga - Thriller",
       "copies": 8,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Promised+Neverland+Vol.+5",
+      "coverImage": "https://picsum.photos/seed/manga-1578/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9600,7 +9600,7 @@
       "category": "Manga - Thriller",
       "copies": 14,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Death+Note+Vol.+36",
+      "coverImage": "https://m.media-amazon.com/images/I/81Rm1oGLZkL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9614,7 +9614,7 @@
       "category": "Manga - Thriller",
       "copies": 5,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Monster+Vol.+41",
+      "coverImage": "https://m.media-amazon.com/images/I/81TlWNvOW8L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9628,7 +9628,7 @@
       "category": "Manga - Thriller",
       "copies": 19,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Promised+Neverland+Vol.+17",
+      "coverImage": "https://picsum.photos/seed/manga-1581/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9642,7 +9642,7 @@
       "category": "Manga - Thriller",
       "copies": 19,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Monster+Vol.+30",
+      "coverImage": "https://m.media-amazon.com/images/I/81TlWNvOW8L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9656,7 +9656,7 @@
       "category": "Manga - Thriller",
       "copies": 14,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Psycho-Pass+Vol.+33",
+      "coverImage": "https://picsum.photos/seed/manga-1583/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9670,7 +9670,7 @@
       "category": "Manga - Thriller",
       "copies": 11,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Promised+Neverland+Vol.+39",
+      "coverImage": "https://picsum.photos/seed/manga-1584/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9684,7 +9684,7 @@
       "category": "Manga - Romance",
       "copies": 14,
       "availableCopies": 3,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fruits+Basket+Vol.+19",
+      "coverImage": "https://picsum.photos/seed/manga-1585/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9698,7 +9698,7 @@
       "category": "Manga - Romance",
       "copies": 8,
       "availableCopies": 3,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fruits+Basket+Vol.+44",
+      "coverImage": "https://picsum.photos/seed/manga-1586/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9712,7 +9712,7 @@
       "category": "Manga - Romance",
       "copies": 16,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Horimiya+Vol.+32",
+      "coverImage": "https://picsum.photos/seed/manga-1587/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9726,7 +9726,7 @@
       "category": "Manga - Romance",
       "copies": 20,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fruits+Basket+Vol.+42",
+      "coverImage": "https://picsum.photos/seed/manga-1588/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9740,7 +9740,7 @@
       "category": "Manga - Romance",
       "copies": 5,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fruits+Basket+Vol.+27",
+      "coverImage": "https://picsum.photos/seed/manga-1589/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9754,7 +9754,7 @@
       "category": "Manga - Romance",
       "copies": 7,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Your+Lie+in+April+Vol.+22",
+      "coverImage": "https://picsum.photos/seed/manga-1590/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9768,7 +9768,7 @@
       "category": "Manga - Romance",
       "copies": 16,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Horimiya+Vol.+37",
+      "coverImage": "https://picsum.photos/seed/manga-1591/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9782,7 +9782,7 @@
       "category": "Manga - Romance",
       "copies": 17,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Horimiya+Vol.+18",
+      "coverImage": "https://picsum.photos/seed/manga-1592/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9796,7 +9796,7 @@
       "category": "Manga - Romance",
       "copies": 20,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Your+Lie+in+April+Vol.+45",
+      "coverImage": "https://picsum.photos/seed/manga-1593/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9810,7 +9810,7 @@
       "category": "Manga - Romance",
       "copies": 13,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Horimiya+Vol.+30",
+      "coverImage": "https://picsum.photos/seed/manga-1594/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9824,7 +9824,7 @@
       "category": "Manga - Romance",
       "copies": 17,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Lovely+Complex+Vol.+2",
+      "coverImage": "https://picsum.photos/seed/manga-1595/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9838,7 +9838,7 @@
       "category": "Manga - Romance",
       "copies": 10,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Lovely+Complex+Vol.+35",
+      "coverImage": "https://picsum.photos/seed/manga-1596/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9852,7 +9852,7 @@
       "category": "Manga - Romance",
       "copies": 17,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Your+Lie+in+April+Vol.+15",
+      "coverImage": "https://picsum.photos/seed/manga-1597/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9866,7 +9866,7 @@
       "category": "Manga - Romance",
       "copies": 6,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Your+Lie+in+April+Vol.+47",
+      "coverImage": "https://picsum.photos/seed/manga-1598/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9880,7 +9880,7 @@
       "category": "Manga - Romance",
       "copies": 6,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Horimiya+Vol.+47",
+      "coverImage": "https://picsum.photos/seed/manga-1599/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9894,7 +9894,7 @@
       "category": "Manga - Romance",
       "copies": 6,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kimi+ni+Todoke+Vol.+37",
+      "coverImage": "https://picsum.photos/seed/manga-1600/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9908,7 +9908,7 @@
       "category": "Manga - Romance",
       "copies": 10,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kimi+ni+Todoke+Vol.+37",
+      "coverImage": "https://picsum.photos/seed/manga-1601/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9922,7 +9922,7 @@
       "category": "Manga - Romance",
       "copies": 7,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fruits+Basket+Vol.+1",
+      "coverImage": "https://picsum.photos/seed/manga-1602/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9936,7 +9936,7 @@
       "category": "Manga - Romance",
       "copies": 15,
       "availableCopies": 3,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fruits+Basket+Vol.+5",
+      "coverImage": "https://picsum.photos/seed/manga-1603/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9950,7 +9950,7 @@
       "category": "Manga - Romance",
       "copies": 13,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kimi+ni+Todoke+Vol.+41",
+      "coverImage": "https://picsum.photos/seed/manga-1604/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9964,7 +9964,7 @@
       "category": "Manga - Romance",
       "copies": 8,
       "availableCopies": 3,
-      "coverImage": "https://via.placeholder.com/400x600?text=Lovely+Complex+Vol.+28",
+      "coverImage": "https://picsum.photos/seed/manga-1605/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9978,7 +9978,7 @@
       "category": "Manga - Romance",
       "copies": 20,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Your+Lie+in+April+Vol.+34",
+      "coverImage": "https://picsum.photos/seed/manga-1606/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -9992,7 +9992,7 @@
       "category": "Manga - Romance",
       "copies": 17,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Horimiya+Vol.+18",
+      "coverImage": "https://picsum.photos/seed/manga-1607/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10006,7 +10006,7 @@
       "category": "Manga - Romance",
       "copies": 9,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fruits+Basket+Vol.+12",
+      "coverImage": "https://picsum.photos/seed/manga-1608/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10020,7 +10020,7 @@
       "category": "Manga - Romance",
       "copies": 14,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fruits+Basket+Vol.+45",
+      "coverImage": "https://picsum.photos/seed/manga-1609/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10034,7 +10034,7 @@
       "category": "Manga - Romance",
       "copies": 19,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fruits+Basket+Vol.+27",
+      "coverImage": "https://picsum.photos/seed/manga-1610/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10048,7 +10048,7 @@
       "category": "Manga - Romance",
       "copies": 14,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fruits+Basket+Vol.+31",
+      "coverImage": "https://picsum.photos/seed/manga-1611/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10062,7 +10062,7 @@
       "category": "Manga - Romance",
       "copies": 18,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Horimiya+Vol.+45",
+      "coverImage": "https://picsum.photos/seed/manga-1612/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10076,7 +10076,7 @@
       "category": "Manga - Psychological",
       "copies": 5,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+6",
+      "coverImage": "https://picsum.photos/seed/manga-1613/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10090,7 +10090,7 @@
       "category": "Manga - Psychological",
       "copies": 20,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Monster+Vol.+46",
+      "coverImage": "https://m.media-amazon.com/images/I/81TlWNvOW8L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10104,7 +10104,7 @@
       "category": "Manga - Psychological",
       "copies": 16,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+13",
+      "coverImage": "https://picsum.photos/seed/manga-1615/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10118,7 +10118,7 @@
       "category": "Manga - Psychological",
       "copies": 9,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Liar+Game+Vol.+11",
+      "coverImage": "https://picsum.photos/seed/manga-1616/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10132,7 +10132,7 @@
       "category": "Manga - Psychological",
       "copies": 18,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaiji+Vol.+49",
+      "coverImage": "https://picsum.photos/seed/manga-1617/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10146,7 +10146,7 @@
       "category": "Manga - Psychological",
       "copies": 5,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaiji+Vol.+24",
+      "coverImage": "https://picsum.photos/seed/manga-1618/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10160,7 +10160,7 @@
       "category": "Manga - Psychological",
       "copies": 8,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Homunculus+Vol.+18",
+      "coverImage": "https://picsum.photos/seed/manga-1619/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10174,7 +10174,7 @@
       "category": "Manga - Psychological",
       "copies": 9,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+32",
+      "coverImage": "https://picsum.photos/seed/manga-1620/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10188,7 +10188,7 @@
       "category": "Manga - Psychological",
       "copies": 18,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Liar+Game+Vol.+14",
+      "coverImage": "https://picsum.photos/seed/manga-1621/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10202,7 +10202,7 @@
       "category": "Manga - Psychological",
       "copies": 9,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+6",
+      "coverImage": "https://picsum.photos/seed/manga-1622/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10216,7 +10216,7 @@
       "category": "Manga - Psychological",
       "copies": 11,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Liar+Game+Vol.+19",
+      "coverImage": "https://picsum.photos/seed/manga-1623/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10230,7 +10230,7 @@
       "category": "Manga - Psychological",
       "copies": 8,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Monster+Vol.+29",
+      "coverImage": "https://m.media-amazon.com/images/I/81TlWNvOW8L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10244,7 +10244,7 @@
       "category": "Manga - Psychological",
       "copies": 15,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Liar+Game+Vol.+7",
+      "coverImage": "https://picsum.photos/seed/manga-1625/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10258,7 +10258,7 @@
       "category": "Manga - Psychological",
       "copies": 16,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+11",
+      "coverImage": "https://picsum.photos/seed/manga-1626/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10272,7 +10272,7 @@
       "category": "Manga - Psychological",
       "copies": 19,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+20",
+      "coverImage": "https://picsum.photos/seed/manga-1627/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10286,7 +10286,7 @@
       "category": "Manga - Psychological",
       "copies": 15,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+35",
+      "coverImage": "https://picsum.photos/seed/manga-1628/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10300,7 +10300,7 @@
       "category": "Manga - Psychological",
       "copies": 12,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Liar+Game+Vol.+7",
+      "coverImage": "https://picsum.photos/seed/manga-1629/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10314,7 +10314,7 @@
       "category": "Manga - Psychological",
       "copies": 6,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Homunculus+Vol.+31",
+      "coverImage": "https://picsum.photos/seed/manga-1630/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10328,7 +10328,7 @@
       "category": "Manga - Psychological",
       "copies": 19,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaiji+Vol.+15",
+      "coverImage": "https://picsum.photos/seed/manga-1631/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10342,7 +10342,7 @@
       "category": "Manga - Psychological",
       "copies": 11,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Homunculus+Vol.+40",
+      "coverImage": "https://picsum.photos/seed/manga-1632/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10356,7 +10356,7 @@
       "category": "Manga - Psychological",
       "copies": 17,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Homunculus+Vol.+22",
+      "coverImage": "https://picsum.photos/seed/manga-1633/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10370,7 +10370,7 @@
       "category": "Manga - Psychological",
       "copies": 5,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Monster+Vol.+7",
+      "coverImage": "https://m.media-amazon.com/images/I/81TlWNvOW8L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10384,7 +10384,7 @@
       "category": "Manga - Psychological",
       "copies": 12,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Liar+Game+Vol.+49",
+      "coverImage": "https://picsum.photos/seed/manga-1635/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10398,7 +10398,7 @@
       "category": "Manga - Psychological",
       "copies": 8,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+14",
+      "coverImage": "https://picsum.photos/seed/manga-1636/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10412,7 +10412,7 @@
       "category": "Manga - Psychological",
       "copies": 6,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+13",
+      "coverImage": "https://picsum.photos/seed/manga-1637/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10426,7 +10426,7 @@
       "category": "Manga - Psychological",
       "copies": 12,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+33",
+      "coverImage": "https://picsum.photos/seed/manga-1638/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10440,7 +10440,7 @@
       "category": "Manga - Psychological",
       "copies": 7,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Oyasumi+Punpun+Vol.+31",
+      "coverImage": "https://picsum.photos/seed/manga-1639/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10454,7 +10454,7 @@
       "category": "Manga - Psychological",
       "copies": 12,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaiji+Vol.+13",
+      "coverImage": "https://picsum.photos/seed/manga-1640/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10468,7 +10468,7 @@
       "category": "Manga - Comedy",
       "copies": 8,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaguya-sama+Vol.+19",
+      "coverImage": "https://picsum.photos/seed/manga-1641/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10482,7 +10482,7 @@
       "category": "Manga - Comedy",
       "copies": 5,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=One+Punch+Man+Vol.+32",
+      "coverImage": "https://picsum.photos/seed/manga-1642/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10496,7 +10496,7 @@
       "category": "Manga - Comedy",
       "copies": 11,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaguya-sama+Vol.+6",
+      "coverImage": "https://picsum.photos/seed/manga-1643/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10510,7 +10510,7 @@
       "category": "Manga - Comedy",
       "copies": 16,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Daily+Lives+of+High+School+Boys+Vol.+40",
+      "coverImage": "https://picsum.photos/seed/manga-1644/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10524,7 +10524,7 @@
       "category": "Manga - Comedy",
       "copies": 5,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Gintama+Vol.+26",
+      "coverImage": "https://picsum.photos/seed/manga-1645/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10538,7 +10538,7 @@
       "category": "Manga - Comedy",
       "copies": 16,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Daily+Lives+of+High+School+Boys+Vol.+4",
+      "coverImage": "https://picsum.photos/seed/manga-1646/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10552,7 +10552,7 @@
       "category": "Manga - Comedy",
       "copies": 19,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Gintama+Vol.+15",
+      "coverImage": "https://picsum.photos/seed/manga-1647/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10566,7 +10566,7 @@
       "category": "Manga - Comedy",
       "copies": 5,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Daily+Lives+of+High+School+Boys+Vol.+25",
+      "coverImage": "https://picsum.photos/seed/manga-1648/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10580,7 +10580,7 @@
       "category": "Manga - Comedy",
       "copies": 7,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Daily+Lives+of+High+School+Boys+Vol.+16",
+      "coverImage": "https://picsum.photos/seed/manga-1649/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10594,7 +10594,7 @@
       "category": "Manga - Comedy",
       "copies": 13,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaguya-sama+Vol.+25",
+      "coverImage": "https://picsum.photos/seed/manga-1650/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10608,7 +10608,7 @@
       "category": "Manga - Comedy",
       "copies": 20,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaguya-sama+Vol.+29",
+      "coverImage": "https://picsum.photos/seed/manga-1651/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10622,7 +10622,7 @@
       "category": "Manga - Comedy",
       "copies": 12,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Gintama+Vol.+42",
+      "coverImage": "https://picsum.photos/seed/manga-1652/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10636,7 +10636,7 @@
       "category": "Manga - Comedy",
       "copies": 12,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Daily+Lives+of+High+School+Boys+Vol.+25",
+      "coverImage": "https://picsum.photos/seed/manga-1653/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10650,7 +10650,7 @@
       "category": "Manga - Comedy",
       "copies": 11,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Gintama+Vol.+1",
+      "coverImage": "https://picsum.photos/seed/manga-1654/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10664,7 +10664,7 @@
       "category": "Manga - Comedy",
       "copies": 20,
       "availableCopies": 3,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaguya-sama+Vol.+35",
+      "coverImage": "https://picsum.photos/seed/manga-1655/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10678,7 +10678,7 @@
       "category": "Manga - Comedy",
       "copies": 8,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=One+Punch+Man+Vol.+30",
+      "coverImage": "https://picsum.photos/seed/manga-1656/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10692,7 +10692,7 @@
       "category": "Manga - Comedy",
       "copies": 6,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaguya-sama+Vol.+43",
+      "coverImage": "https://picsum.photos/seed/manga-1657/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10706,7 +10706,7 @@
       "category": "Manga - Comedy",
       "copies": 17,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Gintama+Vol.+48",
+      "coverImage": "https://picsum.photos/seed/manga-1658/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10720,7 +10720,7 @@
       "category": "Manga - Comedy",
       "copies": 13,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Nichijou+Vol.+9",
+      "coverImage": "https://picsum.photos/seed/manga-1659/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10734,7 +10734,7 @@
       "category": "Manga - Comedy",
       "copies": 14,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=One+Punch+Man+Vol.+32",
+      "coverImage": "https://picsum.photos/seed/manga-1660/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10748,7 +10748,7 @@
       "category": "Manga - Comedy",
       "copies": 6,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Daily+Lives+of+High+School+Boys+Vol.+26",
+      "coverImage": "https://picsum.photos/seed/manga-1661/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10762,7 +10762,7 @@
       "category": "Manga - Comedy",
       "copies": 7,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=One+Punch+Man+Vol.+22",
+      "coverImage": "https://picsum.photos/seed/manga-1662/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10776,7 +10776,7 @@
       "category": "Manga - Comedy",
       "copies": 9,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Daily+Lives+of+High+School+Boys+Vol.+25",
+      "coverImage": "https://picsum.photos/seed/manga-1663/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10790,7 +10790,7 @@
       "category": "Manga - Comedy",
       "copies": 15,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaguya-sama+Vol.+13",
+      "coverImage": "https://picsum.photos/seed/manga-1664/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10804,7 +10804,7 @@
       "category": "Manga - Comedy",
       "copies": 10,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=One+Punch+Man+Vol.+14",
+      "coverImage": "https://picsum.photos/seed/manga-1665/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10818,7 +10818,7 @@
       "category": "Manga - Comedy",
       "copies": 6,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Gintama+Vol.+18",
+      "coverImage": "https://picsum.photos/seed/manga-1666/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10832,7 +10832,7 @@
       "category": "Manga - Comedy",
       "copies": 17,
       "availableCopies": 3,
-      "coverImage": "https://via.placeholder.com/400x600?text=Kaguya-sama+Vol.+27",
+      "coverImage": "https://picsum.photos/seed/manga-1667/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10846,7 +10846,7 @@
       "category": "Manga - Comedy",
       "copies": 12,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Gintama+Vol.+14",
+      "coverImage": "https://picsum.photos/seed/manga-1668/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10860,7 +10860,7 @@
       "category": "Manga - Classic",
       "copies": 12,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Astro+Boy+Vol.+10",
+      "coverImage": "https://picsum.photos/seed/manga-1669/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10874,7 +10874,7 @@
       "category": "Manga - Classic",
       "copies": 12,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Astro+Boy+Vol.+26",
+      "coverImage": "https://picsum.photos/seed/manga-1670/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10888,7 +10888,7 @@
       "category": "Manga - Classic",
       "copies": 10,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dragon+Ball+Vol.+5",
+      "coverImage": "https://m.media-amazon.com/images/I/81OwbBLkRwL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10902,7 +10902,7 @@
       "category": "Manga - Classic",
       "copies": 10,
       "availableCopies": 3,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sailor+Moon+Vol.+24",
+      "coverImage": "https://m.media-amazon.com/images/I/81t5WR5L9LL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10916,7 +10916,7 @@
       "category": "Manga - Classic",
       "copies": 19,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dragon+Ball+Vol.+23",
+      "coverImage": "https://m.media-amazon.com/images/I/81OwbBLkRwL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10930,7 +10930,7 @@
       "category": "Manga - Classic",
       "copies": 20,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sailor+Moon+Vol.+12",
+      "coverImage": "https://m.media-amazon.com/images/I/81t5WR5L9LL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10944,7 +10944,7 @@
       "category": "Manga - Classic",
       "copies": 13,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Ghost+in+the+Shell+Vol.+14",
+      "coverImage": "https://picsum.photos/seed/manga-1675/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10958,7 +10958,7 @@
       "category": "Manga - Classic",
       "copies": 15,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Ghost+in+the+Shell+Vol.+11",
+      "coverImage": "https://picsum.photos/seed/manga-1676/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10972,7 +10972,7 @@
       "category": "Manga - Classic",
       "copies": 18,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dragon+Ball+Vol.+12",
+      "coverImage": "https://m.media-amazon.com/images/I/81OwbBLkRwL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -10986,7 +10986,7 @@
       "category": "Manga - Classic",
       "copies": 13,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Ghost+in+the+Shell+Vol.+39",
+      "coverImage": "https://picsum.photos/seed/manga-1678/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11000,7 +11000,7 @@
       "category": "Manga - Classic",
       "copies": 10,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Ghost+in+the+Shell+Vol.+5",
+      "coverImage": "https://picsum.photos/seed/manga-1679/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11014,7 +11014,7 @@
       "category": "Manga - Classic",
       "copies": 5,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sailor+Moon+Vol.+35",
+      "coverImage": "https://m.media-amazon.com/images/I/81t5WR5L9LL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11028,7 +11028,7 @@
       "category": "Manga - Classic",
       "copies": 17,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Akira+Vol.+46",
+      "coverImage": "https://m.media-amazon.com/images/I/91YnxAb0-SL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11042,7 +11042,7 @@
       "category": "Manga - Classic",
       "copies": 6,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sailor+Moon+Vol.+43",
+      "coverImage": "https://m.media-amazon.com/images/I/81t5WR5L9LL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11056,7 +11056,7 @@
       "category": "Manga - Classic",
       "copies": 11,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Ghost+in+the+Shell+Vol.+34",
+      "coverImage": "https://picsum.photos/seed/manga-1683/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11070,7 +11070,7 @@
       "category": "Manga - Classic",
       "copies": 13,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Astro+Boy+Vol.+6",
+      "coverImage": "https://picsum.photos/seed/manga-1684/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11084,7 +11084,7 @@
       "category": "Manga - Classic",
       "copies": 15,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Ghost+in+the+Shell+Vol.+14",
+      "coverImage": "https://picsum.photos/seed/manga-1685/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11098,7 +11098,7 @@
       "category": "Manga - Classic",
       "copies": 7,
       "availableCopies": 4,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sailor+Moon+Vol.+41",
+      "coverImage": "https://m.media-amazon.com/images/I/81t5WR5L9LL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11112,7 +11112,7 @@
       "category": "Manga - Classic",
       "copies": 9,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Ghost+in+the+Shell+Vol.+38",
+      "coverImage": "https://picsum.photos/seed/manga-1687/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11126,7 +11126,7 @@
       "category": "Manga - Classic",
       "copies": 5,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sailor+Moon+Vol.+14",
+      "coverImage": "https://m.media-amazon.com/images/I/81t5WR5L9LL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11140,7 +11140,7 @@
       "category": "Manga - Classic",
       "copies": 19,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Akira+Vol.+30",
+      "coverImage": "https://m.media-amazon.com/images/I/91YnxAb0-SL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11154,7 +11154,7 @@
       "category": "Manga - Classic",
       "copies": 7,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Ghost+in+the+Shell+Vol.+38",
+      "coverImage": "https://picsum.photos/seed/manga-1690/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11168,7 +11168,7 @@
       "category": "Manga - Classic",
       "copies": 5,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Akira+Vol.+13",
+      "coverImage": "https://m.media-amazon.com/images/I/91YnxAb0-SL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11182,7 +11182,7 @@
       "category": "Manga - Classic",
       "copies": 20,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Ghost+in+the+Shell+Vol.+11",
+      "coverImage": "https://picsum.photos/seed/manga-1692/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11196,7 +11196,7 @@
       "category": "Manga - Classic",
       "copies": 19,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Astro+Boy+Vol.+23",
+      "coverImage": "https://picsum.photos/seed/manga-1693/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11210,7 +11210,7 @@
       "category": "Manga - Classic",
       "copies": 18,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Akira+Vol.+44",
+      "coverImage": "https://m.media-amazon.com/images/I/91YnxAb0-SL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11224,7 +11224,7 @@
       "category": "Manga - Classic",
       "copies": 8,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Ghost+in+the+Shell+Vol.+15",
+      "coverImage": "https://picsum.photos/seed/manga-1695/400/600",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11238,7 +11238,7 @@
       "category": "Manga - Classic",
       "copies": 9,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dragon+Ball+Vol.+5",
+      "coverImage": "https://m.media-amazon.com/images/I/81OwbBLkRwL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Manga reading available online"
       },
@@ -11252,7 +11252,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/1/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/1/"
       },
@@ -11266,7 +11266,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/2/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/2/"
       },
@@ -11280,7 +11280,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/3/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/3/"
       },
@@ -11294,7 +11294,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/4/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/4/"
       },
@@ -11308,7 +11308,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/5/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/5/"
       },
@@ -11322,7 +11322,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/6/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/6/"
       },
@@ -11336,7 +11336,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/7/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/7/"
       },
@@ -11350,7 +11350,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/8/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/8/"
       },
@@ -11364,7 +11364,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/9/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/9/"
       },
@@ -11378,7 +11378,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/10/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/10/"
       },
@@ -11392,7 +11392,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/11/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/11/"
       },
@@ -11406,7 +11406,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/12/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/12/"
       },
@@ -11420,7 +11420,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/13/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/13/"
       },
@@ -11434,7 +11434,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/14/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/14/"
       },
@@ -11448,7 +11448,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/15/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/15/"
       },
@@ -11462,7 +11462,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/16/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/16/"
       },
@@ -11476,7 +11476,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/17/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/17/"
       },
@@ -11490,7 +11490,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/18/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/18/"
       },
@@ -11504,7 +11504,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/19/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/19/"
       },
@@ -11518,7 +11518,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/20/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/20/"
       },
@@ -11532,7 +11532,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/21/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/21/"
       },
@@ -11546,7 +11546,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/22/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/22/"
       },
@@ -11560,7 +11560,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/23/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/23/"
       },
@@ -11574,7 +11574,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/24/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/24/"
       },
@@ -11588,7 +11588,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/25/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/25/"
       },
@@ -11602,7 +11602,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/26/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/26/"
       },
@@ -11616,7 +11616,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/27/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/27/"
       },
@@ -11630,7 +11630,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/28/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/28/"
       },
@@ -11644,7 +11644,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/29/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/29/"
       },
@@ -11658,7 +11658,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/30/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/30/"
       },
@@ -11672,7 +11672,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/31/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/31/"
       },
@@ -11686,7 +11686,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/32/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/32/"
       },
@@ -11700,7 +11700,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/33/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/33/"
       },
@@ -11714,7 +11714,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/34/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/34/"
       },
@@ -11728,7 +11728,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/35/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/35/"
       },
@@ -11742,7 +11742,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/36/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/36/"
       },
@@ -11756,7 +11756,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/37/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/37/"
       },
@@ -11770,7 +11770,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/38/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/38/"
       },
@@ -11784,7 +11784,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/39/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/39/"
       },
@@ -11798,7 +11798,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/40/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/40/"
       },
@@ -11812,7 +11812,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/41/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/41/"
       },
@@ -11826,7 +11826,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/42/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/42/"
       },
@@ -11840,7 +11840,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/43/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/43/"
       },
@@ -11854,7 +11854,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/44/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/44/"
       },
@@ -11868,7 +11868,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/45/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/45/"
       },
@@ -11882,7 +11882,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/46/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/46/"
       },
@@ -11896,7 +11896,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/47/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/47/"
       },
@@ -11910,7 +11910,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/48/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/48/"
       },
@@ -11924,7 +11924,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/49/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/49/"
       },
@@ -11938,7 +11938,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/50/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/50/"
       },
@@ -11952,7 +11952,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/51/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/51/"
       },
@@ -11966,7 +11966,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/52/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/52/"
       },
@@ -11980,7 +11980,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/53/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/53/"
       },
@@ -11994,7 +11994,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/54/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/54/"
       },
@@ -12008,7 +12008,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/55/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/55/"
       },
@@ -12022,7 +12022,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/56/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/56/"
       },
@@ -12036,7 +12036,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/57/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/57/"
       },
@@ -12050,7 +12050,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/58/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/58/"
       },
@@ -12064,7 +12064,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/59/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/59/"
       },
@@ -12078,7 +12078,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/60/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/60/"
       },
@@ -12092,7 +12092,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/61/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/61/"
       },
@@ -12106,7 +12106,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/62/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/62/"
       },
@@ -12120,7 +12120,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/63/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/63/"
       },
@@ -12134,7 +12134,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/64/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/64/"
       },
@@ -12148,7 +12148,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/65/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/65/"
       },
@@ -12162,7 +12162,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/66/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/66/"
       },
@@ -12176,7 +12176,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/67/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/67/"
       },
@@ -12190,7 +12190,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/68/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/68/"
       },
@@ -12204,7 +12204,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/69/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/69/"
       },
@@ -12218,7 +12218,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/70/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/70/"
       },
@@ -12232,7 +12232,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/71/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/71/"
       },
@@ -12246,7 +12246,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/72/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/72/"
       },
@@ -12260,7 +12260,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/73/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/73/"
       },
@@ -12274,7 +12274,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/74/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/74/"
       },
@@ -12288,7 +12288,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/75/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/75/"
       },
@@ -12302,7 +12302,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/76/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/76/"
       },
@@ -12316,7 +12316,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/77/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/77/"
       },
@@ -12330,7 +12330,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/78/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/78/"
       },
@@ -12344,7 +12344,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/79/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/79/"
       },
@@ -12358,7 +12358,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/80/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/80/"
       },
@@ -12372,7 +12372,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/81/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/81/"
       },
@@ -12386,7 +12386,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/82/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/82/"
       },
@@ -12400,7 +12400,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/83/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/83/"
       },
@@ -12414,7 +12414,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/84/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/84/"
       },
@@ -12428,7 +12428,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/85/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/85/"
       },
@@ -12442,7 +12442,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/86/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/86/"
       },
@@ -12456,7 +12456,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/87/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/87/"
       },
@@ -12470,7 +12470,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/88/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/88/"
       },
@@ -12484,7 +12484,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/89/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/89/"
       },
@@ -12498,7 +12498,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/90/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/90/"
       },
@@ -12512,7 +12512,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/91/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/91/"
       },
@@ -12526,7 +12526,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/92/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/92/"
       },
@@ -12540,7 +12540,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/93/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/93/"
       },
@@ -12554,7 +12554,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/94/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/94/"
       },
@@ -12568,7 +12568,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/95/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/95/"
       },
@@ -12582,7 +12582,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/96/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/96/"
       },
@@ -12596,7 +12596,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/97/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/97/"
       },
@@ -12610,7 +12610,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/98/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/98/"
       },
@@ -12624,7 +12624,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/99/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/99/"
       },
@@ -12638,7 +12638,7 @@
       "category": "Comic - Comedy",
       "copies": 999,
       "availableCopies": 999,
-      "coverImage": "https://imgs.xkcd.com/100/",
+      "coverImage": "https://m.media-amazon.com/images/I/71TYgV9qb9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "web": "https://xkcd.com/100/"
       },
@@ -12652,7 +12652,7 @@
       "category": "Comic - Fiction",
       "copies": 25,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Y:+The+Last+Man+%2359",
+      "coverImage": "https://m.media-amazon.com/images/I/81nTTm+qH5L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12666,7 +12666,7 @@
       "category": "Comic - Fiction",
       "copies": 11,
       "availableCopies": 25,
-      "coverImage": "https://via.placeholder.com/400x600?text=Y:+The+Last+Man+%23176",
+      "coverImage": "https://m.media-amazon.com/images/I/81nTTm+qH5L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12680,7 +12680,7 @@
       "category": "Comic - Fiction",
       "copies": 18,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Sandman+%23110",
+      "coverImage": "https://m.media-amazon.com/images/I/81UQP0AXYTL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12694,7 +12694,7 @@
       "category": "Comic - Fiction",
       "copies": 16,
       "availableCopies": 24,
-      "coverImage": "https://via.placeholder.com/400x600?text=Preacher+%2330",
+      "coverImage": "https://m.media-amazon.com/images/I/81k3tWDwPqL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12708,7 +12708,7 @@
       "category": "Comic - Fiction",
       "copies": 30,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Preacher+%23110",
+      "coverImage": "https://m.media-amazon.com/images/I/81k3tWDwPqL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12722,7 +12722,7 @@
       "category": "Comic - Fiction",
       "copies": 25,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Y:+The+Last+Man+%2315",
+      "coverImage": "https://m.media-amazon.com/images/I/81nTTm+qH5L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12736,7 +12736,7 @@
       "category": "Comic - Fiction",
       "copies": 13,
       "availableCopies": 21,
-      "coverImage": "https://via.placeholder.com/400x600?text=Preacher+%2322",
+      "coverImage": "https://m.media-amazon.com/images/I/81k3tWDwPqL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12750,7 +12750,7 @@
       "category": "Comic - Fiction",
       "copies": 16,
       "availableCopies": 30,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%2346",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12764,7 +12764,7 @@
       "category": "Comic - Fiction",
       "copies": 18,
       "availableCopies": 29,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Sandman+%2334",
+      "coverImage": "https://m.media-amazon.com/images/I/81UQP0AXYTL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12778,7 +12778,7 @@
       "category": "Comic - Fiction",
       "copies": 22,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fables+%2380",
+      "coverImage": "https://m.media-amazon.com/images/I/81C9kK2LUUL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12792,7 +12792,7 @@
       "category": "Comic - Fiction",
       "copies": 28,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%2311",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12806,7 +12806,7 @@
       "category": "Comic - Fiction",
       "copies": 11,
       "availableCopies": 9,
-      "coverImage": "https://via.placeholder.com/400x600?text=Y:+The+Last+Man+%23134",
+      "coverImage": "https://m.media-amazon.com/images/I/81nTTm+qH5L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12820,7 +12820,7 @@
       "category": "Comic - Fiction",
       "copies": 25,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%23171",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12834,7 +12834,7 @@
       "category": "Comic - Fiction",
       "copies": 23,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Y:+The+Last+Man+%2362",
+      "coverImage": "https://m.media-amazon.com/images/I/81nTTm+qH5L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12848,7 +12848,7 @@
       "category": "Comic - Fiction",
       "copies": 23,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%23122",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12862,7 +12862,7 @@
       "category": "Comic - Fiction",
       "copies": 15,
       "availableCopies": 27,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fables+%2316",
+      "coverImage": "https://m.media-amazon.com/images/I/81C9kK2LUUL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12876,7 +12876,7 @@
       "category": "Comic - Fiction",
       "copies": 14,
       "availableCopies": 24,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%2388",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12890,7 +12890,7 @@
       "category": "Comic - Fiction",
       "copies": 26,
       "availableCopies": 23,
-      "coverImage": "https://via.placeholder.com/400x600?text=Y:+The+Last+Man+%2394",
+      "coverImage": "https://m.media-amazon.com/images/I/81nTTm+qH5L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12904,7 +12904,7 @@
       "category": "Comic - Fiction",
       "copies": 10,
       "availableCopies": 26,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%23169",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12918,7 +12918,7 @@
       "category": "Comic - Fiction",
       "copies": 19,
       "availableCopies": 9,
-      "coverImage": "https://via.placeholder.com/400x600?text=Y:+The+Last+Man+%2390",
+      "coverImage": "https://m.media-amazon.com/images/I/81nTTm+qH5L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12932,7 +12932,7 @@
       "category": "Comic - Fiction",
       "copies": 21,
       "availableCopies": 26,
-      "coverImage": "https://via.placeholder.com/400x600?text=Preacher+%23136",
+      "coverImage": "https://m.media-amazon.com/images/I/81k3tWDwPqL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12946,7 +12946,7 @@
       "category": "Comic - Fiction",
       "copies": 30,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%2338",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12960,7 +12960,7 @@
       "category": "Comic - Fiction",
       "copies": 13,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%2319",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12974,7 +12974,7 @@
       "category": "Comic - Fiction",
       "copies": 12,
       "availableCopies": 26,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Sandman+%2340",
+      "coverImage": "https://m.media-amazon.com/images/I/81UQP0AXYTL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -12988,7 +12988,7 @@
       "category": "Comic - Fiction",
       "copies": 25,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fables+%23148",
+      "coverImage": "https://m.media-amazon.com/images/I/81C9kK2LUUL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13002,7 +13002,7 @@
       "category": "Comic - Fiction",
       "copies": 24,
       "availableCopies": 21,
-      "coverImage": "https://via.placeholder.com/400x600?text=Y:+The+Last+Man+%2373",
+      "coverImage": "https://m.media-amazon.com/images/I/81nTTm+qH5L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13016,7 +13016,7 @@
       "category": "Comic - Fiction",
       "copies": 27,
       "availableCopies": 21,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%23119",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13030,7 +13030,7 @@
       "category": "Comic - Fiction",
       "copies": 28,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Fables+%23117",
+      "coverImage": "https://m.media-amazon.com/images/I/81C9kK2LUUL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13044,7 +13044,7 @@
       "category": "Comic - Horror",
       "copies": 22,
       "availableCopies": 28,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sandman+%2366",
+      "coverImage": "https://picsum.photos/seed/comic-1825/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13058,7 +13058,7 @@
       "category": "Comic - Horror",
       "copies": 16,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=30+Days+of+Night+%2367",
+      "coverImage": "https://m.media-amazon.com/images/I/81kYjH6BYEL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13072,7 +13072,7 @@
       "category": "Comic - Horror",
       "copies": 29,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Locke+&+Key+%23125",
+      "coverImage": "https://m.media-amazon.com/images/I/91cEUMNGC6L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13086,7 +13086,7 @@
       "category": "Comic - Horror",
       "copies": 27,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=30+Days+of+Night+%2327",
+      "coverImage": "https://m.media-amazon.com/images/I/81kYjH6BYEL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13100,7 +13100,7 @@
       "category": "Comic - Horror",
       "copies": 26,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sandman+%234",
+      "coverImage": "https://picsum.photos/seed/comic-1829/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13114,7 +13114,7 @@
       "category": "Comic - Horror",
       "copies": 10,
       "availableCopies": 29,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Walking+Dead+%2315",
+      "coverImage": "https://m.media-amazon.com/images/I/91jmL4KyJUL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13128,7 +13128,7 @@
       "category": "Comic - Horror",
       "copies": 12,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Locke+&+Key+%2323",
+      "coverImage": "https://m.media-amazon.com/images/I/91cEUMNGC6L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13142,7 +13142,7 @@
       "category": "Comic - Horror",
       "copies": 25,
       "availableCopies": 28,
-      "coverImage": "https://via.placeholder.com/400x600?text=30+Days+of+Night+%23185",
+      "coverImage": "https://m.media-amazon.com/images/I/81kYjH6BYEL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13156,7 +13156,7 @@
       "category": "Comic - Horror",
       "copies": 16,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Locke+&+Key+%2354",
+      "coverImage": "https://m.media-amazon.com/images/I/91cEUMNGC6L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13170,7 +13170,7 @@
       "category": "Comic - Horror",
       "copies": 22,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Hellblazer+%23109",
+      "coverImage": "https://m.media-amazon.com/images/I/81IHlZWNXdL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13184,7 +13184,7 @@
       "category": "Comic - Horror",
       "copies": 11,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sandman+%23128",
+      "coverImage": "https://picsum.photos/seed/comic-1835/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13198,7 +13198,7 @@
       "category": "Comic - Horror",
       "copies": 20,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=30+Days+of+Night+%2358",
+      "coverImage": "https://m.media-amazon.com/images/I/81kYjH6BYEL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13212,7 +13212,7 @@
       "category": "Comic - Horror",
       "copies": 26,
       "availableCopies": 25,
-      "coverImage": "https://via.placeholder.com/400x600?text=Hellblazer+%23104",
+      "coverImage": "https://m.media-amazon.com/images/I/81IHlZWNXdL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13226,7 +13226,7 @@
       "category": "Comic - Horror",
       "copies": 19,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Hellblazer+%23169",
+      "coverImage": "https://m.media-amazon.com/images/I/81IHlZWNXdL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13240,7 +13240,7 @@
       "category": "Comic - Horror",
       "copies": 10,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Walking+Dead+%2354",
+      "coverImage": "https://m.media-amazon.com/images/I/91jmL4KyJUL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13254,7 +13254,7 @@
       "category": "Comic - Horror",
       "copies": 25,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Locke+&+Key+%23103",
+      "coverImage": "https://m.media-amazon.com/images/I/91cEUMNGC6L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13268,7 +13268,7 @@
       "category": "Comic - Horror",
       "copies": 25,
       "availableCopies": 30,
-      "coverImage": "https://via.placeholder.com/400x600?text=Locke+&+Key+%23106",
+      "coverImage": "https://m.media-amazon.com/images/I/91cEUMNGC6L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13282,7 +13282,7 @@
       "category": "Comic - Horror",
       "copies": 27,
       "availableCopies": 22,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Walking+Dead+%2350",
+      "coverImage": "https://m.media-amazon.com/images/I/91jmL4KyJUL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13296,7 +13296,7 @@
       "category": "Comic - Horror",
       "copies": 22,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Walking+Dead+%23189",
+      "coverImage": "https://m.media-amazon.com/images/I/91jmL4KyJUL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13310,7 +13310,7 @@
       "category": "Comic - Horror",
       "copies": 23,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Locke+&+Key+%23127",
+      "coverImage": "https://m.media-amazon.com/images/I/91cEUMNGC6L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13324,7 +13324,7 @@
       "category": "Comic - Horror",
       "copies": 26,
       "availableCopies": 25,
-      "coverImage": "https://via.placeholder.com/400x600?text=30+Days+of+Night+%239",
+      "coverImage": "https://m.media-amazon.com/images/I/81kYjH6BYEL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13338,7 +13338,7 @@
       "category": "Comic - Horror",
       "copies": 20,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sandman+%2319",
+      "coverImage": "https://picsum.photos/seed/comic-1846/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13352,7 +13352,7 @@
       "category": "Comic - Horror",
       "copies": 27,
       "availableCopies": 27,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Walking+Dead+%2378",
+      "coverImage": "https://m.media-amazon.com/images/I/91jmL4KyJUL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13366,7 +13366,7 @@
       "category": "Comic - Horror",
       "copies": 24,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Locke+&+Key+%2367",
+      "coverImage": "https://m.media-amazon.com/images/I/91cEUMNGC6L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13380,7 +13380,7 @@
       "category": "Comic - Horror",
       "copies": 19,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Hellblazer+%23117",
+      "coverImage": "https://m.media-amazon.com/images/I/81IHlZWNXdL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13394,7 +13394,7 @@
       "category": "Comic - Horror",
       "copies": 25,
       "availableCopies": 26,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sandman+%2341",
+      "coverImage": "https://picsum.photos/seed/comic-1850/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13408,7 +13408,7 @@
       "category": "Comic - Horror",
       "copies": 27,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Hellblazer+%23191",
+      "coverImage": "https://m.media-amazon.com/images/I/81IHlZWNXdL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13422,7 +13422,7 @@
       "category": "Comic - Horror",
       "copies": 28,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sandman+%23113",
+      "coverImage": "https://picsum.photos/seed/comic-1852/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13436,7 +13436,7 @@
       "category": "Comic - Thriller",
       "copies": 22,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sin+City+%2359",
+      "coverImage": "https://m.media-amazon.com/images/I/81bTWo5jRvL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13450,7 +13450,7 @@
       "category": "Comic - Thriller",
       "copies": 27,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Watchmen+%23145",
+      "coverImage": "https://m.media-amazon.com/images/I/81MUWh6+CwL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13464,7 +13464,7 @@
       "category": "Comic - Thriller",
       "copies": 29,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=V+for+Vendetta+%23104",
+      "coverImage": "https://m.media-amazon.com/images/I/71Dej45qJxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13478,7 +13478,7 @@
       "category": "Comic - Thriller",
       "copies": 20,
       "availableCopies": 22,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Killing+Joke+%2356",
+      "coverImage": "https://picsum.photos/seed/comic-1856/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13492,7 +13492,7 @@
       "category": "Comic - Thriller",
       "copies": 26,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sin+City+%2371",
+      "coverImage": "https://m.media-amazon.com/images/I/81bTWo5jRvL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13506,7 +13506,7 @@
       "category": "Comic - Thriller",
       "copies": 11,
       "availableCopies": 24,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Killing+Joke+%2343",
+      "coverImage": "https://picsum.photos/seed/comic-1858/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13520,7 +13520,7 @@
       "category": "Comic - Thriller",
       "copies": 20,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Watchmen+%2358",
+      "coverImage": "https://m.media-amazon.com/images/I/81MUWh6+CwL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13534,7 +13534,7 @@
       "category": "Comic - Thriller",
       "copies": 11,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Killing+Joke+%23178",
+      "coverImage": "https://picsum.photos/seed/comic-1860/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13548,7 +13548,7 @@
       "category": "Comic - Thriller",
       "copies": 20,
       "availableCopies": 25,
-      "coverImage": "https://via.placeholder.com/400x600?text=Watchmen+%2373",
+      "coverImage": "https://m.media-amazon.com/images/I/81MUWh6+CwL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13562,7 +13562,7 @@
       "category": "Comic - Thriller",
       "copies": 14,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Watchmen+%23112",
+      "coverImage": "https://m.media-amazon.com/images/I/81MUWh6+CwL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13576,7 +13576,7 @@
       "category": "Comic - Thriller",
       "copies": 27,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Batman+%2326",
+      "coverImage": "https://m.media-amazon.com/images/I/91BP8HzDesL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13590,7 +13590,7 @@
       "category": "Comic - Thriller",
       "copies": 27,
       "availableCopies": 26,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sin+City+%2349",
+      "coverImage": "https://m.media-amazon.com/images/I/81bTWo5jRvL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13604,7 +13604,7 @@
       "category": "Comic - Thriller",
       "copies": 16,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Watchmen+%2333",
+      "coverImage": "https://m.media-amazon.com/images/I/81MUWh6+CwL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13618,7 +13618,7 @@
       "category": "Comic - Thriller",
       "copies": 24,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Killing+Joke+%2367",
+      "coverImage": "https://picsum.photos/seed/comic-1866/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13632,7 +13632,7 @@
       "category": "Comic - Thriller",
       "copies": 28,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=V+for+Vendetta+%23187",
+      "coverImage": "https://m.media-amazon.com/images/I/71Dej45qJxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13646,7 +13646,7 @@
       "category": "Comic - Thriller",
       "copies": 10,
       "availableCopies": 9,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sin+City+%2387",
+      "coverImage": "https://m.media-amazon.com/images/I/81bTWo5jRvL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13660,7 +13660,7 @@
       "category": "Comic - Thriller",
       "copies": 25,
       "availableCopies": 27,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Killing+Joke+%2379",
+      "coverImage": "https://picsum.photos/seed/comic-1869/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13674,7 +13674,7 @@
       "category": "Comic - Thriller",
       "copies": 28,
       "availableCopies": 27,
-      "coverImage": "https://via.placeholder.com/400x600?text=Batman+%2396",
+      "coverImage": "https://m.media-amazon.com/images/I/91BP8HzDesL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13688,7 +13688,7 @@
       "category": "Comic - Thriller",
       "copies": 24,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=V+for+Vendetta+%23193",
+      "coverImage": "https://m.media-amazon.com/images/I/71Dej45qJxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13702,7 +13702,7 @@
       "category": "Comic - Thriller",
       "copies": 28,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Batman+%2393",
+      "coverImage": "https://m.media-amazon.com/images/I/91BP8HzDesL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13716,7 +13716,7 @@
       "category": "Comic - Thriller",
       "copies": 14,
       "availableCopies": 22,
-      "coverImage": "https://via.placeholder.com/400x600?text=V+for+Vendetta+%23200",
+      "coverImage": "https://m.media-amazon.com/images/I/71Dej45qJxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13730,7 +13730,7 @@
       "category": "Comic - Thriller",
       "copies": 26,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=V+for+Vendetta+%236",
+      "coverImage": "https://m.media-amazon.com/images/I/71Dej45qJxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13744,7 +13744,7 @@
       "category": "Comic - Thriller",
       "copies": 17,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Killing+Joke+%23130",
+      "coverImage": "https://picsum.photos/seed/comic-1875/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13758,7 +13758,7 @@
       "category": "Comic - Thriller",
       "copies": 29,
       "availableCopies": 29,
-      "coverImage": "https://via.placeholder.com/400x600?text=Batman+%235",
+      "coverImage": "https://m.media-amazon.com/images/I/91BP8HzDesL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13772,7 +13772,7 @@
       "category": "Comic - Thriller",
       "copies": 11,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Watchmen+%2379",
+      "coverImage": "https://m.media-amazon.com/images/I/81MUWh6+CwL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13786,7 +13786,7 @@
       "category": "Comic - Thriller",
       "copies": 17,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Batman+%2358",
+      "coverImage": "https://m.media-amazon.com/images/I/91BP8HzDesL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13800,7 +13800,7 @@
       "category": "Comic - Thriller",
       "copies": 29,
       "availableCopies": 23,
-      "coverImage": "https://via.placeholder.com/400x600?text=Batman+%2358",
+      "coverImage": "https://m.media-amazon.com/images/I/91BP8HzDesL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13814,7 +13814,7 @@
       "category": "Comic - Thriller",
       "copies": 19,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sin+City+%2356",
+      "coverImage": "https://m.media-amazon.com/images/I/81bTWo5jRvL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13828,7 +13828,7 @@
       "category": "Comic - Romance",
       "copies": 30,
       "availableCopies": 21,
-      "coverImage": "https://via.placeholder.com/400x600?text=Lumberjanes+%2382",
+      "coverImage": "https://picsum.photos/seed/comic-1881/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13842,7 +13842,7 @@
       "category": "Comic - Romance",
       "copies": 17,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Heartstopper+%23103",
+      "coverImage": "https://picsum.photos/seed/comic-1882/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13856,7 +13856,7 @@
       "category": "Comic - Romance",
       "copies": 21,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Lumberjanes+%23144",
+      "coverImage": "https://picsum.photos/seed/comic-1883/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13870,7 +13870,7 @@
       "category": "Comic - Romance",
       "copies": 12,
       "availableCopies": 21,
-      "coverImage": "https://via.placeholder.com/400x600?text=Archie+%2374",
+      "coverImage": "https://picsum.photos/seed/comic-1884/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13884,7 +13884,7 @@
       "category": "Comic - Romance",
       "copies": 13,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Love+and+Rockets+%2322",
+      "coverImage": "https://picsum.photos/seed/comic-1885/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13898,7 +13898,7 @@
       "category": "Comic - Romance",
       "copies": 19,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%2314",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13912,7 +13912,7 @@
       "category": "Comic - Romance",
       "copies": 24,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Love+and+Rockets+%2360",
+      "coverImage": "https://picsum.photos/seed/comic-1887/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13926,7 +13926,7 @@
       "category": "Comic - Romance",
       "copies": 10,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Archie+%2311",
+      "coverImage": "https://picsum.photos/seed/comic-1888/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13940,7 +13940,7 @@
       "category": "Comic - Romance",
       "copies": 11,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Heartstopper+%2341",
+      "coverImage": "https://picsum.photos/seed/comic-1889/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13954,7 +13954,7 @@
       "category": "Comic - Romance",
       "copies": 11,
       "availableCopies": 22,
-      "coverImage": "https://via.placeholder.com/400x600?text=Archie+%2382",
+      "coverImage": "https://picsum.photos/seed/comic-1890/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13968,7 +13968,7 @@
       "category": "Comic - Romance",
       "copies": 17,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Heartstopper+%23123",
+      "coverImage": "https://picsum.photos/seed/comic-1891/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13982,7 +13982,7 @@
       "category": "Comic - Romance",
       "copies": 28,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Heartstopper+%23164",
+      "coverImage": "https://picsum.photos/seed/comic-1892/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -13996,7 +13996,7 @@
       "category": "Comic - Romance",
       "copies": 26,
       "availableCopies": 28,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%23109",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14010,7 +14010,7 @@
       "category": "Comic - Romance",
       "copies": 27,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Archie+%23190",
+      "coverImage": "https://picsum.photos/seed/comic-1894/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14024,7 +14024,7 @@
       "category": "Comic - Romance",
       "copies": 11,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Heartstopper+%23150",
+      "coverImage": "https://picsum.photos/seed/comic-1895/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14038,7 +14038,7 @@
       "category": "Comic - Romance",
       "copies": 25,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Heartstopper+%2343",
+      "coverImage": "https://picsum.photos/seed/comic-1896/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14052,7 +14052,7 @@
       "category": "Comic - Romance",
       "copies": 21,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Archie+%23112",
+      "coverImage": "https://picsum.photos/seed/comic-1897/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14066,7 +14066,7 @@
       "category": "Comic - Romance",
       "copies": 17,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Heartstopper+%2393",
+      "coverImage": "https://picsum.photos/seed/comic-1898/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14080,7 +14080,7 @@
       "category": "Comic - Romance",
       "copies": 16,
       "availableCopies": 24,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%23190",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14094,7 +14094,7 @@
       "category": "Comic - Romance",
       "copies": 21,
       "availableCopies": 27,
-      "coverImage": "https://via.placeholder.com/400x600?text=Archie+%23144",
+      "coverImage": "https://picsum.photos/seed/comic-1900/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14108,7 +14108,7 @@
       "category": "Comic - Romance",
       "copies": 22,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%2365",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14122,7 +14122,7 @@
       "category": "Comic - Romance",
       "copies": 18,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Archie+%23144",
+      "coverImage": "https://picsum.photos/seed/comic-1902/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14136,7 +14136,7 @@
       "category": "Comic - Romance",
       "copies": 12,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%2343",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14150,7 +14150,7 @@
       "category": "Comic - Romance",
       "copies": 21,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Love+and+Rockets+%23153",
+      "coverImage": "https://picsum.photos/seed/comic-1904/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14164,7 +14164,7 @@
       "category": "Comic - Romance",
       "copies": 15,
       "availableCopies": 27,
-      "coverImage": "https://via.placeholder.com/400x600?text=Love+and+Rockets+%23167",
+      "coverImage": "https://picsum.photos/seed/comic-1905/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14178,7 +14178,7 @@
       "category": "Comic - Romance",
       "copies": 27,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Love+and+Rockets+%23166",
+      "coverImage": "https://picsum.photos/seed/comic-1906/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14192,7 +14192,7 @@
       "category": "Comic - Romance",
       "copies": 21,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=Archie+%23100",
+      "coverImage": "https://picsum.photos/seed/comic-1907/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14206,7 +14206,7 @@
       "category": "Comic - Romance",
       "copies": 29,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Saga+%23133",
+      "coverImage": "https://m.media-amazon.com/images/I/91yFPcVxLxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14220,7 +14220,7 @@
       "category": "Comic - Psychological",
       "copies": 13,
       "availableCopies": 28,
-      "coverImage": "https://via.placeholder.com/400x600?text=Black+Mirror+%2388",
+      "coverImage": "https://picsum.photos/seed/comic-1909/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14234,7 +14234,7 @@
       "category": "Comic - Psychological",
       "copies": 25,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Swamp+Thing+%23169",
+      "coverImage": "https://picsum.photos/seed/comic-1910/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14248,7 +14248,7 @@
       "category": "Comic - Psychological",
       "copies": 12,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Maxx+%23124",
+      "coverImage": "https://picsum.photos/seed/comic-1911/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14262,7 +14262,7 @@
       "category": "Comic - Psychological",
       "copies": 20,
       "availableCopies": 24,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Invisibles+%2327",
+      "coverImage": "https://picsum.photos/seed/comic-1912/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14276,7 +14276,7 @@
       "category": "Comic - Psychological",
       "copies": 11,
       "availableCopies": 28,
-      "coverImage": "https://via.placeholder.com/400x600?text=Swamp+Thing+%23190",
+      "coverImage": "https://picsum.photos/seed/comic-1913/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14290,7 +14290,7 @@
       "category": "Comic - Psychological",
       "copies": 14,
       "availableCopies": 28,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sandman+%2380",
+      "coverImage": "https://picsum.photos/seed/comic-1914/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14304,7 +14304,7 @@
       "category": "Comic - Psychological",
       "copies": 15,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sandman+%2352",
+      "coverImage": "https://picsum.photos/seed/comic-1915/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14318,7 +14318,7 @@
       "category": "Comic - Psychological",
       "copies": 16,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=Swamp+Thing+%239",
+      "coverImage": "https://picsum.photos/seed/comic-1916/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14332,7 +14332,7 @@
       "category": "Comic - Psychological",
       "copies": 19,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Black+Mirror+%23180",
+      "coverImage": "https://picsum.photos/seed/comic-1917/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14346,7 +14346,7 @@
       "category": "Comic - Psychological",
       "copies": 21,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Invisibles+%23100",
+      "coverImage": "https://picsum.photos/seed/comic-1918/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14360,7 +14360,7 @@
       "category": "Comic - Psychological",
       "copies": 28,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Maxx+%2329",
+      "coverImage": "https://picsum.photos/seed/comic-1919/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14374,7 +14374,7 @@
       "category": "Comic - Psychological",
       "copies": 18,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Black+Mirror+%23122",
+      "coverImage": "https://picsum.photos/seed/comic-1920/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14388,7 +14388,7 @@
       "category": "Comic - Psychological",
       "copies": 12,
       "availableCopies": 29,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sandman+%23102",
+      "coverImage": "https://picsum.photos/seed/comic-1921/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14402,7 +14402,7 @@
       "category": "Comic - Psychological",
       "copies": 21,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Maxx+%23103",
+      "coverImage": "https://picsum.photos/seed/comic-1922/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14416,7 +14416,7 @@
       "category": "Comic - Psychological",
       "copies": 17,
       "availableCopies": 29,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Maxx+%23144",
+      "coverImage": "https://picsum.photos/seed/comic-1923/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14430,7 +14430,7 @@
       "category": "Comic - Psychological",
       "copies": 10,
       "availableCopies": 9,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Maxx+%2371",
+      "coverImage": "https://picsum.photos/seed/comic-1924/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14444,7 +14444,7 @@
       "category": "Comic - Psychological",
       "copies": 10,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Black+Mirror+%2382",
+      "coverImage": "https://picsum.photos/seed/comic-1925/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14458,7 +14458,7 @@
       "category": "Comic - Psychological",
       "copies": 16,
       "availableCopies": 16,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Invisibles+%23193",
+      "coverImage": "https://picsum.photos/seed/comic-1926/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14472,7 +14472,7 @@
       "category": "Comic - Psychological",
       "copies": 19,
       "availableCopies": 25,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Maxx+%2355",
+      "coverImage": "https://picsum.photos/seed/comic-1927/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14486,7 +14486,7 @@
       "category": "Comic - Psychological",
       "copies": 13,
       "availableCopies": 22,
-      "coverImage": "https://via.placeholder.com/400x600?text=Swamp+Thing+%2376",
+      "coverImage": "https://picsum.photos/seed/comic-1928/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14500,7 +14500,7 @@
       "category": "Comic - Psychological",
       "copies": 16,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Swamp+Thing+%23120",
+      "coverImage": "https://picsum.photos/seed/comic-1929/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14514,7 +14514,7 @@
       "category": "Comic - Psychological",
       "copies": 30,
       "availableCopies": 22,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Maxx+%23127",
+      "coverImage": "https://picsum.photos/seed/comic-1930/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14528,7 +14528,7 @@
       "category": "Comic - Psychological",
       "copies": 22,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Sandman+%23144",
+      "coverImage": "https://picsum.photos/seed/comic-1931/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14542,7 +14542,7 @@
       "category": "Comic - Psychological",
       "copies": 10,
       "availableCopies": 26,
-      "coverImage": "https://via.placeholder.com/400x600?text=Swamp+Thing+%23138",
+      "coverImage": "https://picsum.photos/seed/comic-1932/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14556,7 +14556,7 @@
       "category": "Comic - Psychological",
       "copies": 29,
       "availableCopies": 28,
-      "coverImage": "https://via.placeholder.com/400x600?text=Swamp+Thing+%2335",
+      "coverImage": "https://picsum.photos/seed/comic-1933/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14570,7 +14570,7 @@
       "category": "Comic - Psychological",
       "copies": 14,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Maxx+%23195",
+      "coverImage": "https://picsum.photos/seed/comic-1934/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14584,7 +14584,7 @@
       "category": "Comic - Psychological",
       "copies": 20,
       "availableCopies": 25,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Maxx+%2397",
+      "coverImage": "https://picsum.photos/seed/comic-1935/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14598,7 +14598,7 @@
       "category": "Comic - Psychological",
       "copies": 16,
       "availableCopies": 21,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Invisibles+%2346",
+      "coverImage": "https://picsum.photos/seed/comic-1936/400/600",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14612,7 +14612,7 @@
       "category": "Comic - Comedy",
       "copies": 22,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Peanuts+%2392",
+      "coverImage": "https://m.media-amazon.com/images/I/81YkEcf0BsL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14626,7 +14626,7 @@
       "category": "Comic - Comedy",
       "copies": 23,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Garfield+%23100",
+      "coverImage": "https://m.media-amazon.com/images/I/81a7LDdPfCL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14640,7 +14640,7 @@
       "category": "Comic - Comedy",
       "copies": 16,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Garfield+%23140",
+      "coverImage": "https://m.media-amazon.com/images/I/81a7LDdPfCL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14654,7 +14654,7 @@
       "category": "Comic - Comedy",
       "copies": 30,
       "availableCopies": 17,
-      "coverImage": "https://via.placeholder.com/400x600?text=Peanuts+%2328",
+      "coverImage": "https://m.media-amazon.com/images/I/81YkEcf0BsL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14668,7 +14668,7 @@
       "category": "Comic - Comedy",
       "copies": 18,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Peanuts+%2372",
+      "coverImage": "https://m.media-amazon.com/images/I/81YkEcf0BsL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14682,7 +14682,7 @@
       "category": "Comic - Comedy",
       "copies": 16,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Far+Side+%234",
+      "coverImage": "https://m.media-amazon.com/images/I/81x8fmzLzxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14696,7 +14696,7 @@
       "category": "Comic - Comedy",
       "copies": 12,
       "availableCopies": 24,
-      "coverImage": "https://via.placeholder.com/400x600?text=Peanuts+%2349",
+      "coverImage": "https://m.media-amazon.com/images/I/81YkEcf0BsL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14710,7 +14710,7 @@
       "category": "Comic - Comedy",
       "copies": 26,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Far+Side+%2355",
+      "coverImage": "https://m.media-amazon.com/images/I/81x8fmzLzxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14724,7 +14724,7 @@
       "category": "Comic - Comedy",
       "copies": 24,
       "availableCopies": 19,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dilbert+%23132",
+      "coverImage": "https://m.media-amazon.com/images/I/81pu-M4VH9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14738,7 +14738,7 @@
       "category": "Comic - Comedy",
       "copies": 24,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Far+Side+%23127",
+      "coverImage": "https://m.media-amazon.com/images/I/81x8fmzLzxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14752,7 +14752,7 @@
       "category": "Comic - Comedy",
       "copies": 19,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Calvin+and+Hobbes+%2351",
+      "coverImage": "https://m.media-amazon.com/images/I/91MD2T4mXvL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14766,7 +14766,7 @@
       "category": "Comic - Comedy",
       "copies": 14,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Far+Side+%2335",
+      "coverImage": "https://m.media-amazon.com/images/I/81x8fmzLzxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14780,7 +14780,7 @@
       "category": "Comic - Comedy",
       "copies": 20,
       "availableCopies": 23,
-      "coverImage": "https://via.placeholder.com/400x600?text=Peanuts+%23132",
+      "coverImage": "https://m.media-amazon.com/images/I/81YkEcf0BsL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14794,7 +14794,7 @@
       "category": "Comic - Comedy",
       "copies": 16,
       "availableCopies": 25,
-      "coverImage": "https://via.placeholder.com/400x600?text=Garfield+%23115",
+      "coverImage": "https://m.media-amazon.com/images/I/81a7LDdPfCL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14808,7 +14808,7 @@
       "category": "Comic - Comedy",
       "copies": 27,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dilbert+%23183",
+      "coverImage": "https://m.media-amazon.com/images/I/81pu-M4VH9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14822,7 +14822,7 @@
       "category": "Comic - Comedy",
       "copies": 27,
       "availableCopies": 22,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Far+Side+%2388",
+      "coverImage": "https://m.media-amazon.com/images/I/81x8fmzLzxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14836,7 +14836,7 @@
       "category": "Comic - Comedy",
       "copies": 21,
       "availableCopies": 27,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dilbert+%23105",
+      "coverImage": "https://m.media-amazon.com/images/I/81pu-M4VH9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14850,7 +14850,7 @@
       "category": "Comic - Comedy",
       "copies": 24,
       "availableCopies": 30,
-      "coverImage": "https://via.placeholder.com/400x600?text=Calvin+and+Hobbes+%2388",
+      "coverImage": "https://m.media-amazon.com/images/I/91MD2T4mXvL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14864,7 +14864,7 @@
       "category": "Comic - Comedy",
       "copies": 26,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Garfield+%233",
+      "coverImage": "https://m.media-amazon.com/images/I/81a7LDdPfCL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14878,7 +14878,7 @@
       "category": "Comic - Comedy",
       "copies": 24,
       "availableCopies": 11,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Far+Side+%23138",
+      "coverImage": "https://m.media-amazon.com/images/I/81x8fmzLzxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14892,7 +14892,7 @@
       "category": "Comic - Comedy",
       "copies": 18,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dilbert+%23102",
+      "coverImage": "https://m.media-amazon.com/images/I/81pu-M4VH9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14906,7 +14906,7 @@
       "category": "Comic - Comedy",
       "copies": 14,
       "availableCopies": 7,
-      "coverImage": "https://via.placeholder.com/400x600?text=Peanuts+%2328",
+      "coverImage": "https://m.media-amazon.com/images/I/81YkEcf0BsL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14920,7 +14920,7 @@
       "category": "Comic - Comedy",
       "copies": 10,
       "availableCopies": 21,
-      "coverImage": "https://via.placeholder.com/400x600?text=Peanuts+%23119",
+      "coverImage": "https://m.media-amazon.com/images/I/81YkEcf0BsL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14934,7 +14934,7 @@
       "category": "Comic - Comedy",
       "copies": 20,
       "availableCopies": 15,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dilbert+%23150",
+      "coverImage": "https://m.media-amazon.com/images/I/81pu-M4VH9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14948,7 +14948,7 @@
       "category": "Comic - Comedy",
       "copies": 26,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Far+Side+%2398",
+      "coverImage": "https://m.media-amazon.com/images/I/81x8fmzLzxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14962,7 +14962,7 @@
       "category": "Comic - Comedy",
       "copies": 11,
       "availableCopies": 28,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dilbert+%23191",
+      "coverImage": "https://m.media-amazon.com/images/I/81pu-M4VH9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14976,7 +14976,7 @@
       "category": "Comic - Comedy",
       "copies": 19,
       "availableCopies": 21,
-      "coverImage": "https://via.placeholder.com/400x600?text=The+Far+Side+%23160",
+      "coverImage": "https://m.media-amazon.com/images/I/81x8fmzLzxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -14990,7 +14990,7 @@
       "category": "Comic - Comedy",
       "copies": 23,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Dilbert+%233",
+      "coverImage": "https://m.media-amazon.com/images/I/81pu-M4VH9L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15004,7 +15004,7 @@
       "category": "Comic - Classic",
       "copies": 13,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Superman+%2336",
+      "coverImage": "https://m.media-amazon.com/images/I/81fhfVGJj3L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15018,7 +15018,7 @@
       "category": "Comic - Classic",
       "copies": 15,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Spider-Man+%2383",
+      "coverImage": "https://m.media-amazon.com/images/I/91Z7c8RDHRL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15032,7 +15032,7 @@
       "category": "Comic - Classic",
       "copies": 23,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Wonder+Woman+%2352",
+      "coverImage": "https://m.media-amazon.com/images/I/81Qmcwt+vxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15046,7 +15046,7 @@
       "category": "Comic - Classic",
       "copies": 21,
       "availableCopies": 27,
-      "coverImage": "https://via.placeholder.com/400x600?text=Spider-Man+%2370",
+      "coverImage": "https://m.media-amazon.com/images/I/91Z7c8RDHRL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15060,7 +15060,7 @@
       "category": "Comic - Classic",
       "copies": 15,
       "availableCopies": 28,
-      "coverImage": "https://via.placeholder.com/400x600?text=X-Men+%23199",
+      "coverImage": "https://m.media-amazon.com/images/I/91a1RjGkxrL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15074,7 +15074,7 @@
       "category": "Comic - Classic",
       "copies": 21,
       "availableCopies": 5,
-      "coverImage": "https://via.placeholder.com/400x600?text=Superman+%23163",
+      "coverImage": "https://m.media-amazon.com/images/I/81fhfVGJj3L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15088,7 +15088,7 @@
       "category": "Comic - Classic",
       "copies": 19,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Superman+%2324",
+      "coverImage": "https://m.media-amazon.com/images/I/81fhfVGJj3L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15102,7 +15102,7 @@
       "category": "Comic - Classic",
       "copies": 10,
       "availableCopies": 14,
-      "coverImage": "https://via.placeholder.com/400x600?text=Batman+%2357",
+      "coverImage": "https://m.media-amazon.com/images/I/91BP8HzDesL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15116,7 +15116,7 @@
       "category": "Comic - Classic",
       "copies": 28,
       "availableCopies": 20,
-      "coverImage": "https://via.placeholder.com/400x600?text=Spider-Man+%23104",
+      "coverImage": "https://m.media-amazon.com/images/I/91Z7c8RDHRL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15130,7 +15130,7 @@
       "category": "Comic - Classic",
       "copies": 29,
       "availableCopies": 28,
-      "coverImage": "https://via.placeholder.com/400x600?text=Wonder+Woman+%23194",
+      "coverImage": "https://m.media-amazon.com/images/I/81Qmcwt+vxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15144,7 +15144,7 @@
       "category": "Comic - Classic",
       "copies": 24,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Spider-Man+%23148",
+      "coverImage": "https://m.media-amazon.com/images/I/91Z7c8RDHRL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15158,7 +15158,7 @@
       "category": "Comic - Classic",
       "copies": 18,
       "availableCopies": 25,
-      "coverImage": "https://via.placeholder.com/400x600?text=Superman+%23102",
+      "coverImage": "https://m.media-amazon.com/images/I/81fhfVGJj3L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15172,7 +15172,7 @@
       "category": "Comic - Classic",
       "copies": 17,
       "availableCopies": 27,
-      "coverImage": "https://via.placeholder.com/400x600?text=Superman+%2346",
+      "coverImage": "https://m.media-amazon.com/images/I/81fhfVGJj3L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15186,7 +15186,7 @@
       "category": "Comic - Classic",
       "copies": 26,
       "availableCopies": 18,
-      "coverImage": "https://via.placeholder.com/400x600?text=Wonder+Woman+%23126",
+      "coverImage": "https://m.media-amazon.com/images/I/81Qmcwt+vxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15200,7 +15200,7 @@
       "category": "Comic - Classic",
       "copies": 14,
       "availableCopies": 9,
-      "coverImage": "https://via.placeholder.com/400x600?text=Superman+%2365",
+      "coverImage": "https://m.media-amazon.com/images/I/81fhfVGJj3L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15214,7 +15214,7 @@
       "category": "Comic - Classic",
       "copies": 11,
       "availableCopies": 6,
-      "coverImage": "https://via.placeholder.com/400x600?text=Wonder+Woman+%2367",
+      "coverImage": "https://m.media-amazon.com/images/I/81Qmcwt+vxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15228,7 +15228,7 @@
       "category": "Comic - Classic",
       "copies": 15,
       "availableCopies": 24,
-      "coverImage": "https://via.placeholder.com/400x600?text=Superman+%23119",
+      "coverImage": "https://m.media-amazon.com/images/I/81fhfVGJj3L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15242,7 +15242,7 @@
       "category": "Comic - Classic",
       "copies": 30,
       "availableCopies": 25,
-      "coverImage": "https://via.placeholder.com/400x600?text=Wonder+Woman+%23174",
+      "coverImage": "https://m.media-amazon.com/images/I/81Qmcwt+vxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15256,7 +15256,7 @@
       "category": "Comic - Classic",
       "copies": 19,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Superman+%232",
+      "coverImage": "https://m.media-amazon.com/images/I/81fhfVGJj3L._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15270,7 +15270,7 @@
       "category": "Comic - Classic",
       "copies": 24,
       "availableCopies": 23,
-      "coverImage": "https://via.placeholder.com/400x600?text=Spider-Man+%2348",
+      "coverImage": "https://m.media-amazon.com/images/I/91Z7c8RDHRL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15284,7 +15284,7 @@
       "category": "Comic - Classic",
       "copies": 10,
       "availableCopies": 12,
-      "coverImage": "https://via.placeholder.com/400x600?text=Spider-Man+%23180",
+      "coverImage": "https://m.media-amazon.com/images/I/91Z7c8RDHRL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15298,7 +15298,7 @@
       "category": "Comic - Classic",
       "copies": 18,
       "availableCopies": 26,
-      "coverImage": "https://via.placeholder.com/400x600?text=Wonder+Woman+%23117",
+      "coverImage": "https://m.media-amazon.com/images/I/81Qmcwt+vxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15312,7 +15312,7 @@
       "category": "Comic - Classic",
       "copies": 26,
       "availableCopies": 10,
-      "coverImage": "https://via.placeholder.com/400x600?text=Spider-Man+%2364",
+      "coverImage": "https://m.media-amazon.com/images/I/91Z7c8RDHRL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15326,7 +15326,7 @@
       "category": "Comic - Classic",
       "copies": 13,
       "availableCopies": 13,
-      "coverImage": "https://via.placeholder.com/400x600?text=Batman+%23121",
+      "coverImage": "https://m.media-amazon.com/images/I/91BP8HzDesL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15340,7 +15340,7 @@
       "category": "Comic - Classic",
       "copies": 22,
       "availableCopies": 26,
-      "coverImage": "https://via.placeholder.com/400x600?text=Batman+%23159",
+      "coverImage": "https://m.media-amazon.com/images/I/91BP8HzDesL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15354,7 +15354,7 @@
       "category": "Comic - Classic",
       "copies": 27,
       "availableCopies": 8,
-      "coverImage": "https://via.placeholder.com/400x600?text=Wonder+Woman+%2390",
+      "coverImage": "https://m.media-amazon.com/images/I/81Qmcwt+vxL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15368,7 +15368,7 @@
       "category": "Comic - Classic",
       "copies": 15,
       "availableCopies": 27,
-      "coverImage": "https://via.placeholder.com/400x600?text=Spider-Man+%23105",
+      "coverImage": "https://m.media-amazon.com/images/I/91Z7c8RDHRL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
@@ -15382,7 +15382,7 @@
       "category": "Comic - Classic",
       "copies": 15,
       "availableCopies": 25,
-      "coverImage": "https://via.placeholder.com/400x600?text=X-Men+%23112",
+      "coverImage": "https://m.media-amazon.com/images/I/91a1RjGkxrL._AC_UF1000,1000_QL80_.jpg",
       "downloadLinks": {
         "info": "Comic reading available"
       },
