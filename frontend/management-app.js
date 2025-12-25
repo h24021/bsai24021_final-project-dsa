@@ -261,22 +261,7 @@ async function returnBook() {
 
 async function loadBorrowHistory() {
     const container = document.getElementById('borrowHistory');
-    container.innerHTML = `
-        <h3>How to Borrow/Return</h3>
-        <div class="info-box">
-            <p><strong>To Borrow:</strong></p>
-            <ol>
-                <li>Go to the <strong>Search</strong> tab to find a book and note its <strong>Book ID</strong></li>
-                <li>Go to the <strong>Users</strong> tab to find your <strong>User ID</strong></li>
-                <li>Enter both IDs above and click "Borrow"</li>
-            </ol>
-            <p><strong>To Return:</strong></p>
-            <ol>
-                <li>Enter the same User ID and Book ID</li>
-                <li>Click "Return"</li>
-            </ol>
-        </div>
-    `;
+    container.innerHTML = '<p style="color: var(--light-gray); text-align: center; padding: 2rem;">Use the forms above to borrow or return books</p>';
 }
 
 // Search

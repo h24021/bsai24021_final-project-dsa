@@ -31,9 +31,7 @@ static void seedSampleData(Library& library) {
     library.addBook(Book(109, "The Hobbit", "J.R.R. Tolkien", "ISBN-109", "Fantasy", 3, 3));
     library.addBook(Book(110, "Fahrenheit 451", "Ray Bradbury", "ISBN-110", "Science Fiction", 3, 3));
 
-    library.addUser(User(1001, "Alice Johnson", "alice@library.com", "librarian"));
-    library.addUser(User(1002, "Bob Smith", "bob@library.com", "member"));
-    library.addUser(User(1003, "Carol Davis", "carol@library.com", "member"));
+    // No hardcoded users - users add themselves via the UI
 }
 
 static void registerRoutes(Router& router, Library& library,
