@@ -13,10 +13,10 @@ using namespace std;
 
 static void printBanner() {
     cout << "\n";
-    cout << "╔═══════════════════════════════════════════════════════════╗\n";
-    cout << "║     Library Management System - HTTP API Server         ║\n";
-    cout << "║  (exposes Router over TCP with JSON + CORS)             ║\n";
-    cout << "╚═══════════════════════════════════════════════════════════╝\n\n";
+    cout << "===========================================================\n";
+    cout << "     Library Management System - HTTP API Server         \n";
+    cout << "  (exposes Router over TCP with JSON + CORS)             \n";
+    cout << "===========================================================\n\n";
 }
 
 static void seedSampleData(Library& library) {

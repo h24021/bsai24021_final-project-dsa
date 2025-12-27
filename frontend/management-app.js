@@ -84,7 +84,7 @@ function displayAllBooks(books) {
                 placeholder.className = 'book-cover-placeholder';
                 placeholder.innerHTML = `
                     <div style="padding: 1rem; text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">[Book]</div>
                         <div style="font-size: 0.75rem; font-weight: bold; color: var(--maroon);">${book.type || 'Book'}</div>
                     </div>
                 `;
@@ -96,7 +96,7 @@ function displayAllBooks(books) {
             placeholder.className = 'book-cover-placeholder';
             placeholder.innerHTML = `
                 <div style="padding: 1rem; text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">[Book]</div>
                     <div style="font-size: 0.75rem; font-weight: bold; color: var(--maroon);">${book.type || 'Book'}</div>
                 </div>
             `;
@@ -239,10 +239,10 @@ async function borrowBook() {
             document.getElementById('borrowBookId').value = '';
             loadBorrowHistory();
         } else {
-            alert('❌ Error: ' + (data.message || 'Failed to borrow book'));
+            alert('Error: Error: ' + (data.message || 'Failed to borrow book'));
         }
     } catch (error) {
-        alert('❌ Error borrowing book: ' + error.message);
+        alert('Error: Error borrowing book: ' + error.message);
     }
 }
 
@@ -270,10 +270,10 @@ async function returnBook() {
             document.getElementById('returnBookId').value = '';
             loadBorrowHistory();
         } else {
-            alert('❌ Error: ' + (data.message || 'Failed to return book'));
+            alert('Error: Error: ' + (data.message || 'Failed to return book'));
         }
     } catch (error) {
-        alert('❌ Error returning book: ' + error.message);
+        alert('Error: Error returning book: ' + error.message);
     }
 }
 
@@ -378,10 +378,10 @@ async function quickReturn(userId, bookId) {
             alert('✅ Book returned successfully!');
             loadBorrowHistory(); // Reload the list
         } else {
-            alert('❌ Error: ' + (data.message || 'Failed to return book'));
+            alert('Error: Error: ' + (data.message || 'Failed to return book'));
         }
     } catch (error) {
-        alert('❌ Error returning book: ' + error.message);
+        alert('Error: Error returning book: ' + error.message);
     }
 }
 
@@ -468,7 +468,7 @@ function displaySearchResults(books) {
                 placeholder.className = 'book-cover-placeholder';
                 placeholder.innerHTML = `
                     <div style="padding: 1rem; text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">[Book]</div>
                         <div style="font-size: 0.75rem; font-weight: bold; color: var(--maroon);">${book.type || 'Book'}</div>
                     </div>
                 `;
@@ -545,7 +545,7 @@ async function loadStatistics() {
         // Calculate statistics with individual error handling
         try {
             displayOverallStats(books, users);
-            console.log('✓ Overall stats displayed');
+            console.log('Success: Overall stats displayed');
         } catch (e) {
             console.error('✗ Error in displayOverallStats:', e);
             document.getElementById('overallStats').innerHTML = '<p class="error">Error displaying overall statistics</p>';
@@ -553,7 +553,7 @@ async function loadStatistics() {
 
         try {
             displayGenreStats(books);
-            console.log('✓ Genre stats displayed');
+            console.log('Success: Genre stats displayed');
         } catch (e) {
             console.error('✗ Error in displayGenreStats:', e);
             document.getElementById('genreStats').innerHTML = '<p class="error">Error displaying genre statistics</p>';
@@ -561,7 +561,7 @@ async function loadStatistics() {
 
         try {
             displayUserStats(users);
-            console.log('✓ User stats displayed');
+            console.log('Success: User stats displayed');
         } catch (e) {
             console.error('✗ Error in displayUserStats:', e);
             document.getElementById('userStats').innerHTML = '<p class="error">Error displaying user statistics</p>';
@@ -569,7 +569,7 @@ async function loadStatistics() {
 
         try {
             displayBorrowingStats(books, users);
-            console.log('✓ Borrowing stats displayed');
+            console.log('Success: Borrowing stats displayed');
         } catch (e) {
             console.error('✗ Error in displayBorrowingStats:', e);
             document.getElementById('borrowStats').innerHTML = '<p class="error">Error displaying borrowing statistics</p>';
@@ -577,7 +577,7 @@ async function loadStatistics() {
 
         try {
             displayUserBorrowDetails(users, books);
-            console.log('✓ User borrow details displayed');
+            console.log('Success: User borrow details displayed');
         } catch (e) {
             console.error('✗ Error in displayUserBorrowDetails:', e);
             document.getElementById('userBorrowDetails').innerHTML = '<p class="error">Error displaying user borrow details</p>';
