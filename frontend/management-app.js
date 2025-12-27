@@ -527,8 +527,8 @@ async function loadStatistics() {
     try {
         // Fetch all data
         const [booksRes, usersRes] = await Promise.all([
-            fetch(`${API_BASE_URL}/books`),
-            fetch(`${API_BASE_URL}/users`)
+            fetch(`${API_URL}/books`),
+            fetch(`${API_URL}/users`)
         ]);
 
         console.log('Responses received:', booksRes.status, usersRes.status);
