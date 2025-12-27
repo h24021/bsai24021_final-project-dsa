@@ -88,7 +88,11 @@ private:
             std::string category = extractValue(json, "category", objStart);
             int copies = extractInt(json, "copies", objStart);
             int availableCopies = extractInt(json, "availableCopies", objStart);
-            std::string coverImage = extractValue(json, "coverImage", objStart);
+            // Try "cover" field first (new real covers), fallback to "coverImage"
+            std::string coverImage = extractValue(json, "cover", objStart);
+            if (coverImage.empty()) {
+                coverImage = extractValue(json, "coverImage", objStart);
+            }
             std::string type = extractValue(json, "type", objStart);
 
             if (id > 0 && !title.empty()) {
