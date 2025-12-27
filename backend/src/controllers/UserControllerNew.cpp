@@ -130,7 +130,7 @@ HttpResponse UserController::createUser(const HttpRequest& req) {
             );
         }
 
-        static int nextUserID = 5000;
+        static int nextUserID = 1;
         int newUserID = nextUserID++;
 
         User newUser(newUserID, name, email, role);
