@@ -163,7 +163,6 @@ function displayUsers(users) {
             <div class="item-info">
                 <h4>${user.name}</h4>
                 <p><strong>User ID: ${userId}</strong> | Email: ${user.email || 'N/A'} | Role: ${user.role || 'Member'}</p>
-                <p class="id-highlight">Use ID ${userId} for borrowing/returning books</p>
             </div>
         `;
         container.appendChild(userCard);
