@@ -63,7 +63,7 @@
 
         <!-- Users Section -->
         <section id="users-section" class="content-section">
-            <h2 class="section-title">User Management</h2>
+            <h2 class="section-title">Users</h2>
             <div class="management-container">
                 <div class="add-form">
                     <h3>Add New User</h3>
@@ -82,19 +82,13 @@
 
         <!-- Borrow/Return Section -->
         <section id="borrow-section" class="content-section">
-            <h2 class="section-title">Borrow & Return Books</h2>
+            <h2 class="section-title">Borrowing</h2>
             <div class="management-container">
                 <div class="borrow-form">
                     <h3>Borrow Book</h3>
                     <input type="number" id="borrowUserId" placeholder="User ID" class="form-input">
                     <input type="number" id="borrowBookId" placeholder="Book ID" class="form-input">
                     <button onclick="borrowBook()" class="btn-primary">Borrow</button>
-                </div>
-                <div class="return-form">
-                    <h3>Return Book</h3>
-                    <input type="number" id="returnUserId" placeholder="User ID" class="form-input">
-                    <input type="number" id="returnBookId" placeholder="Book ID" class="form-input">
-                    <button onclick="returnBook()" class="btn-success">Return</button>
                 </div>
             </div>
             <div id="borrowHistory" class="items-list"></div>
