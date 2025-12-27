@@ -542,12 +542,46 @@ async function loadStatistics() {
         const books = booksData.data || [];
         const users = usersData.data || [];
 
-        // Calculate statistics
-        displayOverallStats(books, users);
-        displayGenreStats(books);
-        displayUserStats(users);
-        displayBorrowingStats(books, users);
-        displayUserBorrowDetails(users, books);
+        // Calculate statistics with individual error handling
+        try {
+            displayOverallStats(books, users);
+            console.log('✓ Overall stats displayed');
+        } catch (e) {
+            console.error('✗ Error in displayOverallStats:', e);
+            document.getElementById('overallStats').innerHTML = '<p class="error">Error displaying overall statistics</p>';
+        }
+
+        try {
+            displayGenreStats(books);
+            console.log('✓ Genre stats displayed');
+        } catch (e) {
+            console.error('✗ Error in displayGenreStats:', e);
+            document.getElementById('genreStats').innerHTML = '<p class="error">Error displaying genre statistics</p>';
+        }
+
+        try {
+            displayUserStats(users);
+            console.log('✓ User stats displayed');
+        } catch (e) {
+            console.error('✗ Error in displayUserStats:', e);
+            document.getElementById('userStats').innerHTML = '<p class="error">Error displaying user statistics</p>';
+        }
+
+        try {
+            displayBorrowingStats(books, users);
+            console.log('✓ Borrowing stats displayed');
+        } catch (e) {
+            console.error('✗ Error in displayBorrowingStats:', e);
+            document.getElementById('borrowStats').innerHTML = '<p class="error">Error displaying borrowing statistics</p>';
+        }
+
+        try {
+            displayUserBorrowDetails(users, books);
+            console.log('✓ User borrow details displayed');
+        } catch (e) {
+            console.error('✗ Error in displayUserBorrowDetails:', e);
+            document.getElementById('userBorrowDetails').innerHTML = '<p class="error">Error displaying user borrow details</p>';
+        }
 
         console.log('Statistics loaded successfully');
 
