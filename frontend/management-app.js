@@ -212,12 +212,12 @@ async function borrowBook() {
         const response = await fetch(`${API_URL}/borrow`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userId: parseInt(userId), bookId: parseInt(bookId) })
+            body: JSON.stringify({ userID: parseInt(userId), bookID: parseInt(bookId) })
         });
         
         const data = await response.json();
         
-        if (data.status === 'success') {
+        if (data.message && data.message.includes('successfully')) {
             alert('✅ Book borrowed successfully!\n\nUser ID: ' + userId + '\nBook ID: ' + bookId);
             document.getElementById('borrowUserId').value = '';
             document.getElementById('borrowBookId').value = '';
@@ -243,12 +243,12 @@ async function returnBook() {
         const response = await fetch(`${API_URL}/return`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userId: parseInt(userId), bookId: parseInt(bookId) })
+            body: JSON.stringify({ userID: parseInt(userId), bookID: parseInt(bookId) })
         });
         
         const data = await response.json();
         
-        if (data.status === 'success') {
+        if (data.message && data.message.includes('successfully')) {
             alert('✅ Book returned successfully!\n\nUser ID: ' + userId + '\nBook ID: ' + bookId);
             document.getElementById('returnUserId').value = '';
             document.getElementById('returnBookId').value = '';
@@ -263,7 +263,110 @@ async function returnBook() {
 
 async function loadBorrowHistory() {
     const container = document.getElementById('borrowHistory');
-    container.innerHTML = '<p style="color: var(--light-gray); text-align: center; padding: 2rem;">Use the forms above to borrow or return books</p>';
+    container.innerHTML = '<p style="color: var(--light-gray); text-align: center; padding: 2rem;">Loading borrowed books...</p>';
+    
+    try {
+        // Get all users
+        const usersResponse = await fetch(`${API_URL}/users`);
+        const usersData = await usersResponse.json();
+        
+        if (usersData.status !== 'success') {
+            container.innerHTML = '<p style="color: var(--light-gray); text-align: center; padding: 2rem;">No borrow history available</p>';
+            return;
+        }
+        
+        const users = usersData.data;
+        const allBorrowedBooks = [];
+        
+        // For each user, get their borrowed books
+        for (const user of users) {
+            const userId = user.userID || user.id;
+            try {
+                const borrowedResponse = await fetch(`${API_URL}/users/${userId}/borrowed`);
+                const borrowedData = await borrowedResponse.json();
+                
+                if (borrowedData.status === 'success' && borrowedData.data && borrowedData.data.length > 0) {
+                    borrowedData.data.forEach(book => {
+                        allBorrowedBooks.push({
+                            userId: userId,
+                            userName: user.name,
+                            userEmail: user.email,
+                            bookId: book.bookID,
+                            bookTitle: book.title,
+                            bookAuthor: book.author
+                        });
+                    });
+                }
+            } catch (error) {
+                console.error(`Error fetching borrowed books for user ${userId}:`, error);
+            }
+        }
+        
+        // Display the borrowed books
+        if (allBorrowedBooks.length === 0) {
+            container.innerHTML = '<p style="color: var(--light-gray); text-align: center; padding: 2rem;">No books currently borrowed</p>';
+            return;
+        }
+        
+        container.innerHTML = `
+            <h3 style="color: var(--white); margin-bottom: 1.5rem; font-size: 1.2rem;">Currently Borrowed Books (${allBorrowedBooks.length})</h3>
+            <div class="borrow-history-list">
+                ${allBorrowedBooks.map(item => `
+                    <div class="borrow-item" style="background: rgba(255,255,255,0.05); padding: 1rem; margin-bottom: 0.8rem; border-radius: 8px; border-left: 4px solid var(--maroon);">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <div style="flex: 1;">
+                                <div style="color: var(--white); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">
+                                    ${item.bookTitle}
+                                </div>
+                                <div style="color: var(--light-gray); font-size: 0.9rem; margin-bottom: 0.3rem;">
+                                    by ${item.bookAuthor}
+                                </div>
+                                <div style="color: var(--light-gray); font-size: 0.85rem;">
+                                    <span style="background: var(--maroon); color: white; padding: 2px 8px; border-radius: 4px; margin-right: 0.5rem;">Book ID: ${item.bookId}</span>
+                                    <span>Borrowed by: ${item.userName} (User ID: ${item.userId})</span>
+                                </div>
+                            </div>
+                            <button onclick="quickReturn(${item.userId}, ${item.bookId})" 
+                                    class="btn-success" 
+                                    style="margin-left: 1rem; white-space: nowrap; padding: 0.5rem 1rem; font-size: 0.9rem;">
+                                Return Book
+                            </button>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        
+    } catch (error) {
+        console.error('Error loading borrow history:', error);
+        container.innerHTML = '<p style="color: var(--maroon); text-align: center; padding: 2rem;">Error loading borrow history</p>';
+    }
+}
+
+// Quick return function for the borrow history list
+async function quickReturn(userId, bookId) {
+    if (!confirm(`Return Book ID ${bookId} for User ID ${userId}?`)) {
+        return;
+    }
+    
+    try {
+        const response = await fetch(`${API_URL}/return`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userID: parseInt(userId), bookID: parseInt(bookId) })
+        });
+        
+        const data = await response.json();
+        
+        if (data.message && data.message.includes('successfully')) {
+            alert('✅ Book returned successfully!');
+            loadBorrowHistory(); // Reload the list
+        } else {
+            alert('❌ Error: ' + (data.message || 'Failed to return book'));
+        }
+    } catch (error) {
+        alert('❌ Error returning book: ' + error.message);
+    }
 }
 
 // Search
@@ -274,7 +377,6 @@ async function loadAllBooksForSearch() {
         
         if (data.status === 'success') {
             displaySearchResults(data.data.slice(0, 20)); // Show first 20 books
-            document.getElementById('searchQuery').placeholder = 'Search by title, author, or ISBN... (showing first 20 books)';
         }
     } catch (error) {
         console.error('Error loading books:', error);
@@ -290,14 +392,33 @@ async function searchBooks() {
     }
     
     try {
-        // Search by title by default - backend expects title, author, or category parameter
-        const response = await fetch(`${API_URL}/books/search?title=${encodeURIComponent(query)}`);
-        const data = await response.json();
+        // Search by title first
+        const titleResponse = await fetch(`${API_URL}/books/search?title=${encodeURIComponent(query)}`);
+        const titleData = await titleResponse.json();
         
-        if (data.status === 'success') {
-            displaySearchResults(data.data);
+        // Search by author
+        const authorResponse = await fetch(`${API_URL}/books/search?author=${encodeURIComponent(query)}`);
+        const authorData = await authorResponse.json();
+        
+        // Combine results and remove duplicates
+        let allResults = [];
+        if (titleData.status === 'success' && titleData.data) {
+            allResults = [...titleData.data];
+        }
+        if (authorData.status === 'success' && authorData.data) {
+            authorData.data.forEach(book => {
+                // Only add if not already in results (check both id and bookID)
+                const bookId = book.id || book.bookID;
+                if (!allResults.find(b => (b.id || b.bookID) === bookId)) {
+                    allResults.push(book);
+                }
+            });
+        }
+        
+        if (allResults.length > 0) {
+            displaySearchResults(allResults);
         } else {
-            alert('Search failed: ' + data.message);
+            displaySearchResults([]);
         }
     } catch (error) {
         console.error('Error searching:', error);

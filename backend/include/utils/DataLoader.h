@@ -81,7 +81,7 @@ private:
                 break;
             }
 
-            int id = extractInt(json, "id", objStart);
+            int id = extractInt(json, "bookID", objStart);
             std::string title = extractValue(json, "title", objStart);
             std::string author = extractValue(json, "author", objStart);
             std::string isbn = extractValue(json, "isbn", objStart);
