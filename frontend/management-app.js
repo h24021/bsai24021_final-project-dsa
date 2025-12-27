@@ -82,12 +82,24 @@ function displayAllBooks(books) {
                 this.style.display = 'none';
                 const placeholder = document.createElement('div');
                 placeholder.className = 'book-cover-placeholder';
+                placeholder.innerHTML = `
+                    <div style="padding: 1rem; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                        <div style="font-size: 0.75rem; font-weight: bold; color: var(--maroon);">${book.type || 'Book'}</div>
+                    </div>
+                `;
                 cover.appendChild(placeholder);
             };
             cover.appendChild(img);
         } else {
             const placeholder = document.createElement('div');
             placeholder.className = 'book-cover-placeholder';
+            placeholder.innerHTML = `
+                <div style="padding: 1rem; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                    <div style="font-size: 0.75rem; font-weight: bold; color: var(--maroon);">${book.type || 'Book'}</div>
+                </div>
+            `;
             cover.appendChild(placeholder);
         }
         
@@ -454,6 +466,12 @@ function displaySearchResults(books) {
                 this.style.display = 'none';
                 const placeholder = document.createElement('div');
                 placeholder.className = 'book-cover-placeholder';
+                placeholder.innerHTML = `
+                    <div style="padding: 1rem; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                        <div style="font-size: 0.75rem; font-weight: bold; color: var(--maroon);">${book.type || 'Book'}</div>
+                    </div>
+                `;
                 cover.appendChild(placeholder);
             };
             cover.appendChild(img);
