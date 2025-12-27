@@ -19,6 +19,7 @@
         <button class="main-tab" data-section="users">Users</button>
         <button class="main-tab" data-section="borrow">Borrow/Return</button>
         <button class="main-tab" data-section="search">Search</button>
+        <button class="main-tab" data-section="statistics">Statistics</button>
     </nav>
 
     <main class="main-content">
@@ -102,6 +103,43 @@
                 <button onclick="searchBooks()" class="btn-primary">Search</button>
             </div>
             <div id="searchResults" class="book-grid"></div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section id="statistics-section" class="content-section">
+            <h2 class="section-title">Library Statistics</h2>
+            
+            <div class="stats-grid">
+                <!-- Overall Stats -->
+                <div class="stat-card">
+                    <h3>Overall Library Stats</h3>
+                    <div id="overallStats" class="stat-content"></div>
+                </div>
+
+                <!-- Books by Genre -->
+                <div class="stat-card">
+                    <h3>Books by Genre</h3>
+                    <div id="genreStats" class="stat-content"></div>
+                </div>
+
+                <!-- User Stats -->
+                <div class="stat-card">
+                    <h3>User Statistics</h3>
+                    <div id="userStats" class="stat-content"></div>
+                </div>
+
+                <!-- Borrowing Stats -->
+                <div class="stat-card">
+                    <h3>Borrowing Statistics</h3>
+                    <div id="borrowStats" class="stat-content"></div>
+                </div>
+
+                <!-- Individual User Borrowing -->
+                <div class="stat-card full-width">
+                    <h3>User Borrowing Details</h3>
+                    <div id="userBorrowDetails" class="stat-content"></div>
+                </div>
+            </div>
         </section>
     </main>
 

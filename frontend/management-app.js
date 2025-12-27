@@ -21,6 +21,7 @@ document.querySelectorAll('.main-tab').forEach(tab => {
         if (section === 'users') loadUsers();
         if (section === 'borrow') loadBorrowHistory();
         if (section === 'search') loadAllBooksForSearch();
+        if (section === 'statistics') loadStatistics();
     });
 });
 
@@ -499,3 +500,178 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load books on page load (Books tab is active by default)
     loadAllBooks();
 });
+
+// ===================================
+// STATISTICS FUNCTIONS
+// ===================================
+
+async function loadStatistics() {
+    try {
+        // Fetch all data
+        const [booksRes, usersRes] = await Promise.all([
+            fetch(`${API_BASE_URL}/books`),
+            fetch(`${API_BASE_URL}/users`)
+        ]);
+
+        const booksData = await booksRes.json();
+        const usersData = await usersRes.json();
+
+        const books = booksData.data || [];
+        const users = usersData.data || [];
+
+        // Calculate statistics
+        displayOverallStats(books, users);
+        displayGenreStats(books);
+        displayUserStats(users);
+        displayBorrowingStats(books, users);
+        displayUserBorrowDetails(users, books);
+
+    } catch (error) {
+        console.error('Error loading statistics:', error);
+    }
+}
+
+function displayOverallStats(books, users) {
+    const totalBooks = books.length;
+    const totalCopies = books.reduce((sum, book) => sum + book.copies, 0);
+    const availableCopies = books.reduce((sum, book) => sum + book.availableCopies, 0);
+    const borrowedCopies = totalCopies - availableCopies;
+    const totalUsers = users.length;
+
+    const html = `
+        <div class="stat-item">
+            <span class="stat-label">Total Unique Books:</span>
+            <span class="stat-value">${totalBooks}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Total Book Copies:</span>
+            <span class="stat-value">${totalCopies}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Available Copies:</span>
+            <span class="stat-value">${availableCopies}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Borrowed Copies:</span>
+            <span class="stat-value">${borrowedCopies}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Total Users:</span>
+            <span class="stat-value">${totalUsers}</span>
+        </div>
+    `;
+
+    document.getElementById('overallStats').innerHTML = html;
+}
+
+function displayGenreStats(books) {
+    const genreCounts = {};
+    const genreAvailable = {};
+
+    books.forEach(book => {
+        const genre = book.category || 'Unknown';
+        genreCounts[genre] = (genreCounts[genre] || 0) + 1;
+        genreAvailable[genre] = (genreAvailable[genre] || 0) + book.availableCopies;
+    });
+
+    // Sort genres by count
+    const sortedGenres = Object.entries(genreCounts).sort((a, b) => b[1] - a[1]);
+
+    let html = '<table class="stats-table"><thead><tr><th>Genre</th><th>Total Books</th><th>Available</th></tr></thead><tbody>';
+    
+    sortedGenres.forEach(([genre, count]) => {
+        html += `
+            <tr>
+                <td>${genre}</td>
+                <td>${count}</td>
+                <td>${genreAvailable[genre]}</td>
+            </tr>
+        `;
+    });
+
+    html += '</tbody></table>';
+    document.getElementById('genreStats').innerHTML = html;
+}
+
+function displayUserStats(users) {
+    const totalUsers = users.length;
+    const usersWithBorrowedBooks = users.filter(u => u.borrowedBooks && u.borrowedBooks.length > 0).length;
+    const usersWithoutBooks = totalUsers - usersWithBorrowedBooks;
+
+    const html = `
+        <div class="stat-item">
+            <span class="stat-label">Total Users:</span>
+            <span class="stat-value">${totalUsers}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Users with Borrowed Books:</span>
+            <span class="stat-value">${usersWithBorrowedBooks}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Users without Borrowed Books:</span>
+            <span class="stat-value">${usersWithoutBooks}</span>
+        </div>
+    `;
+
+    document.getElementById('userStats').innerHTML = html;
+}
+
+function displayBorrowingStats(books, users) {
+    const totalCopies = books.reduce((sum, book) => sum + book.copies, 0);
+    const availableCopies = books.reduce((sum, book) => sum + book.availableCopies, 0);
+    const borrowedCopies = totalCopies - availableCopies;
+    
+    const totalBorrowedByUsers = users.reduce((sum, user) => {
+        return sum + (user.borrowedBooks ? user.borrowedBooks.length : 0);
+    }, 0);
+
+    const html = `
+        <div class="stat-item">
+            <span class="stat-label">Total Books Borrowed:</span>
+            <span class="stat-value">${borrowedCopies}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Books Returned:</span>
+            <span class="stat-value">${totalCopies - availableCopies}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Active Borrowings:</span>
+            <span class="stat-value">${totalBorrowedByUsers}</span>
+        </div>
+    `;
+
+    document.getElementById('borrowStats').innerHTML = html;
+}
+
+function displayUserBorrowDetails(users, books) {
+    if (users.length === 0) {
+        document.getElementById('userBorrowDetails').innerHTML = '<p class="empty-state">No users registered yet.</p>';
+        return;
+    }
+
+    let html = '<table class="stats-table"><thead><tr><th>User ID</th><th>Name</th><th>Email</th><th>Books Borrowed</th><th>Borrowed Titles</th></tr></thead><tbody>';
+
+    users.forEach(user => {
+        const borrowedCount = user.borrowedBooks ? user.borrowedBooks.length : 0;
+        const borrowedTitles = user.borrowedBooks && user.borrowedBooks.length > 0
+            ? user.borrowedBooks.map(bookId => {
+                const book = books.find(b => b.bookID === bookId);
+                return book ? book.title : `Book #${bookId}`;
+            }).join(', ')
+            : 'None';
+
+        html += `
+            <tr>
+                <td>${user.userID}</td>
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+                <td>${borrowedCount}</td>
+                <td class="borrowed-titles">${borrowedTitles}</td>
+            </tr>
+        `;
+    });
+
+    html += '</tbody></table>';
+    document.getElementById('userBorrowDetails').innerHTML = html;
+}
+
