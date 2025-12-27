@@ -47,6 +47,10 @@ function filterBooks(type) {
     
     if (type === 'all') {
         displayAllBooks(allBooks);
+    } else if (type === 'Comic') {
+        // Show both comics AND manga when "Comics" filter is selected
+        const filtered = allBooks.filter(book => book.type === 'Comic' || book.type === 'Manga');
+        displayAllBooks(filtered);
     } else {
         const filtered = allBooks.filter(book => book.type === type);
         displayAllBooks(filtered);
