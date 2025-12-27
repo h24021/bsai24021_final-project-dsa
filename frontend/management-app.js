@@ -687,15 +687,19 @@ function displayBorrowingStats(books, users) {
 
     const html = `
         <div class="stat-item">
-            <span class="stat-label">Total Books Borrowed:</span>
+            <span class="stat-label">Total Copies in Library:</span>
+            <span class="stat-value">${totalCopies}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Available Copies:</span>
+            <span class="stat-value">${availableCopies}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Currently Borrowed:</span>
             <span class="stat-value">${borrowedCopies}</span>
         </div>
         <div class="stat-item">
-            <span class="stat-label">Books Returned:</span>
-            <span class="stat-value">${totalCopies - availableCopies}</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-label">Active Borrowings:</span>
+            <span class="stat-label">Active User Borrowings:</span>
             <span class="stat-value">${totalBorrowedByUsers}</span>
         </div>
     `;
