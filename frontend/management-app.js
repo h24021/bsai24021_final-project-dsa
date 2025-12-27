@@ -505,6 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===================================
 
 async function loadStatistics() {
+    console.log('Loading statistics...');
     try {
         // Fetch all data
         const [booksRes, usersRes] = await Promise.all([
@@ -512,8 +513,13 @@ async function loadStatistics() {
             fetch(`${API_BASE_URL}/users`)
         ]);
 
+        console.log('Responses received:', booksRes.status, usersRes.status);
+
         const booksData = await booksRes.json();
         const usersData = await usersRes.json();
+
+        console.log('Books data:', booksData.data?.length, 'books');
+        console.log('Users data:', usersData.data?.length, 'users');
 
         const books = booksData.data || [];
         const users = usersData.data || [];
@@ -525,8 +531,11 @@ async function loadStatistics() {
         displayBorrowingStats(books, users);
         displayUserBorrowDetails(users, books);
 
+        console.log('Statistics loaded successfully');
+
     } catch (error) {
         console.error('Error loading statistics:', error);
+        document.getElementById('overallStats').innerHTML = '<p class="error">Error loading statistics. Please try again.</p>';
     }
 }
 
