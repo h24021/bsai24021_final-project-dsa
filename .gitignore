@@ -115,3 +115,4 @@ Makefile.old
 # Core dumps
 core
 core.*
+mykey.pem

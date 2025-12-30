@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <fstream>
+#include <sstream>
 #include "../include/services/Library.h"
 #include "../include/api/Router.h"
 #include "../include/controllers/BookController.h"
@@ -34,11 +36,30 @@ static void seedSampleData(Library& library) {
     // No hardcoded users - users add themselves via the UI
 }
 
+static HttpResponse serveApiDocs(const HttpRequest& req) {
+    std::ifstream file("backend/api-docs.html");
+    if (!file.is_open()) {
+        return HttpResponse::notFound("API documentation file not found");
+    }
+    
+    std::stringstream buffer;
+    buffer << file.rdbuf();
+    file.close();
+    
+    HttpResponse response(HttpStatus::OK);
+    response.setBody(buffer.str());
+    response.setHeader("Content-Type", "text/html");
+    return response;
+}
+
 static void registerRoutes(Router& router, Library& library,
                            BookController& bookController,
                            UserController& userController,
                            BorrowController& borrowController,
                            StatisticsController& statsController) {
+    // API Documentation route
+    router.get("/docs", serveApiDocs);
+    
     // Book routes
     router.get("/books", [&](const HttpRequest& req) { return bookController.getAllBooks(req); });
     router.get("/books/search", [&](const HttpRequest& req) { return bookController.searchBooks(req); });  // MUST be before :id

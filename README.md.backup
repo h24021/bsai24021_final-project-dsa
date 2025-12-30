@@ -137,47 +137,10 @@ The documentation includes:
 ```
 http://localhost:8080/api/v1
 ```
-### Available Endpoints
-
-#### 📖 Books
-```
-GET    /api/v1/books                    - Get all books
-GET    /api/v1/books/search?query=...   - Search books
-GET    /api/v1/books/:id                - Get book by ID
-POST   /api/v1/books                    - Create new book
-PUT    /api/v1/books/:id                - Update book
-DELETE /api/v1/books/:id                - Delete book
-GET    /api/v1/books/:id/history        - Get borrow history
-```
-
-#### 👥 Users
-```
-GET    /api/v1/users                    - Get all users
-GET    /api/v1/users/:id                - Get user by ID
-GET    /api/v1/users/email/:email       - Get user by email
-GET    /api/v1/users/:id/borrowed       - Get borrowed books
-POST   /api/v1/users                    - Create new user
-PUT    /api/v1/users/:id                - Update user
-DELETE /api/v1/users/:id                - Delete user
-```
-
-#### 📚 Borrowing
-```
-POST   /api/v1/borrow                   - Borrow a book
-POST   /api/v1/return                   - Return a book
-```
-
-#### 📊 Statistics
-```
-GET    /api/v1/dashboard                       - Dashboard overview
-GET    /api/v1/statistics/most-borrowed        - Most borrowed books
-GET    /api/v1/statistics/most-active          - Most active users
-GET    /api/v1/statistics/category-distribution - Category stats
-```
-
-#### 📄 Documentation
-```
-GET    /api/v1/docs                     - Interactive API documentation
+GET    /api/users/:id          - Get user by ID
+POST   /api/users              - Create new user
+POST   /api/users/:id/borrow   - Borrow a book
+POST   /api/users/:id/return   - Return a book
 ```
 
 ## 🏗️ Architecture
@@ -189,139 +152,58 @@ GET    /api/v1/docs                     - Interactive API documentation
    - `Book.h` - Book entity
    - `User.h` - User entity
 
-2. **Data Structures Layer** (`backend/include/data_structures/`)
-   - Custom implementations
-   - `BTree.h` - B-Tree for efficient book indexing
-   - `HashTable.h` - Hash table for fast user lookup
-
-3. **Services Layer** (`backend/include/services/`)
+2. **Services Layer** (`backend/include/services/`)
    - Business logic and data management
    - `Library.h` - Core library operations
-   - `SessionManager.h` - Session management
 
-4. **Controllers Layer** (`backend/include/controllers/`)
+3. **Controllers Layer** (`backend/include/controllers/`)
    - API request handlers
    - `BookController.h` - Book API endpoints
    - `UserController.h` - User API endpoints
-   - `BorrowController.h` - Borrowing operations
-   - `StatisticsController.h` - Analytics endpoints
 
-5. **HTTP Layer** (`backend/include/http/`)
-   - HTTP server implementation
-   - `HttpServer.h` - TCP socket server
-   - `HttpModels.h` - Request/Response models
-
-6. **API Layer** (`backend/include/api/`)
+4. **API Layer** (`backend/src/api/`)
    - Routing and middleware
-   - `Router.h` - Request routing with path parameters
-
-## 💡 Quick Start Example
-
-```bash
-# 1. Build the project
-make
-
-# 2. Start the server with supervisor (recommended)
-./supervisor.sh  # or supervisor.bat / supervisor.ps1 on Windows
-
-# 3. Open API documentation in browser
-# Navigate to: http://localhost:8080/api/v1/docs
-
-# 4. Test the API
-curl http://localhost:8080/api/v1/books
-```
+   - `Router.cpp` - Request routing
 
 ## 🔧 Configuration
 
-### Server Configuration
-Edit the port in `backend/src/main_http.cpp`:
-```cpp
-HttpServer server(router, 8080);  // Change port here
-```
+Configuration files can be placed in the `config/` directory:
+- Database connection settings
+- API server configuration
+- Authentication settings
+- Logging configuration
 
-### Supervisor Configuration
-Edit variables at the top of supervisor scripts:
-- `MAX_RESTARTS`: Maximum restart attempts (default: 10)
-- `RESTART_WINDOW`: Time window in seconds (default: 60)
-- `PORT`: Server port (default: 8080)
+## 📚 API Documentation
 
-## 📝 Data Persistence
+Detailed API documentation will be available in the `docs/` directory:
+- `docs/API.md` - API endpoint specifications
+- `docs/ARCHITECTURE.md` - System architecture guide
+- `docs/DEVELOPMENT.md` - Development guidelines
 
-Data is automatically saved to `library_data.json` and loaded on server start.
-
-## 🧪 Testing the API
-
-### Using the Interactive Documentation
-1. Go to `http://localhost:8080/api/v1/docs`
-2. Click "Try it out" on any endpoint
-3. Fill in parameters/body
-4. Click "Send Request"
-5. View the response
-
-### Using curl
+## 🧪 Testing
 
 ```bash
-# Get all books
-curl http://localhost:8080/api/v1/books
+# Run tests (future implementation)
+make test
 
-# Search books
-curl http://localhost:8080/api/v1/books/search?query=gatsby
-
-# Create a user
-curl -X POST http://localhost:8080/api/v1/users \
-  -H "Content-Type: application/json" \
-  -d '{"userId":100,"name":"John Doe","email":"john@example.com","membershipType":"Student"}'
-
-# Borrow a book
-curl -X POST http://localhost:8080/api/v1/borrow \
-  -H "Content-Type: application/json" \
-  -d '{"userId":100,"bookId":101}'
+# Or with CMake
+cd build && ctest
 ```
-
-## 🎨 Frontend Integration
-
-The API is CORS-enabled and ready for frontend integration. A sample frontend is available in the `frontend/` directory.
-
-To use the frontend:
-1. Ensure the API server is running
-2. Update `frontend/api-config.js` with your API URL
-3. Open `frontend/index.html` in a browser
 
 ## 🔄 Development Roadmap
 
 - [x] Core data models (Book, User)
-- [x] Custom data structures (B-Tree, HashTable)
 - [x] Library service implementation
 - [x] Modular project structure
 - [x] API controller layer
-- [x] HTTP server implementation
-- [x] RESTful API with routing
-- [x] Interactive API documentation
-- [x] Process supervision system
-- [x] JSON data persistence
-- [x] CORS support
-- [x] Statistics and dashboard
+- [x] Build system (Make & CMake)
+- [ ] RESTful API with HTTP server (cpp-httplib or Crow)
 - [ ] Database integration (SQLite/PostgreSQL)
 - [ ] Authentication & authorization
-- [ ] Rate limiting
+- [ ] Frontend application (React/Vue)
 - [ ] Comprehensive testing suite
 - [ ] Docker containerization
 - [ ] CI/CD pipeline
-
-## 🐛 Troubleshooting
-
-### Server won't start
-- Check if port 8080 is already in use
-- Ensure the build succeeded: check `build/http_api_server` exists
-- Try running directly: `./build/http_api_server`
-
-### Supervisor keeps restarting
-- Check logs in `logs/api_server_error.log`
-- Verify library_data.json is readable if it exists
-
-### API documentation not loading
-- Ensure `backend/api-docs.html` exists
-- Verify server is running: `http://localhost:8080/api/v1/docs`
 
 ## 🤝 Contributing
 
