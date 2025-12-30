@@ -115,4 +115,11 @@ Makefile.old
 # Core dumps
 core
 core.*
+
+# Security - SSH keys
 mykey.pem
+*.pem
+
+# Logs
+logs/
+*.log
