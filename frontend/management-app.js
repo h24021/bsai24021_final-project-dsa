@@ -29,11 +29,20 @@ document.querySelectorAll('.main-tab').forEach(tab => {
 async function loadAllBooks() {
     try {
         const response = await fetch(`${API_URL}/books`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
+        console.log('Books API Response:', data); // Debug log
         
-        if (data.status === 'success') {
-            allBooks = data.data;
+        // Handle the response structure from the API
+        if (data.status === 'success' && data.data) {
+            // data.data is the JSON array
+            allBooks = Array.isArray(data.data) ? data.data : JSON.parse(data.data);
             displayAllBooks(allBooks);
+        } else {
+            console.error('Unexpected response format:', data);
+            alert('Error: Unexpected response format from server');
         }
     } catch (error) {
         console.error('Error loading books:', error);
@@ -147,10 +156,26 @@ function displayAllBooks(books) {
 async function loadUsers() {
     try {
         const response = await fetch(`${API_URL}/users`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
+        console.log('Users API Response:', data); // Debug log
         
-        if (data.status === 'success') {
-            displayUsers(data.data);
+        if (data.status === 'success' && data.data) {
+            // data.data might be a JSON string, parse if needed
+            let users;
+            if (typeof data.data === 'string') {
+                users = JSON.parse(data.data);
+            } else if (Array.isArray(data.data)) {
+                users = data.data;
+            } else {
+                users = [];
+            }
+            displayUsers(users);
+        } else {
+            console.error('Unexpected response format:', data);
+            displayUsers([]);
         }
     } catch (error) {
         console.error('Error loading users:', error);
@@ -238,6 +263,8 @@ async function borrowBook() {
             document.getElementById('borrowUserId').value = '';
             document.getElementById('borrowBookId').value = '';
             loadBorrowHistory();
+            loadAllBooks(); // Refresh book list to show updated availability
+            loadStatistics(); // Refresh statistics
         } else {
             alert('Error: Error: ' + (data.message || 'Failed to borrow book'));
         }
@@ -269,6 +296,8 @@ async function returnBook() {
             document.getElementById('returnUserId').value = '';
             document.getElementById('returnBookId').value = '';
             loadBorrowHistory();
+            loadAllBooks(); // Refresh book list to show updated availability
+            loadStatistics(); // Refresh statistics
         } else {
             alert('Error: Error: ' + (data.message || 'Failed to return book'));
         }
@@ -286,12 +315,20 @@ async function loadBorrowHistory() {
         const usersResponse = await fetch(`${API_URL}/users`);
         const usersData = await usersResponse.json();
         
-        if (usersData.status !== 'success') {
+        if (usersData.status !== 'success' || !usersData.data) {
             container.innerHTML = '<p style="color: var(--light-gray); text-align: center; padding: 2rem;">No borrow history available</p>';
             return;
         }
         
-        const users = usersData.data;
+        // Parse users data properly
+        let users;
+        if (typeof usersData.data === 'string') {
+            users = JSON.parse(usersData.data);
+        } else if (Array.isArray(usersData.data)) {
+            users = usersData.data;
+        } else {
+            users = [];
+        }
         const allBorrowedBooks = [];
         
         // For each user, get their borrowed books
@@ -391,8 +428,15 @@ async function loadAllBooksForSearch() {
         const response = await fetch(`${API_URL}/books`);
         const data = await response.json();
         
-        if (data.status === 'success') {
-            displaySearchResults(data.data.slice(0, 20)); // Show first 20 books
+        if (data.status === 'success' && data.data) {
+            // Parse data properly
+            let books = [];
+            if (typeof data.data === 'string') {
+                books = JSON.parse(data.data);
+            } else if (Array.isArray(data.data)) {
+                books = data.data;
+            }
+            displaySearchResults(books.slice(0, 20)); // Show first 20 books
         }
     } catch (error) {
         console.error('Error loading books:', error);
@@ -418,11 +462,26 @@ async function searchBooks() {
         
         // Combine results and remove duplicates
         let allResults = [];
+        
+        // Parse title results
         if (titleData.status === 'success' && titleData.data) {
-            allResults = [...titleData.data];
+            if (typeof titleData.data === 'string') {
+                allResults = JSON.parse(titleData.data);
+            } else if (Array.isArray(titleData.data)) {
+                allResults = [...titleData.data];
+            }
         }
+        
+        // Parse and merge author results
         if (authorData.status === 'success' && authorData.data) {
-            authorData.data.forEach(book => {
+            let authorBooks = [];
+            if (typeof authorData.data === 'string') {
+                authorBooks = JSON.parse(authorData.data);
+            } else if (Array.isArray(authorData.data)) {
+                authorBooks = authorData.data;
+            }
+            
+            authorBooks.forEach(book => {
                 // Only add if not already in results (check both id and bookID)
                 const bookId = book.id || book.bookID;
                 if (!allResults.find(b => (b.id || b.bookID) === bookId)) {
@@ -431,11 +490,7 @@ async function searchBooks() {
             });
         }
         
-        if (allResults.length > 0) {
-            displaySearchResults(allResults);
-        } else {
-            displaySearchResults([]);
-        }
+        displaySearchResults(allResults);
     } catch (error) {
         console.error('Error searching:', error);
         alert('Error searching: ' + error.message);
@@ -536,11 +591,31 @@ async function loadStatistics() {
         const booksData = await booksRes.json();
         const usersData = await usersRes.json();
 
-        console.log('Books data:', booksData.data?.length, 'books');
-        console.log('Users data:', usersData.data?.length, 'users');
+        console.log('Books data:', booksData);
+        console.log('Users data:', usersData);
 
-        const books = booksData.data || [];
-        const users = usersData.data || [];
+        // Parse data properly - handle JSON strings
+        let books = [];
+        let users = [];
+        
+        if (booksData.status === 'success' && booksData.data) {
+            if (typeof booksData.data === 'string') {
+                books = JSON.parse(booksData.data);
+            } else if (Array.isArray(booksData.data)) {
+                books = booksData.data;
+            }
+        }
+        
+        if (usersData.status === 'success' && usersData.data) {
+            if (typeof usersData.data === 'string') {
+                users = JSON.parse(usersData.data);
+            } else if (Array.isArray(usersData.data)) {
+                users = usersData.data;
+            }
+        }
+
+        console.log('Parsed books:', books.length, 'books');
+        console.log('Parsed users:', users.length, 'users');
 
         // Calculate statistics with individual error handling
         try {
@@ -610,10 +685,6 @@ function displayOverallStats(books, users) {
         <div class="stat-item">
             <span class="stat-label">Available Copies:</span>
             <span class="stat-value">${availableCopies}</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-label">Borrowed Copies:</span>
-            <span class="stat-value">${borrowedCopies}</span>
         </div>
         <div class="stat-item">
             <span class="stat-label">Total Users:</span>
@@ -693,10 +764,6 @@ function displayBorrowingStats(books, users) {
         <div class="stat-item">
             <span class="stat-label">Available Copies:</span>
             <span class="stat-value">${availableCopies}</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-label">Currently Borrowed:</span>
-            <span class="stat-value">${borrowedCopies}</span>
         </div>
         <div class="stat-item">
             <span class="stat-label">Active User Borrowings:</span>
