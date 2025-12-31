@@ -14,13 +14,14 @@ TEST_TARGET = $(BUILD_DIR)/test_btree
 
 # Source files
 MODEL_SRCS = $(SRC_DIR)/models/Book.cpp $(SRC_DIR)/models/User.cpp
-SERVICE_SRCS = $(SRC_DIR)/services/Library.cpp
+SERVICE_SRCS = $(SRC_DIR)/services/Library.cpp $(SRC_DIR)/services/SessionManager.cpp
 HTTP_SRCS = $(SRC_DIR)/http/HttpModels.cpp $(SRC_DIR)/http/HttpServer.cpp
 API_SRCS = $(SRC_DIR)/api/Router.cpp
 CONTROLLER_SRCS = $(SRC_DIR)/controllers/BookControllerNew.cpp \
                   $(SRC_DIR)/controllers/UserControllerNew.cpp \
                   $(SRC_DIR)/controllers/BorrowController.cpp \
-                  $(SRC_DIR)/controllers/StatisticsController.cpp
+                  $(SRC_DIR)/controllers/StatisticsController.cpp \
+                  $(SRC_DIR)/controllers/AuthController.cpp
 # Main entry point (HTTP server only)
 NET_API_MAIN_SRC = $(SRC_DIR)/main_http.cpp
 

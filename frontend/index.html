@@ -9,7 +9,13 @@
 </head>
 <body>
     <header class="main-header">
-        <h1 class="site-title">Library Management System</h1>
+        <div class="header-content">
+            <h1 class="site-title">Library Management System - Admin</h1>
+            <div class="user-info">
+                <span id="welcomeMessage" class="welcome-text"></span>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+        </div>
         <div class="title-accent"></div>
     </header>
 
@@ -23,7 +29,6 @@
     </nav>
 
     <main class="main-content">
-        <!-- Books Section -->
         <section id="books-section" class="content-section active">
             <h2 class="section-title">All Books</h2>
             
@@ -36,7 +41,6 @@
             <div id="allBooksGrid" class="books-grid"></div>
         </section>
 
-        <!-- Users Section -->
         <section id="users-section" class="content-section">
             <h2 class="section-title">Users</h2>
             <div class="management-container">
@@ -55,7 +59,6 @@
             </div>
         </section>
 
-        <!-- Borrow/Return Section -->
         <section id="borrow-section" class="content-section">
             <h2 class="section-title">Borrowing</h2>
             <div class="management-container">
@@ -69,7 +72,6 @@
             <div id="borrowHistory" class="items-list"></div>
         </section>
 
-        <!-- Search Section -->
         <section id="search-section" class="content-section">
             <h2 class="section-title">Search Library</h2>
             <div class="search-container">
@@ -79,36 +81,30 @@
             <div id="searchResults" class="book-grid"></div>
         </section>
 
-        <!-- Statistics Section -->
         <section id="statistics-section" class="content-section">
             <h2 class="section-title">Library Statistics</h2>
             
             <div class="stats-grid">
-                <!-- Overall Stats -->
                 <div class="stat-card">
                     <h3>Overall Library Stats</h3>
                     <div id="overallStats" class="stat-content"></div>
                 </div>
 
-                <!-- Books by Genre -->
                 <div class="stat-card">
                     <h3>Books by Genre</h3>
                     <div id="genreStats" class="stat-content"></div>
                 </div>
 
-                <!-- User Stats -->
                 <div class="stat-card">
                     <h3>User Statistics</h3>
                     <div id="userStats" class="stat-content"></div>
                 </div>
 
-                <!-- Borrowing Stats -->
                 <div class="stat-card">
                     <h3>Borrowing Statistics</h3>
                     <div id="borrowStats" class="stat-content"></div>
                 </div>
 
-                <!-- Individual User Borrowing -->
                 <div class="stat-card full-width">
                     <h3>User Borrowing Details</h3>
                     <div id="userBorrowDetails" class="stat-content"></div>

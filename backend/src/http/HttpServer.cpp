@@ -122,7 +122,7 @@ void HttpServer::handleClient(int clientSock) {
         ss << "HTTP/1.1 204\r\n";
         ss << "Access-Control-Allow-Origin: *\r\n";
         ss << "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS\r\n";
-        ss << "Access-Control-Allow-Headers: Content-Type\r\n";
+        ss << "Access-Control-Allow-Headers: Content-Type, Authorization\r\n";
         ss << "Content-Length: 0\r\n\r\n";
         ::send(clientSock, ss.str().c_str(), ss.str().size(), 0);
         return;

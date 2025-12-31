@@ -75,6 +75,7 @@ Book* Library::findBookByID(int bookID) {
 void Library::addUser(const User& u) {
     usersByID.insert(u.getUserID(), u);
     usersByEmail.insert(u.getEmail(), u);
+    usersByUsername.insert(u.getUsername(), u);
     cout << "User added: " << u.getName() << " (ID: " << u.getUserID() << ")" << endl;
 }
 
@@ -90,6 +91,16 @@ User* Library::findUserByID(int userID) {
 
 User* Library::findUserByEmail(const string& email) {
     auto result = usersByEmail.find(email);
+    if (result.has_value()) {
+        static User foundUser;
+        foundUser = result.value();
+        return &foundUser;
+    }
+    return nullptr;
+}
+
+User* Library::findUserByUsername(const string& username) {
+    auto result = usersByUsername.find(username);
     if (result.has_value()) {
         static User foundUser;
         foundUser = result.value();

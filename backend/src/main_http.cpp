@@ -3,11 +3,13 @@
 #include <fstream>
 #include <sstream>
 #include "../include/services/Library.h"
+#include "../include/services/SessionManager.h"
 #include "../include/api/Router.h"
 #include "../include/controllers/BookController.h"
 #include "../include/controllers/UserController.h"
 #include "../include/controllers/BorrowController.h"
 #include "../include/controllers/StatisticsController.h"
+#include "../include/controllers/AuthController.h"
 #include "../include/http/HttpServer.h"
 #include "../include/utils/DataLoader.h"
 
@@ -33,7 +35,7 @@ static void seedSampleData(Library& library) {
     library.addBook(Book(109, "The Hobbit", "J.R.R. Tolkien", "ISBN-109", "Fantasy", 3, 3));
     library.addBook(Book(110, "Fahrenheit 451", "Ray Bradbury", "ISBN-110", "Science Fiction", 3, 3));
 
-    // No hardcoded users - users add themselves via the UI
+    
 }
 
 static HttpResponse serveApiDocs(const HttpRequest& req) {
@@ -56,19 +58,24 @@ static void registerRoutes(Router& router, Library& library,
                            BookController& bookController,
                            UserController& userController,
                            BorrowController& borrowController,
-                           StatisticsController& statsController) {
-    // API Documentation route
+                           StatisticsController& statsController,
+                           AuthController& authController) {
     router.get("/docs", serveApiDocs);
     
-    // Book routes
+    // Authentication routes
+    router.post("/auth/login", [&](const HttpRequest& req) { return authController.login(req); });
+    router.post("/auth/register", [&](const HttpRequest& req) { return authController.registerUser(req); });
+    router.post("/auth/logout", [&](const HttpRequest& req) { return authController.logout(req); });
+    router.get("/auth/me", [&](const HttpRequest& req) { return authController.getCurrentUser(req); });
+    
     router.get("/books", [&](const HttpRequest& req) { return bookController.getAllBooks(req); });
-    router.get("/books/search", [&](const HttpRequest& req) { return bookController.searchBooks(req); });  // MUST be before :id
+    router.get("/books/search", [&](const HttpRequest& req) { return bookController.searchBooks(req); }); 
     router.get("/books/:id", [&](const HttpRequest& req) { return bookController.getBookById(req); });
     router.post("/books", [&](const HttpRequest& req) { return bookController.createBook(req); });
     router.put("/books/:id", [&](const HttpRequest& req) { return bookController.updateBook(req); });
     router.del("/books/:id", [&](const HttpRequest& req) { return bookController.deleteBook(req); });
 
-    // User routes
+
     router.get("/users", [&](const HttpRequest& req) { return userController.getAllUsers(req); });
     router.get("/users/:id", [&](const HttpRequest& req) { return userController.getUserById(req); });
     router.get("/users/email/:email", [&](const HttpRequest& req) { return userController.getUserByEmail(req); });
@@ -82,7 +89,7 @@ static void registerRoutes(Router& router, Library& library,
     router.post("/return", [&](const HttpRequest& req) { return borrowController.returnBook(req); });
     router.get("/books/:id/history", [&](const HttpRequest& req) { return borrowController.getBorrowHistory(req); });
 
-    // Stats routes
+
     router.get("/dashboard", [&](const HttpRequest& req) { return statsController.getDashboard(req); });
     router.get("/statistics/most-borrowed", [&](const HttpRequest& req) { return statsController.getMostBorrowedBooks(req); });
     router.get("/statistics/most-active",  [&](const HttpRequest& req) { return statsController.getMostActiveUsers(req); });
@@ -92,8 +99,8 @@ static void registerRoutes(Router& router, Library& library,
 int main() {
     printBanner();
     Library library;
+    SessionManager sessionManager;
     
-    // Try to load from JSON file first, fall back to sample data if file not found
     if (!DataLoader::loadFromFile(library, "library_data.json")) {
         cout << "Could not load library_data.json, using sample data instead...\n";
         seedSampleData(library);
@@ -101,13 +108,13 @@ int main() {
 
     Router router("/api/v1");
     
-    // Create controllers that will live for the entire program
     BookController bookController(&library);
     UserController userController(&library);
     BorrowController borrowController(&library);
     StatisticsController statsController(&library);
+    AuthController authController(&library, &sessionManager);
     
-    registerRoutes(router, library, bookController, userController, borrowController, statsController);
+    registerRoutes(router, library, bookController, userController, borrowController, statsController, authController);
     cout << "Registered routes: " << router.getRouteCount() << " under base path " << router.getBasePath() << "\n";
 
     HttpServer server(router, 8080);

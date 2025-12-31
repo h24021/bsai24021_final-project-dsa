@@ -16,6 +16,7 @@ private:
 
     HashTable<int, User> usersByID;
     HashTable<string, User> usersByEmail;
+    HashTable<string, User> usersByUsername;
 
     HashTable<int, int> borrowCounts;
 
@@ -34,6 +35,7 @@ public:
     void addUser(const User& u);
     User* findUserByID(int userID);
     User* findUserByEmail(const string& email);
+    User* findUserByUsername(const string& username);
     void printAllUsers();
 
     bool borrowBook(int userID, int bookID);

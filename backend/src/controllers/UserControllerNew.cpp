@@ -134,7 +134,11 @@ HttpResponse UserController::createUser(const HttpRequest& req) {
         static int nextUserID = 1;
         int newUserID = nextUserID++;
 
-        User newUser(newUserID, name, email, role);
+        // Generate username from email (part before @) and set a default password
+        string username = email.substr(0, email.find('@'));
+        string defaultPassword = "password123"; // Admin should change this
+        
+        User newUser(newUserID, username, name, email, defaultPassword, role);
         library->addUser(newUser);
 
         return HttpResponse::created(

@@ -6,29 +6,29 @@
 #include <sstream>
 #include "../services/Library.h"
 
+using namespace std;
+
 class DataLoader {
 public:
-    // Simple JSON parser for our specific format
-    static bool loadFromFile(Library& library, const std::string& filename) {
-        std::ifstream file(filename);
+    static bool loadFromFile(Library& library, const string& filename) {
+        ifstream file(filename);
         if (!file.is_open()) {
-            std::cerr << "Error: Could not open " << filename << std::endl;
+            cerr << "Error: Could not open " << filename << endl;
             return false;
         }
 
-        std::string content((std::istreambuf_iterator<char>(file)),
-                           std::istreambuf_iterator<char>());
+        string content((istreambuf_iterator<char>(file)),
+                           istreambuf_iterator<char>());
         file.close();
 
-        // Parse books
+
         size_t booksPos = content.find("\"books\":");
-        if (booksPos != std::string::npos) {
+        if (booksPos != string::npos) {
             parseBooks(library, content, booksPos);
         }
 
-        // Parse users
         size_t usersPos = content.find("\"users\":");
-        if (usersPos != std::string::npos) {
+        if (usersPos != string::npos) {
             parseUsers(library, content, usersPos);
         }
 
@@ -36,64 +36,60 @@ public:
     }
 
 private:
-    static std::string extractValue(const std::string& json, const std::string& key, size_t startPos) {
+    static string extractValue(const string& json, const string& key, size_t startPos) {
         size_t keyPos = json.find("\"" + key + "\":", startPos);
-        if (keyPos == std::string::npos) return "";
+        if (keyPos == string::npos) return "";
         
         size_t valueStart = json.find(":", keyPos) + 1;
         while (json[valueStart] == ' ') valueStart++;
         
         if (json[valueStart] == '"') {
-            // String value
             valueStart++;
             size_t valueEnd = json.find('"', valueStart);
             return json.substr(valueStart, valueEnd - valueStart);
         } else {
-            // Number value
             size_t valueEnd = json.find_first_of(",}\n", valueStart);
-            std::string num = json.substr(valueStart, valueEnd - valueStart);
-            // Trim whitespace
+            string num = json.substr(valueStart, valueEnd - valueStart);
             size_t first = num.find_first_not_of(" \t\n\r");
             size_t last = num.find_last_not_of(" \t\n\r");
-            return (first == std::string::npos) ? "" : num.substr(first, last - first + 1);
+            return (first == string::npos) ? "" : num.substr(first, last - first + 1);
         }
     }
 
-    static int extractInt(const std::string& json, const std::string& key, size_t startPos) {
-        std::string value = extractValue(json, key, startPos);
-        return value.empty() ? 0 : std::stoi(value);
+    static int extractInt(const string& json, const string& key, size_t startPos) {
+        string value = extractValue(json, key, startPos);
+        return value.empty() ? 0 : stoi(value);
     }
 
-    static void parseBooks(Library& library, const std::string& json, size_t startPos) {
+    static void parseBooks(Library& library, const string& json, size_t startPos) {
         size_t pos = json.find('[', startPos);
-        if (pos == std::string::npos) return;
+        if (pos == string::npos) return;
 
         int count = 0;
         while (true) {
             size_t objStart = json.find('{', pos);
-            if (objStart == std::string::npos) break;
+            if (objStart == string::npos) break;
             
             size_t objEnd = json.find('}', objStart);
-            if (objEnd == std::string::npos) break;
+            if (objEnd == string::npos) break;
 
-            // Check if we've moved to users section
-            if (json.substr(objStart, objEnd - objStart).find("\"email\"") != std::string::npos) {
+            if (json.substr(objStart, objEnd - objStart).find("\"email\"") != string::npos) {
                 break;
             }
 
             int id = extractInt(json, "bookID", objStart);
-            std::string title = extractValue(json, "title", objStart);
-            std::string author = extractValue(json, "author", objStart);
-            std::string isbn = extractValue(json, "isbn", objStart);
-            std::string category = extractValue(json, "category", objStart);
+            string title = extractValue(json, "title", objStart);
+            string author = extractValue(json, "author", objStart);
+            string isbn = extractValue(json, "isbn", objStart);
+            string category = extractValue(json, "category", objStart);
             int copies = extractInt(json, "copies", objStart);
             int availableCopies = extractInt(json, "availableCopies", objStart);
             // Try "cover" field first (new real covers), fallback to "coverImage"
-            std::string coverImage = extractValue(json, "cover", objStart);
+            string coverImage = extractValue(json, "cover", objStart);
             if (coverImage.empty()) {
                 coverImage = extractValue(json, "coverImage", objStart);
             }
-            std::string type = extractValue(json, "type", objStart);
+            string type = extractValue(json, "type", objStart);
 
             if (id > 0 && !title.empty()) {
                 library.addBook(Book(id, title, author, isbn, category, copies, availableCopies, coverImage, type));
@@ -102,42 +98,51 @@ private:
 
             pos = objEnd + 1;
             
-            // Stop if we hit the users section
+
             size_t nextObj = json.find('{', pos);
             size_t usersSection = json.find("\"users\"", pos);
-            if (usersSection != std::string::npos && usersSection < nextObj) {
+            if (usersSection != string::npos && usersSection < nextObj) {
                 break;
             }
         }
-        std::cout << "Loaded " << count << " books from file\n";
+        cout << "Loaded " << count << " books from file\n";
     }
 
-    static void parseUsers(Library& library, const std::string& json, size_t startPos) {
+    static void parseUsers(Library& library, const string& json, size_t startPos) {
         size_t pos = json.find('[', startPos);
-        if (pos == std::string::npos) return;
+        if (pos == string::npos) return;
 
         int count = 0;
         while (true) {
             size_t objStart = json.find('{', pos);
-            if (objStart == std::string::npos) break;
+            if (objStart == string::npos) break;
             
             size_t objEnd = json.find('}', objStart);
-            if (objEnd == std::string::npos) break;
+            if (objEnd == string::npos) break;
 
             int id = extractInt(json, "id", objStart);
-            std::string name = extractValue(json, "name", objStart);
-            std::string email = extractValue(json, "email", objStart);
-            std::string role = extractValue(json, "role", objStart);
+            string name = extractValue(json, "name", objStart);
+            string email = extractValue(json, "email", objStart);
+            string role = extractValue(json, "role", objStart);
+            string username = extractValue(json, "username", objStart);
+            string password = extractValue(json, "password", objStart);
+
+            if (username.empty() && !email.empty()) {
+                username = email.substr(0, email.find('@'));
+            }
+            if (password.empty()) {
+                password = "password123";
+            }
 
             if (id > 0 && !name.empty()) {
-                library.addUser(User(id, name, email, role));
+                library.addUser(User(id, username, name, email, password, role));
                 count++;
             }
 
             pos = objEnd + 1;
             if (pos >= json.size()) break;
         }
-        std::cout << "Loaded " << count << " users from file\n";
+        cout << "Loaded " << count << " users from file\n";
     }
 };
 

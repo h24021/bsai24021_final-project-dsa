@@ -3,6 +3,90 @@ const API_URL = window.ENV.API_BASE;
 
 let allBooks = []; // Store all books for filtering
 
+// Authentication check on page load
+document.addEventListener('DOMContentLoaded', () => {
+    checkAuthentication();
+    setupLogout();
+});
+
+function checkAuthentication() {
+    const token = localStorage.getItem('authToken');
+    const role = localStorage.getItem('userRole');
+    const userName = localStorage.getItem('userName');
+    
+    if (!token || role !== 'ADMIN') {
+        // Not authenticated or not admin, redirect to login
+        window.location.href = 'login.html';
+        return;
+    }
+    
+    // Display welcome message
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    if (welcomeMessage && userName) {
+        welcomeMessage.textContent = `Welcome, ${userName}`;
+    }
+    
+    // Verify token is still valid
+    verifyToken(token);
+}
+
+async function verifyToken(token) {
+    try {
+        const response = await fetch(`${API_URL}/auth/me`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        
+        if (!response.ok) {
+            // Token is invalid, redirect to login
+            clearAuthData();
+            window.location.href = 'login.html';
+        }
+    } catch (error) {
+        console.error('Token verification error:', error);
+        clearAuthData();
+        window.location.href = 'login.html';
+    }
+}
+
+function setupLogout() {
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async () => {
+            const token = localStorage.getItem('authToken');
+            
+            if (token) {
+                try {
+                    // Call logout endpoint
+                    await fetch(`${API_URL}/auth/logout`, {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+                } catch (error) {
+                    console.error('Logout error:', error);
+                }
+            }
+            
+            // Clear local storage and redirect
+            clearAuthData();
+            window.location.href = 'login.html';
+        });
+    }
+}
+
+function clearAuthData() {
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('userRole');
+    localStorage.removeItem('userID');
+    localStorage.removeItem('username');
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userName');
+}
+
 // Tab switching
 document.querySelectorAll('.main-tab').forEach(tab => {
     tab.addEventListener('click', () => {
