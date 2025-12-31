@@ -1,10 +1,8 @@
-// User Dashboard - Library Management System
 const API_URL = window.ENV.API_BASE;
 
 let allBooks = [];
 let currentUserID = null;
 
-// Authentication check on page load
 document.addEventListener('DOMContentLoaded', () => {
     checkAuthentication();
     setupLogout();
@@ -17,32 +15,26 @@ function checkAuthentication() {
     const userID = localStorage.getItem('userID');
     
     if (!token) {
-        // Not authenticated, redirect to login
         window.location.href = 'login.html';
         return;
     }
     
     if (role === 'ADMIN') {
-        // Admin user, redirect to admin dashboard
         window.location.href = 'index.html';
         return;
     }
     
     currentUserID = parseInt(userID);
     
-    // Display welcome message
     const welcomeMessage = document.getElementById('welcomeMessage');
     if (welcomeMessage && userName) {
         welcomeMessage.textContent = `Welcome, ${userName}`;
     }
     
-    // Load profile info
     loadProfileInfo();
     
-    // Verify token is still valid
     verifyToken(token);
     
-    // Load initial data
     loadAllBooks();
 }
 
@@ -56,7 +48,6 @@ async function verifyToken(token) {
         });
         
         if (!response.ok) {
-            // Token is invalid, redirect to login
             clearAuthData();
             window.location.href = 'login.html';
         }
@@ -107,7 +98,6 @@ function loadProfileInfo() {
     document.getElementById('profileEmail').textContent = localStorage.getItem('userEmail') || 'N/A';
     document.getElementById('profileUserID').textContent = localStorage.getItem('userID') || 'N/A';
     
-    // Load user statistics
     loadUserStatistics();
 }
 
@@ -124,11 +114,9 @@ async function loadUserStatistics() {
             if (data.status === 'success') {
                 const borrowedBooks = data.data && Array.isArray(data.data) ? data.data : [];
                 
-                // Currently borrowed is the length of the array (API only returns unreturned books)
                 const currentlyBorrowed = borrowedBooks.length;
                 console.log('Currently borrowed count:', currentlyBorrowed);
                 
-                // Update the display
                 const currentlyBorrowedElement = document.getElementById('currentlyBorrowed');
                 if (currentlyBorrowedElement) {
                     currentlyBorrowedElement.textContent = currentlyBorrowed;
@@ -142,20 +130,16 @@ async function loadUserStatistics() {
     }
 }
 
-// Tab switching
 document.querySelectorAll('.main-tab').forEach(tab => {
     tab.addEventListener('click', () => {
         const section = tab.dataset.section;
         
-        // Update active tab
         document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         
-        // Update active section
         document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
         document.getElementById(`${section}-section`).classList.add('active');
         
-        // Load data for the section
         if (section === 'books') loadAllBooks();
         if (section === 'myborrowed') loadMyBorrowedBooks();
         if (section === 'search') loadAllBooksForSearch();
@@ -165,7 +149,6 @@ document.querySelectorAll('.main-tab').forEach(tab => {
     });
 });
 
-// Load all books
 async function loadAllBooks() {
     try {
         const response = await fetch(`${API_URL}/books`);
@@ -235,7 +218,6 @@ function displayAllBooks(books) {
 }
 
 function filterBooks(genre) {
-    // Update active filter button
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
     
@@ -247,7 +229,6 @@ function filterBooks(genre) {
     }
 }
 
-// Load borrowed books for current user
 async function loadMyBorrowedBooks() {
     try {
         const response = await fetch(`${API_URL}/users/${currentUserID}/borrowed`);
@@ -273,7 +254,6 @@ function displayMyBorrowedBooks(borrowedBooks) {
     const container = document.getElementById('myBorrowedList');
     if (!container) return;
     
-    // Filter to show only currently borrowed (not returned)
     const currentlyBorrowed = borrowedBooks.filter(b => !b.returnDate);
     
     if (currentlyBorrowed.length === 0) {
@@ -297,7 +277,6 @@ function displayMyBorrowedBooks(borrowedBooks) {
     `).join('');
 }
 
-// Search functionality
 function loadAllBooksForSearch() {
     loadAllBooks();
 }
@@ -311,26 +290,20 @@ async function searchBooks() {
     }
     
     try {
-        // Search by title first
         const titleResponse = await fetch(`${API_URL}/books/search?title=${encodeURIComponent(query)}`);
         const titleData = await titleResponse.json();
         
-        // Search by author
         const authorResponse = await fetch(`${API_URL}/books/search?author=${encodeURIComponent(query)}`);
         const authorData = await authorResponse.json();
         
-        // Combine results and remove duplicates
         let allResults = [];
         
-        // Parse title results - data is already an array
         if (titleData.status === 'success' && titleData.data && Array.isArray(titleData.data)) {
             allResults = [...titleData.data];
         }
         
-        // Parse and merge author results - data is already an array
         if (authorData.status === 'success' && authorData.data && Array.isArray(authorData.data)) {
             authorData.data.forEach(book => {
-                // Only add if not already in results
                 if (!allResults.find(b => b.id === book.id)) {
                     allResults.push(book);
                 }
@@ -394,14 +367,12 @@ function displaySearchResults(books) {
     }).join('');
 }
 
-// Helper function to format date
 function formatDate(dateString) {
     if (!dateString) return 'N/A';
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-// Allow search on Enter key
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
@@ -413,7 +384,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Borrow book function
 async function borrowBook(bookID) {
     if (!currentUserID) {
         alert('User ID not found. Please log in again.');
@@ -435,15 +405,12 @@ async function borrowBook(bookID) {
         const data = await response.json();
         
         if (response.ok && data.status === 'success') {
-            // Increment total borrowed count
             const currentTotal = parseInt(localStorage.getItem(`user_${currentUserID}_totalBorrowed`) || '0');
             localStorage.setItem(`user_${currentUserID}_totalBorrowed`, (currentTotal + 1).toString());
             
-            // Reload all data immediately
             await loadAllBooks();
             await loadMyBorrowedBooks();
             await loadUserStatistics();
-            // Show success message after refresh
             alert('Book borrowed successfully!');
         } else {
             alert(data.message || 'Failed to borrow book');
@@ -454,7 +421,6 @@ async function borrowBook(bookID) {
     }
 }
 
-// Borrow book by ID (from input box)
 async function borrowBookByID() {
     const bookIDInput = document.getElementById('borrowBookID');
     const bookID = parseInt(bookIDInput.value);
@@ -466,12 +432,10 @@ async function borrowBookByID() {
     
     await borrowBook(bookID);
     
-    // Clear input and reload borrowed books
     bookIDInput.value = '';
     loadMyBorrowedBooks();
 }
 
-// Return book function
 async function returnBook(bookID) {
     if (!currentUserID) {
         alert('User ID not found. Please log in again.');
@@ -493,11 +457,9 @@ async function returnBook(bookID) {
         const data = await response.json();
         
         if (response.ok && data.status === 'success') {
-            // Reload all data immediately
             await loadMyBorrowedBooks();
             await loadAllBooks();
             await loadUserStatistics();
-            // Show success message after refresh
             alert('Book returned successfully!');
         } else {
             alert(data.message || 'Failed to return book');

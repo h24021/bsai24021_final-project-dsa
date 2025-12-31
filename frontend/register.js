@@ -1,6 +1,4 @@
-// Registration functionality for Library Management System
 
-// Check if already logged in
 document.addEventListener('DOMContentLoaded', () => {
     const token = localStorage.getItem('authToken');
     if (token) {
@@ -14,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Form submission handler
 document.getElementById('registerForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     
@@ -25,7 +22,6 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     const confirmPassword = document.getElementById('confirmPassword').value;
     const adminKey = document.getElementById('adminKey').value.trim();
     
-    // Validation
     if (!username || !name || !email || !password) {
         showError('Please fill in all required fields');
         return;
@@ -60,11 +56,9 @@ async function performRegistration(username, name, email, password, adminKey) {
     const successMessage = document.getElementById('successMessage');
     const loadingSpinner = document.getElementById('loadingSpinner');
     
-    // Hide messages
     errorMessage.style.display = 'none';
     successMessage.style.display = 'none';
     
-    // Show loading
     loadingSpinner.style.display = 'block';
     registerBtn.disabled = true;
     registerBtn.textContent = 'Creating Account...';
@@ -78,7 +72,6 @@ async function performRegistration(username, name, email, password, adminKey) {
             role: adminKey ? 'ADMIN' : 'USER'
         };
         
-        // Include admin key only if provided
         if (adminKey) {
             payload.admin_key = adminKey;
         }
@@ -97,12 +90,10 @@ async function performRegistration(username, name, email, password, adminKey) {
             throw new Error(data.error || data.message || 'Registration failed');
         }
         
-        // Show success message
         const role = data.user.role === 'ADMIN' ? 'Administrator' : 'User';
         successMessage.textContent = `Account created successfully as ${role}! Redirecting to login...`;
         successMessage.style.display = 'block';
         
-        // Redirect to login page
         setTimeout(() => {
             window.location.href = 'login.html';
         }, 2000);
@@ -111,7 +102,6 @@ async function performRegistration(username, name, email, password, adminKey) {
         console.error('Registration error:', error);
         showError(error.message || 'Registration failed. Please try again.');
         
-        // Reset button
         registerBtn.disabled = false;
         registerBtn.textContent = 'Create Account';
     } finally {
@@ -124,7 +114,6 @@ function showError(message) {
     errorMessage.textContent = message;
     errorMessage.style.display = 'block';
     
-    // Auto-hide after 5 seconds
     setTimeout(() => {
         errorMessage.style.display = 'none';
     }, 5000);

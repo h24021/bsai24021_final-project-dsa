@@ -3,7 +3,6 @@ const API_URL = window.ENV.API_BASE;
 
 let allBooks = []; // Store all books for filtering
 
-// Authentication check on page load
 document.addEventListener('DOMContentLoaded', () => {
     checkAuthentication();
     setupLogout();
@@ -15,18 +14,15 @@ function checkAuthentication() {
     const userName = localStorage.getItem('userName');
     
     if (!token || role !== 'ADMIN') {
-        // Not authenticated or not admin, redirect to login
         window.location.href = 'login.html';
         return;
     }
     
-    // Display welcome message
     const welcomeMessage = document.getElementById('welcomeMessage');
     if (welcomeMessage && userName) {
         welcomeMessage.textContent = `Welcome, ${userName}`;
     }
     
-    // Verify token is still valid
     verifyToken(token);
 }
 
@@ -40,7 +36,6 @@ async function verifyToken(token) {
         });
         
         if (!response.ok) {
-            // Token is invalid, redirect to login
             clearAuthData();
             window.location.href = 'login.html';
         }
@@ -59,7 +54,6 @@ function setupLogout() {
             
             if (token) {
                 try {
-                    // Call logout endpoint
                     await fetch(`${API_URL}/auth/logout`, {
                         method: 'POST',
                         headers: {
@@ -71,7 +65,6 @@ function setupLogout() {
                 }
             }
             
-            // Clear local storage and redirect
             clearAuthData();
             window.location.href = 'login.html';
         });
@@ -87,20 +80,16 @@ function clearAuthData() {
     localStorage.removeItem('userName');
 }
 
-// Tab switching
 document.querySelectorAll('.main-tab').forEach(tab => {
     tab.addEventListener('click', () => {
         const section = tab.dataset.section;
         
-        // Update active tab
         document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         
-        // Update active section
         document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
         document.getElementById(`${section}-section`).classList.add('active');
         
-        // Load data for the section
         if (section === 'books') loadAllBooks();
         if (section === 'users') loadUsers();
         if (section === 'borrow') loadBorrowHistory();
@@ -109,7 +98,6 @@ document.querySelectorAll('.main-tab').forEach(tab => {
     });
 });
 
-// Books Management - Show all books with IDs
 async function loadAllBooks() {
     try {
         const response = await fetch(`${API_URL}/books`);
@@ -119,9 +107,7 @@ async function loadAllBooks() {
         const data = await response.json();
         console.log('Books API Response:', data); // Debug log
         
-        // Handle the response structure from the API
         if (data.status === 'success' && data.data) {
-            // data.data is the JSON array
             allBooks = Array.isArray(data.data) ? data.data : JSON.parse(data.data);
             displayAllBooks(allBooks);
         } else {
@@ -135,14 +121,12 @@ async function loadAllBooks() {
 }
 
 function filterBooks(type) {
-    // Update active filter button
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
     
     if (type === 'all') {
         displayAllBooks(allBooks);
     } else if (type === 'Comic') {
-        // Show both comics AND manga when "Comics" filter is selected
         const filtered = allBooks.filter(book => book.type === 'Comic' || book.type === 'Manga');
         displayAllBooks(filtered);
     } else {
@@ -223,7 +207,6 @@ function displayAllBooks(books) {
         bookCard.appendChild(cover);
         bookCard.appendChild(bookInfo);
         
-        // Add download link if available
         if (book.downloadLinks && book.downloadLinks.length > 0) {
             const downloadBtn = document.createElement('button');
             downloadBtn.className = 'btn-download';
@@ -236,7 +219,6 @@ function displayAllBooks(books) {
     });
 }
 
-// User Management
 async function loadUsers() {
     try {
         const response = await fetch(`${API_URL}/users`);
@@ -244,10 +226,9 @@ async function loadUsers() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log('Users API Response:', data); // Debug log
+        console.log('Users API Response:', data); 
         
         if (data.status === 'success' && data.data) {
-            // data.data might be a JSON string, parse if needed
             let users;
             if (typeof data.data === 'string') {
                 users = JSON.parse(data.data);
@@ -277,7 +258,7 @@ function displayUsers(users) {
     }
     
     users.forEach(user => {
-        const userId = user.userID || user.id;  // Handle both formats
+        const userId = user.userID || user.id;  
         const userCard = document.createElement('div');
         userCard.className = 'item-card';
         userCard.innerHTML = `
@@ -310,7 +291,7 @@ async function addUser() {
         const data = await response.json();
         
         if (data.status === 'success') {
-            const userId = data.data.userID || data.data.id;  // Handle both formats
+            const userId = data.data.userID || data.data.id;  
             alert(`✅ User added successfully!\n\nName: ${name}\nUser ID: ${userId}\n\nYou can now use this User ID to borrow books.`);
             document.getElementById('userName').value = '';
             document.getElementById('userEmail').value = '';
@@ -323,7 +304,6 @@ async function addUser() {
     }
 }
 
-// Borrow/Return
 async function borrowBook() {
     const userId = document.getElementById('borrowUserId').value;
     const bookId = document.getElementById('borrowBookId').value;
@@ -347,8 +327,8 @@ async function borrowBook() {
             document.getElementById('borrowUserId').value = '';
             document.getElementById('borrowBookId').value = '';
             loadBorrowHistory();
-            loadAllBooks(); // Refresh book list to show updated availability
-            loadStatistics(); // Refresh statistics
+            loadAllBooks(); 
+            loadStatistics(); 
         } else {
             alert('Error: Error: ' + (data.message || 'Failed to borrow book'));
         }
@@ -380,8 +360,8 @@ async function returnBook() {
             document.getElementById('returnUserId').value = '';
             document.getElementById('returnBookId').value = '';
             loadBorrowHistory();
-            loadAllBooks(); // Refresh book list to show updated availability
-            loadStatistics(); // Refresh statistics
+            loadAllBooks(); 
+            loadStatistics(); 
         } else {
             alert('Error: Error: ' + (data.message || 'Failed to return book'));
         }
@@ -395,7 +375,6 @@ async function loadBorrowHistory() {
     container.innerHTML = '<p style="color: var(--light-gray); text-align: center; padding: 2rem;">Loading borrowed books...</p>';
     
     try {
-        // Get all users
         const usersResponse = await fetch(`${API_URL}/users`);
         const usersData = await usersResponse.json();
         
@@ -404,7 +383,6 @@ async function loadBorrowHistory() {
             return;
         }
         
-        // Parse users data properly
         let users;
         if (typeof usersData.data === 'string') {
             users = JSON.parse(usersData.data);
@@ -415,7 +393,6 @@ async function loadBorrowHistory() {
         }
         const allBorrowedBooks = [];
         
-        // For each user, get their borrowed books
         for (const user of users) {
             const userId = user.userID || user.id;
             try {
@@ -439,7 +416,6 @@ async function loadBorrowHistory() {
             }
         }
         
-        // Display the borrowed books
         if (allBorrowedBooks.length === 0) {
             container.innerHTML = '<p style="color: var(--light-gray); text-align: center; padding: 2rem;">No books currently borrowed</p>';
             return;
@@ -480,7 +456,6 @@ async function loadBorrowHistory() {
     }
 }
 
-// Quick return function for the borrow history list
 async function quickReturn(userId, bookId) {
     if (!confirm(`Return Book ID ${bookId} for User ID ${userId}?`)) {
         return;
@@ -497,7 +472,7 @@ async function quickReturn(userId, bookId) {
         
         if (data.message && data.message.includes('successfully')) {
             alert('✅ Book returned successfully!');
-            loadBorrowHistory(); // Reload the list
+            loadBorrowHistory(); 
         } else {
             alert('Error: Error: ' + (data.message || 'Failed to return book'));
         }
@@ -506,21 +481,19 @@ async function quickReturn(userId, bookId) {
     }
 }
 
-// Search
 async function loadAllBooksForSearch() {
     try {
         const response = await fetch(`${API_URL}/books`);
         const data = await response.json();
         
         if (data.status === 'success' && data.data) {
-            // Parse data properly
             let books = [];
             if (typeof data.data === 'string') {
                 books = JSON.parse(data.data);
             } else if (Array.isArray(data.data)) {
                 books = data.data;
             }
-            displaySearchResults(books.slice(0, 20)); // Show first 20 books
+            displaySearchResults(books.slice(0, 20)); 
         }
     } catch (error) {
         console.error('Error loading books:', error);
@@ -536,18 +509,14 @@ async function searchBooks() {
     }
     
     try {
-        // Search by title first
         const titleResponse = await fetch(`${API_URL}/books/search?title=${encodeURIComponent(query)}`);
         const titleData = await titleResponse.json();
         
-        // Search by author
         const authorResponse = await fetch(`${API_URL}/books/search?author=${encodeURIComponent(query)}`);
         const authorData = await authorResponse.json();
         
-        // Combine results and remove duplicates
         let allResults = [];
         
-        // Parse title results
         if (titleData.status === 'success' && titleData.data) {
             if (typeof titleData.data === 'string') {
                 allResults = JSON.parse(titleData.data);
@@ -556,7 +525,6 @@ async function searchBooks() {
             }
         }
         
-        // Parse and merge author results
         if (authorData.status === 'success' && authorData.data) {
             let authorBooks = [];
             if (typeof authorData.data === 'string') {
@@ -566,7 +534,6 @@ async function searchBooks() {
             }
             
             authorBooks.forEach(book => {
-                // Only add if not already in results (check both id and bookID)
                 const bookId = book.id || book.bookID;
                 if (!allResults.find(b => (b.id || b.bookID) === bookId)) {
                     allResults.push(book);
@@ -637,7 +604,6 @@ function displaySearchResults(books) {
         bookCard.appendChild(author);
         bookCard.appendChild(info);
         
-        // Add download link if available
         if (book.downloadLinks && book.downloadLinks.length > 0) {
             const downloadBtn = document.createElement('button');
             downloadBtn.className = 'btn-download';
@@ -650,21 +616,15 @@ function displaySearchResults(books) {
     });
 }
 
-// Initialize
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Library Management System loaded');
-    // Load books on page load (Books tab is active by default)
     loadAllBooks();
 });
 
-// ===================================
-// STATISTICS FUNCTIONS
-// ===================================
 
 async function loadStatistics() {
     console.log('Loading statistics...');
     try {
-        // Fetch all data
         const [booksRes, usersRes] = await Promise.all([
             fetch(`${API_URL}/books`),
             fetch(`${API_URL}/users`)
@@ -678,7 +638,6 @@ async function loadStatistics() {
         console.log('Books data:', booksData);
         console.log('Users data:', usersData);
 
-        // Parse data properly - handle JSON strings
         let books = [];
         let users = [];
         
@@ -701,7 +660,6 @@ async function loadStatistics() {
         console.log('Parsed books:', books.length, 'books');
         console.log('Parsed users:', users.length, 'users');
 
-        // Calculate statistics with individual error handling
         try {
             displayOverallStats(books, users);
             console.log('Success: Overall stats displayed');
@@ -789,7 +747,6 @@ function displayGenreStats(books) {
         genreAvailable[genre] = (genreAvailable[genre] || 0) + book.availableCopies;
     });
 
-    // Sort genres by count
     const sortedGenres = Object.entries(genreCounts).sort((a, b) => b[1] - a[1]);
 
     let html = '<table class="stats-table"><thead><tr><th>Genre</th><th>Total Books</th><th>Available</th></tr></thead><tbody>';
