@@ -73,7 +73,7 @@ HttpResponse AuthController::login(const HttpRequest& request) {
         return HttpResponse::badRequest("{\"error\": \"Invalid credentials\"}");
     }
     
-]    string role = "USER";
+    string role = "USER";
     if (!admin_key.empty() && validateAdminKey(admin_key)) {
         role = "ADMIN";
     }
