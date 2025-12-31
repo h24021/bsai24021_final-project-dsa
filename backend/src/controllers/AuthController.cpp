@@ -11,9 +11,8 @@ string AuthController::extractToken(const HttpRequest& request) {
         return "";
     }
     
-    // Format: "Bearer <token>"
     if (authHeader.find("Bearer ") == 0) {
-        return authHeader.substr(7);  // Skip "Bearer "
+        return authHeader.substr(7); 
     }
     
     return "";
@@ -26,12 +25,10 @@ bool AuthController::validateAdminKey(const string& key) {
 HttpResponse AuthController::login(const HttpRequest& request) {
     string body = request.getBody();
     
-    // Parse JSON body manually (simple parsing)
     string username_or_email = "";
     string password = "";
     string admin_key = "";
     
-    // Extract username_or_email
     size_t pos = body.find("\"username_or_email\"");
     if (pos != string::npos) {
         size_t start = body.find("\"", pos + 20);
@@ -41,7 +38,6 @@ HttpResponse AuthController::login(const HttpRequest& request) {
         }
     }
     
-    // Extract password
     pos = body.find("\"password\"");
     if (pos != string::npos) {
         size_t start = body.find("\"", pos + 11);
@@ -51,7 +47,6 @@ HttpResponse AuthController::login(const HttpRequest& request) {
         }
     }
     
-    // Extract admin_key (optional)
     pos = body.find("\"admin_key\"");
     if (pos != string::npos) {
         size_t start = body.find("\"", pos + 12);
@@ -65,7 +60,6 @@ HttpResponse AuthController::login(const HttpRequest& request) {
         return HttpResponse::badRequest("{\"error\": \"Missing username/email or password\"}");
     }
     
-    // Find user by username or email
     User* user = library->findUserByUsername(username_or_email);
     if (!user) {
         user = library->findUserByEmail(username_or_email);
@@ -75,21 +69,17 @@ HttpResponse AuthController::login(const HttpRequest& request) {
         return HttpResponse::badRequest("{\"error\": \"Invalid credentials\"}");
     }
     
-    // Validate password
     if (user->getPassword() != password) {
         return HttpResponse::badRequest("{\"error\": \"Invalid credentials\"}");
     }
     
-    // Determine role
-    string role = "USER";
+]    string role = "USER";
     if (!admin_key.empty() && validateAdminKey(admin_key)) {
         role = "ADMIN";
     }
     
-    // Create session
     string token = sessionManager->createSession(user->getUserID(), user->getUsername(), role);
     
-    // Build response
     stringstream response;
     response << "{"
              << "\"token\": \"" << JsonHelper::escapeJson(token) << "\","
@@ -110,14 +100,12 @@ HttpResponse AuthController::login(const HttpRequest& request) {
 HttpResponse AuthController::registerUser(const HttpRequest& request) {
     string body = request.getBody();
     
-    // Parse JSON body
     string username = "";
     string name = "";
     string email = "";
     string password = "";
     string admin_key = "";
     
-    // Extract username
     size_t pos = body.find("\"username\"");
     if (pos != string::npos) {
         size_t start = body.find("\"", pos + 11);
@@ -127,7 +115,6 @@ HttpResponse AuthController::registerUser(const HttpRequest& request) {
         }
     }
     
-    // Extract name
     pos = body.find("\"name\"");
     if (pos != string::npos) {
         size_t start = body.find("\"", pos + 7);
@@ -137,7 +124,6 @@ HttpResponse AuthController::registerUser(const HttpRequest& request) {
         }
     }
     
-    // Extract email
     pos = body.find("\"email\"");
     if (pos != string::npos) {
         size_t start = body.find("\"", pos + 8);
@@ -147,7 +133,6 @@ HttpResponse AuthController::registerUser(const HttpRequest& request) {
         }
     }
     
-    // Extract password
     pos = body.find("\"password\"");
     if (pos != string::npos) {
         size_t start = body.find("\"", pos + 11);
@@ -157,7 +142,6 @@ HttpResponse AuthController::registerUser(const HttpRequest& request) {
         }
     }
     
-    // Extract admin_key (optional)
     pos = body.find("\"admin_key\"");
     if (pos != string::npos) {
         size_t start = body.find("\"", pos + 12);
@@ -171,7 +155,6 @@ HttpResponse AuthController::registerUser(const HttpRequest& request) {
         return HttpResponse::badRequest("{\"error\": \"Missing required fields\"}");
     }
     
-    // Check if username or email already exists
     if (library->findUserByUsername(username)) {
         return HttpResponse::badRequest("{\"error\": \"Username already exists\"}");
     }
@@ -180,20 +163,16 @@ HttpResponse AuthController::registerUser(const HttpRequest& request) {
         return HttpResponse::badRequest("{\"error\": \"Email already exists\"}");
     }
     
-    // Determine role
     string role = "USER";
     if (!admin_key.empty() && validateAdminKey(admin_key)) {
         role = "ADMIN";
     }
     
-    // Generate new user ID
     int newUserID = library->getTotalUsers() + 1;
     
-    // Create and add user
     User newUser(newUserID, username, name, email, password, role);
     library->addUser(newUser);
     
-    // Build response
     stringstream response;
     response << "{"
              << "\"user\": {"
@@ -250,7 +229,6 @@ HttpResponse AuthController::getCurrentUser(const HttpRequest& request) {
         return HttpResponse::notFound("{\"error\": \"User not found\"}");
     }
     
-    // Build response
     stringstream response;
     response << "{"
              << "\"user\": {"

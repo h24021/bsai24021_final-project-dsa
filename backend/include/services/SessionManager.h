@@ -16,8 +16,8 @@ struct Session {
 
 class SessionManager {
 private:
-    map<string, Session> sessions;  // token -> Session
-    static const int SESSION_DURATION = 86400; // 24 hours in seconds
+    map<string, Session> sessions;  
+    static const int SESSION_DURATION = 86400; 
 
     string generateToken();
     bool isExpired(const Session& session);
@@ -25,24 +25,17 @@ private:
 public:
     SessionManager();
     
-    // Create new session, returns session token
     string createSession(int userID, const string& username, const string& role);
     
-    // Validate session token, returns Session if valid, nullptr otherwise
     Session* validateSession(const string& token);
     
-    // Remove session (logout)
     bool removeSession(const string& token);
     
-    // Get user ID from token
     int getUserIDFromToken(const string& token);
     
-    // Get user role from token
     string getRoleFromToken(const string& token);
     
-    // Check if user is admin
     bool isAdmin(const string& token);
     
-    // Clean expired sessions
     void cleanExpiredSessions();
 };

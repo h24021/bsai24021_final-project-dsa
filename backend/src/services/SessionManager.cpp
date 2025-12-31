@@ -6,7 +6,6 @@
 SessionManager::SessionManager() {}
 
 string SessionManager::generateToken() {
-    // Generate random token using current time and random number
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<> dis(0, 255);
@@ -14,10 +13,8 @@ string SessionManager::generateToken() {
     stringstream ss;
     ss << hex << setfill('0');
     
-    // Add timestamp
     ss << time(nullptr) << "_";
     
-    // Add random bytes
     for (int i = 0; i < 32; i++) {
         ss << setw(2) << dis(gen);
     }
@@ -49,12 +46,12 @@ Session* SessionManager::validateSession(const string& token) {
     auto it = sessions.find(token);
     
     if (it == sessions.end()) {
-        return nullptr; // Session not found
+        return nullptr; 
     }
     
     if (isExpired(it->second)) {
         sessions.erase(it);
-        return nullptr; // Session expired
+        return nullptr; 
     }
     
     return &(it->second);
@@ -74,7 +71,7 @@ int SessionManager::getUserIDFromToken(const string& token) {
     if (session) {
         return session->userID;
     }
-    return -1; // Invalid session
+    return -1; 
 }
 
 string SessionManager::getRoleFromToken(const string& token) {
@@ -82,7 +79,7 @@ string SessionManager::getRoleFromToken(const string& token) {
     if (session) {
         return session->role;
     }
-    return ""; // Invalid session
+    return ""; 
 }
 
 bool SessionManager::isAdmin(const string& token) {

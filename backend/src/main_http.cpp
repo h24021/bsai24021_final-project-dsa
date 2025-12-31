@@ -84,7 +84,6 @@ static void registerRoutes(Router& router, Library& library,
     router.put("/users/:id", [&](const HttpRequest& req) { return userController.updateUser(req); });
     router.del("/users/:id", [&](const HttpRequest& req) { return userController.deleteUser(req); });
 
-    // Borrow routes
     router.post("/borrow", [&](const HttpRequest& req) { return borrowController.borrowBook(req); });
     router.post("/return", [&](const HttpRequest& req) { return borrowController.returnBook(req); });
     router.get("/books/:id/history", [&](const HttpRequest& req) { return borrowController.getBorrowHistory(req); });

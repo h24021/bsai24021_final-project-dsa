@@ -3,7 +3,6 @@
 # Library Management System - Process Supervisor
 # This script keeps both the API server and frontend server running
 
-# Configuration
 SERVER_EXECUTABLE="./build/http_api_server"
 FRONTEND_DIR="./frontend"
 LOG_DIR="./logs"
@@ -12,21 +11,17 @@ ERROR_LOG="$LOG_DIR/api_server_error.log"
 FRONTEND_LOG="$LOG_DIR/frontend_server.log"
 RESTART_LOG="$LOG_DIR/restart_history.log"
 MAX_RESTARTS=10
-RESTART_WINDOW=60  # seconds
+RESTART_WINDOW=60  
 BACKEND_PORT=8080
 FRONTEND_PORT=8081
 
-# Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-NC='\033[0m' # No Color
-
-# Create log directory if it doesn't exist
+NC='\033[0m' 
 mkdir -p "$LOG_DIR"
 
-# Initialize restart counter
 restart_count=0
 window_start_time=$(date +%s)
 
@@ -47,7 +42,6 @@ is_server_running() {
     return 1
 }
 
-# Function to check if frontend server is running
 is_frontend_running() {
     if [ -f /tmp/frontend_server.pid ]; then
         pid=$(cat /tmp/frontend_server.pid)
@@ -58,7 +52,6 @@ is_frontend_running() {
     return 1
 }
 
-# Function to kill existing server instances
 kill_existing_servers() {
     echo -e "${YELLOW}Checking for existing server instances...${NC}"
     
@@ -73,7 +66,7 @@ kill_existing_servers() {
         rm /tmp/api_server.pid
     fi
     
-    # Kill frontend by PID file
+    
     if [ -f /tmp/frontend_server.pid ]; then
         old_pid=$(cat /tmp/frontend_server.pid)
         if ps -p $old_pid > /dev/null 2>&1; then
@@ -84,7 +77,6 @@ kill_existing_servers() {
         rm /tmp/frontend_server.pid
     fi
     
-    # Kill by backend port
     port_pid=$(lsof -ti:$BACKEND_PORT 2>/dev/null)
     if [ ! -z "$port_pid" ]; then
         echo -e "${YELLOW}Killing process using port $BACKEND_PORT (PID: $port_pid)${NC}"
@@ -92,7 +84,6 @@ kill_existing_servers() {
         sleep 1
     fi
     
-    # Kill by frontend port
     port_pid=$(lsof -ti:$FRONTEND_PORT 2>/dev/null)
     if [ ! -z "$port_pid" ]; then
         echo -e "${YELLOW}Killing process using port $FRONTEND_PORT (PID: $port_pid)${NC}"
@@ -100,7 +91,6 @@ kill_existing_servers() {
         sleep 1
     fi
     
-    # Kill by executable name
     pkill -f "http_api_server" 2>/dev/null
     pkill -f "SimpleHTTPServer" 2>/dev/null
     pkill -f "http.server" 2>/dev/null
@@ -112,14 +102,11 @@ start_server() {
     echo -e "${GREEN}Starting Backend API server...${NC}"
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting backend server" >> "$LOG_FILE"
     
-    # Start server in background and capture its PID
     $SERVER_EXECUTABLE >> "$LOG_FILE" 2>> "$ERROR_LOG" &
     server_pid=$!
     
-    # Save PID to file
     echo $server_pid > /tmp/api_server.pid
     
-    # Wait a moment and check if it started successfully
     sleep 2
     
     if ps -p $server_pid > /dev/null 2>&1; then
@@ -134,21 +121,17 @@ start_server() {
     fi
 }
 
-# Function to start the frontend server
 start_frontend() {
     echo -e "${GREEN}Starting Frontend server...${NC}"
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting frontend server" >> "$FRONTEND_LOG"
     
-    # Start Python HTTP server in the frontend directory
     cd "$FRONTEND_DIR"
     python3 -m http.server $FRONTEND_PORT >> "../$FRONTEND_LOG" 2>&1 &
     frontend_pid=$!
     cd ..
     
-    # Save PID to file
     echo $frontend_pid > /tmp/frontend_server.pid
     
-    # Wait a moment and check if it started successfully
     sleep 2
     
     if ps -p $frontend_pid > /dev/null 2>&1; then
@@ -163,7 +146,6 @@ start_frontend() {
     fi
 }
 
-# Function to check restart limits
 check_restart_limit() {
     current_time=$(date +%s)
     time_diff=$((current_time - window_start_time))
@@ -186,7 +168,6 @@ check_restart_limit() {
     return 0
 }
 
-# Function to monitor and restart
 monitor_server() {
     while true; do
         backend_running=false
@@ -228,12 +209,10 @@ monitor_server() {
             fi
         fi
         
-        # Sleep before next check
         sleep 5
     done
 }
 
-# Cleanup function
 cleanup() {
     echo ""
     echo -e "${YELLOW}Shutting down supervisor...${NC}"
@@ -246,7 +225,6 @@ cleanup() {
             kill $pid 2>/dev/null
             sleep 2
             
-            # Force kill if still running
             if ps -p $pid > /dev/null 2>&1; then
                 kill -9 $pid 2>/dev/null
             fi
@@ -254,7 +232,6 @@ cleanup() {
         rm /tmp/api_server.pid
     fi
     
-    # Stop frontend server
     if [ -f /tmp/frontend_server.pid ]; then
         pid=$(cat /tmp/frontend_server.pid)
         if ps -p $pid > /dev/null 2>&1; then
@@ -262,7 +239,6 @@ cleanup() {
             kill $pid 2>/dev/null
             sleep 2
             
-            # Force kill if still running
             if ps -p $pid > /dev/null 2>&1; then
                 kill -9 $pid 2>/dev/null
             fi
@@ -275,10 +251,8 @@ cleanup() {
     exit 0
 }
 
-# Set up signal handlers
 trap cleanup SIGINT SIGTERM
 
-# Check if executable exists
 if [ ! -f "$SERVER_EXECUTABLE" ]; then
     echo -e "${RED}✗ Server executable not found: $SERVER_EXECUTABLE${NC}"
     echo -e "${YELLOW}Please build the project first:${NC}"
@@ -286,19 +260,15 @@ if [ ! -f "$SERVER_EXECUTABLE" ]; then
     exit 1
 fi
 
-# Make executable if not already
 chmod +x "$SERVER_EXECUTABLE"
 
-# Kill any existing instances
 kill_existing_servers
 
-# Start the backend server
 if ! start_server; then
     echo -e "${RED}✗ Failed to start backend server on first attempt${NC}"
     exit 1
 fi
 
-# Start the frontend server
 if ! start_frontend; then
     echo -e "${RED}✗ Failed to start frontend server on first attempt${NC}"
     exit 1
@@ -322,5 +292,4 @@ echo ""
 echo -e "${YELLOW}Press Ctrl+C to stop the supervisor and all servers${NC}"
 echo ""
 
-# Start monitoring
 monitor_server
